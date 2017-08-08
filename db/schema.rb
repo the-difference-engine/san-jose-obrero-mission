@@ -11,8 +11,23 @@
 # It's strongly recommended that you check this file into your version control system.
 
 
+ActiveRecord::Schema.define(version: 20170807232825) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "residents", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "date"
+    t.string   "hmis_number"
+    t.datetime "hmis_entry_date"
+    t.boolean  "documented"
+    t.string   "gender"
+    t.string   "ethnicity"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
 
   create_table "beds", force: :cascade do |t|
     t.integer  "room_id"
@@ -88,6 +103,7 @@
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
   end
 
 end
