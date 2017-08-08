@@ -1,0 +1,37 @@
+<h1>Register a Resident</h1>
+
+<div>
+<%= form_tag '/residents', method: :post do %>
+<ul>
+  <li>First Name: <input type="text" name="first_name"></li>
+  <li>Last Name: <input type="text" name="last_name"></li>
+  <li>Date: <input type="date" name="date"></li>
+  <li>HMIS Number: <input type="text" name="hmis_number"></li>
+  <li>HMIS Entry Date: <input type="date" name="hmis_entry_date"></li>
+  <li>Documented: 
+    <select name="documented">
+      <option value="true">True</option>
+      <option value="false">False</option>
+    </select>
+  </li>
+  <li>Gender: 
+    <select name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="transgender_f_to_m">Transgender: Female to Male</option>
+      <option value="transgender_m_to_f">Transgender: Male to Female</option>
+      <option value="does_not_identify">I do not identify with the above options</option>
+    </select>
+  </li>
+  <li>Ethnicity:
+    <select name="ethnicity"> 
+      <option value="white">White</option>
+      <option name="hispanic">Hispanic</option>
+      <option name="american_indian_alaskan_native">American Indian/Alaskan Native</option>
+      <option name="asian_or_pacific_islander">Asian or Pacific Islander</option>
+      <option name="black">Black</option>
+    </select>
+  </li> <input type="submit" value="submit"> </li>
+</ul>
+<% end %>
+</div>
