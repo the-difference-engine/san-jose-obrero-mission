@@ -1,1 +1,7 @@
 <h1>Hello Beds!</h1>
+
+<% @beds.each do |bed| %>
+  <h4>Name: <%= bed.name %></h4>
+  <h4>Top or Bottom: <%= bed.top_or_bottom %></h4>
+  <h4>Occupied: <%= bed.occupied %></h4>
+<% end %>
