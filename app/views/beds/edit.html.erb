@@ -1,0 +1,19 @@
+<h1>Edit Bed:</h1>
+
+<%= form_tag "/beds/#{@bed.id}", method: :patch do %>
+  <div>
+    <label for="Name">Name: </label>
+    <input type="text" name="name" value="<%= @bed.name %>">
+  </div>
+  <div>
+    <label for="Top or Bottom">Top or Bottom: </label>
+    <input type="text" name="top_or_bottom" value="<%= @bed.top_or_bottom %>">
+  </div>
+  <div>
+    <label for="Occupied">Occupied: </label>
+    <input type="boolean" name="occupied" value="<%= @bed.occupied %>">
+  </div>
+  <div>
+    <input type="submit" value="Save!">
+  </div>
+<% end %>
