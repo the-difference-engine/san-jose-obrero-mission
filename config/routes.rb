@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get "/beds" => "beds#index"
   get "/beds/:id" => "beds#show"
+  get "/beds/:id/edit" => "beds#edit"
+  patch "/beds/:id" => "beds#update"
 
 end
