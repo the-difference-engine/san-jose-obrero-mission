@@ -6,6 +6,7 @@ class ResidentsController < ApplicationController
   end 
 
   def new
+    @beds = Bed.all
     render "new.html.erb"
   end 
 

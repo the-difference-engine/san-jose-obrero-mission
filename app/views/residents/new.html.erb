@@ -33,6 +33,15 @@
       <option name="asian_or_pacific_islander">Asian or Pacific Islander</option>
       <option name="black">Black</option>
     </select>
+  </li>
+  <li>Bed:
+    <select name="bed_id"> 
+      <% @beds.each do |bed| %>
+        <% if bed.occupied == true %>
+          <option value="bed"><%= bed.name %></option>
+        <% end %>
+      <% end %>
+    </select>
   </li> <input type="submit" value="submit"> </li>
 </ul>
 <% end %>
