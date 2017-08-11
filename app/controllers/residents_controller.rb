@@ -24,16 +24,33 @@ class ResidentsController < ApplicationController
     redirect_to '/residents'
   end 
 
-#   def show
-#   end 
+def show
+  @resident = Resident.find_by(id: params[:id])
+  render "show.html.erb"
+end 
 
-#   def edit
-#   end 
+def edit
+  @resident = Resident.find_by(id: params[:id])
+  render "edit.html.erb"
+end 
 
-#   def update
-#   end 
+  def update
+     resident = Resident.find_by(id: params[:id])
+     resident.update(
+                first_name: params[:first_name].capitalize,
+                last_name: params[:last_name].capitalize,
+                documented: params[:documented],
+                gender: params[:gender]
+              )
 
-#   def destroy
-#   end 
+    redirect_to '/residents'
+  end 
+
+def destroy
+  resident = Resident.find_by(id: params[:id])
+  resident.destroy
+  
+  redirect_to '/residents'
+end 
 
 end
