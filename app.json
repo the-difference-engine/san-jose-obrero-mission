@@ -7,10 +7,10 @@
       "required": true
     },
     "RACK_ENV": {
-      "required": true
+      "required": false
     },
     "RAILS_ENV": {
-      "required": true
+      "required": false
     },
     "RAILS_LOG_TO_STDOUT": {
       "required": true
