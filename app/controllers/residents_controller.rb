@@ -22,7 +22,10 @@ class ResidentsController < ApplicationController
                 ethnicity: params[:ethnicity],
                 bed_id: params[:bed_id]
               )
-
+    bed = Bed.find_by(id: params[:bed_id])
+    bed.update(
+      occupied: !bed.occupied
+    )
     redirect_to '/residents'
   end 
 
