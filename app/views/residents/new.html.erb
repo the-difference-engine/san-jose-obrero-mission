@@ -1,5 +1,7 @@
 <h1>Register a Resident</h1>
 
+<div><a href="/residents" class="btn btn-default">Cancel</a></div>
+
 <div>
 <%= form_tag '/residents', method: :post do %>
 <ul>
@@ -30,6 +32,15 @@
       <option name="american_indian_alaskan_native">American Indian/Alaskan Native</option>
       <option name="asian_or_pacific_islander">Asian or Pacific Islander</option>
       <option name="black">Black</option>
+    </select>
+  </li>
+  <li>Bed:
+    <select name="bed_id"> 
+      <% @beds.each do |bed| %>
+        <% if bed.occupied == true %>
+          <option value="<%= bed.id %>"><%= bed.name %></option>
+        <% end %>
+      <% end %>
     </select>
   </li> <input type="submit" value="submit"> </li>
 </ul>
