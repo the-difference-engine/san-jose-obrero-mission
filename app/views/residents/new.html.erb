@@ -38,7 +38,7 @@
     <select name="bed_id"> 
       <% @beds.each do |bed| %>
         <% if bed.occupied == true %>
-          <option value="bed"><%= bed.name %></option>
+          <option value="<%= bed.id %>"><%= bed.name %></option>
         <% end %>
       <% end %>
     </select>

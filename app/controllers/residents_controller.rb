@@ -19,7 +19,8 @@ class ResidentsController < ApplicationController
                 hmis_entry_date: params[:hmis_entry_date],
                 documented: params[:documented],
                 gender: params[:gender],
-                ethnicity: params[:ethnicity]
+                ethnicity: params[:ethnicity],
+                bed_id: params[:bed_id]
               )
 
     redirect_to '/residents'
