@@ -6,6 +6,7 @@ class ResidentsController < ApplicationController
   end 
 
   def new
+    @beds = Bed.all
     render "new.html.erb"
   end 
 
@@ -18,9 +19,13 @@ class ResidentsController < ApplicationController
                 hmis_entry_date: params[:hmis_entry_date],
                 documented: params[:documented],
                 gender: params[:gender],
-                ethnicity: params[:ethnicity]
+                ethnicity: params[:ethnicity],
+                bed_id: params[:bed_id]
               )
-
+    bed = Bed.find_by(id: params[:bed_id])
+    bed.update(
+      occupied: !bed.occupied
+    )
     redirect_to '/residents'
   end 
 
