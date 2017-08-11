@@ -3,5 +3,14 @@
 <% @residents.each do |resident| %>
   <p><%= resident.first_name %></p>
   <p><%= resident.last_name %></p>
+  <p><%= resident.documented %></p>
+
+  <div>
+  <a href="/residents/<%= resident.id %>"> Click Here to Update </a>
+  </div>
+
+  <div>
+  <%= link_to  'Delete', "/residents/#{resident.id.to_s}", method: :delete %>
+  </div>
 
 <% end %>
