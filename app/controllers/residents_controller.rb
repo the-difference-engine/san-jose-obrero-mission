@@ -20,7 +20,8 @@ class ResidentsController < ApplicationController
                 documented: params[:documented],
                 gender: params[:gender],
                 ethnicity: params[:ethnicity],
-                bed_id: params[:bed_id]
+                bed_id: params[:bed_id],
+                image: params[:image]
               )
     bed = Bed.find_by(id: params[:bed_id])
     bed.update(
@@ -45,7 +46,8 @@ end
                 first_name: params[:first_name].capitalize,
                 last_name: params[:last_name].capitalize,
                 documented: params[:documented],
-                gender: params[:gender]
+                gender: params[:gender],
+                image: params[:image]
               )
 
     redirect_to '/residents'
