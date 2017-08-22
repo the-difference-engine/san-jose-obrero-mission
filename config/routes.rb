@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get "/" => "application#index" 
+  get "/" => "pages#index" 
 
   get "/residents" => "residents#index"
   get "/residents/new" => "residents#new"
