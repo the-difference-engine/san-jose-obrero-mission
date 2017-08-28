@@ -1,17 +1,17 @@
  <h1>Update a Resident</h1>
+ <div><a href="/residents" class="btn btn-default">All Residents</a></div>
+ <br>
 
-<div>
 <%= form_tag "/residents/#{@resident.id}", method: :patch do %>
-<ul>
-  <li>First Name: <input type="text" name="first_name" value="<%= @resident.first_name %>"></li>
-  <li>Last Name: <input type="text" name="last_name" value="<%= @resident.last_name %>"></li>
-  <li>Documented: 
+  <div>First Name: <input type="text" name="first_name" value="<%= @resident.first_name %>"></div>
+  <div>Last Name: <input type="text" name="last_name" value="<%= @resident.last_name %>"></div>
+  <div>Documented: 
     <select name="documented">
       <option value="true">True</option>
       <option value="false">False</option>
     </select>
-  </li>
-  <li>Gender: 
+  </div>
+  <div>Gender: 
     <select name="gender">
       <option value="male">Male</option>
       <option value="female">Female</option>
@@ -19,7 +19,13 @@
       <option value="transgender_m_to_f">Transgender: Male to Female</option>
       <option value="does_not_identify">I do not identify with the above options</option>
     </select>
-  </li> <input type="submit" value="submit"> </li>
-</ul>
+  </div>
+  <div style="padding-left: 20px; position: fixed; padding-left: 5px; padding-top: 10px; border: 1px; border-style: solid; font-family: Tahoma; font-size: 20px; font-weight: bold;">
+
+  </div>
+  <br>
+  <div>
+    <input type="submit" value="submit">
+  </div>
+  </div>
 <% end %>
-</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170818001506) do
+ActiveRecord::Schema.define(version: 20170818010235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20170818001506) do
     t.string   "prior_living_situation"
     t.integer  "number_of_shelters"
     t.boolean  "chronically_homeless"
+    t.string   "image"
   end
 
   create_table "securities", force: :cascade do |t|

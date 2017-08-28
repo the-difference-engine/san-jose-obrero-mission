@@ -1,4 +1,4 @@
-<h1>Hello World </h1> 
+<h1>All Residents!</h1> 
 
 <div><a href="/residents/new" class="btn btn-default">New Resident</a></div>
 <br>
@@ -16,10 +16,10 @@
         <h5>Documented: <%= resident.documented.to_s.capitalize %></h5>
 
         <div>
-        <a href="/residents/<%= resident.id %>"> Click Here to Update </a>
+        <a class="btn btn-default" href="/residents/<%= resident.id %>"> View Resident </a>
         </div>
-
-        <div>
+        <br>
+        <div class="btn btn-default">
         <%= link_to  'Delete', "/residents/#{resident.id.to_s}", method: :delete %>
         </div>
       </div>
