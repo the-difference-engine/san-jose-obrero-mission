@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get "/" => "pages#index" 
+  get "/" => "residents#index" 
 
 
   get "/residents" => "residents#index"
