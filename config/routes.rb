@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get "/" => "residents#index" 
+  get "/" => "sessions#new" 
 
 
   get "/residents" => "residents#index"
@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   patch "/residents/:id" => "residents#update"
   delete "/residents/:id" => "residents#destroy" 
 
-
-  get "/" => "application#index"
 
   get "/beds" => "beds#index"
   get "/beds/:id" => "beds#show"
