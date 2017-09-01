@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get "/" => "pages#index" 
 
+
   get "/residents" => "residents#index"
   get "/residents/new" => "residents#new"
   post "/residents" => "residents#create"
