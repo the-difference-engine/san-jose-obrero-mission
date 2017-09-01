@@ -17,7 +17,14 @@ ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "
     documented: rand(2)==1,
     gender: rand(2) == 1 ? "male" : "female",
     ethnicity: ethnicities[rand(0..ethnicities.length)-1],
-    bed_id: rand(10)
+    bed_id: rand(10000),
+    resident_race: Faker::ChuckNorris.fact,
+    cause_of_homeslessness: Faker::ChuckNorris.fact,
+    length_of_homelessness: rand(5).to_s + ' ' + 'years',
+    prior_living_situation: Faker::ChuckNorris.fact,
+    number_of_shelters: rand(100),
+    chronically_homeless: false,
+    image: 'image'
     )
 end
 
@@ -27,11 +34,13 @@ room_beds.each do |room, beds|
   (1..beds).each do |bed| 
     Bed.create(
       top_or_bottom: "top",
-      occupied: true
+      occupied: true,
+      name: Faker::ChuckNorris.fact
       )
     Bed.create(
       top_or_bottom: "bottom",
-      occupied: false
+      occupied: false,
+      name: Faker::ChuckNorris.fact
       )
   end
 end

@@ -3,7 +3,7 @@
 <%= form_tag "/beds/#{@bed.id}", method: :patch do %>
   <div>
     <label for="Name">Name: </label>
-    <input type="text" name="name" value="<%= @bed.name %>">
+    <input type="text" name="name">
   </div>
   <div>
     <label for="Top or Bottom">Top or Bottom: </label>
