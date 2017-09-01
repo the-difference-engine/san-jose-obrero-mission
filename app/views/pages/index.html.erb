@@ -1,0 +1,17 @@
+<div id="app">
+  <% if !current_user %>
+    <a href="/login">Login</a>
+  <% else %>
+    <a href="/logout">Log Out</a>
+  <% end %>
+  <% if current_user.role == "admin" %>
+    <a href="/signup">Sign Up</a>
+  <% end %>
+
+    <br>
+  {{ message }}
+</div>
+
+
+
+

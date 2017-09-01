@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/" => "pages#index" 
 
-  get "/" => "application#index" 
 
   get "/residents" => "residents#index"
   get "/residents/new" => "residents#new"
@@ -11,14 +11,20 @@ Rails.application.routes.draw do
   patch "/residents/:id" => "residents#update"
   delete "/residents/:id" => "residents#destroy" 
 
-  devise_for :residential_aids, path: 'residential_aids'
-  devise_for :securities, path: 'securities'
-  devise_for :case_managers, path: 'case_managers'
+
   get "/" => "application#index"
 
   get "/beds" => "beds#index"
   get "/beds/:id" => "beds#show"
   get "/beds/:id/edit" => "beds#edit"
   patch "/beds/:id" => "beds#update"
+
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
+
 
 end
