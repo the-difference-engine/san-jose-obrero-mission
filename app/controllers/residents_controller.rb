@@ -56,10 +56,10 @@ end
                 image: params[:image],
                 bed_id: params[:bed_id],
                 resident_race: params[:resident_race],
-                cause_of_homelessness: params[:cause_of_homelessness],
+                cause_of_homeslessness: params[:cause_of_homeslessness],
                 length_of_homelessness: params[:length_of_homelessness],
                 prior_living_situation: params[:prior_living_situation],
-                number_of_shelters: param[:number_of_shelters].to_i,
+                number_of_shelters: params[:number_of_shelters].to_i,
                 chronically_homeless: params[:chronicallyhomeless]
               )
 

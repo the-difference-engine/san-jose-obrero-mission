@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get "/" => "pages#index" 
 
 
   get "/residents" => "residents#index"
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   delete "/residents/:id" => "residents#destroy" 
 
 
-  get "/" => "application#index"
+
 
   get "/beds" => "beds#index"
   get "/beds/:id" => "beds#show"
