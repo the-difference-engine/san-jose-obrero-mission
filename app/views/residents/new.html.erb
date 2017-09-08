@@ -130,7 +130,7 @@
   <div>Bed:
     <select name="bed_id"> 
       <% @beds.each do |bed| %>
-        <% if bed.occupied == true %>
+        <% if bed.occupied == false %>
           <option value="<%= bed.id %>"><%= bed.id %></option>
         <% end %>
       <% end %>
