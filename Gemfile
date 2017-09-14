@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'pry'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
@@ -21,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'faker'
+#gem 'faker'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -40,6 +41,16 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5' 
+  gem "factory_girl_rails", "~> 4.7.0"
+  gem 'shoulda-matchers', '~> 3.1'
+end
+
+group :test do
+   gem "faker", "~> 1.6.6"
+   gem "capybara", "~> 2.4.3"
+   gem "database_cleaner", "1.3.0"
+   gem "launchy", "~> 2.4.2"
+   gem "selenium-webdriver", "~> 2.43.0"
 end
 
 group :development do
