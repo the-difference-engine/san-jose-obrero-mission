@@ -51,19 +51,4 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
-
-  #describe "POST #create" do
-    #it "expect to create an user" do
-      #params = { resource: {
-                  #title: 'this is a title',
-                  #link: 'http://www.google.com',
-                  #description: 'this is the description for the resource'
-                 #}
-               #}
-      #post :create, params 
-      #resource = User.all
-      #expect(response).to redirect_to( '/' )
-      #expect(resource.length).to eq(2)
-    #end
-  #end
 end
