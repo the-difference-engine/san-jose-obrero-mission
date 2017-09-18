@@ -12,9 +12,9 @@
     </div>
   <% end %>
 
-  <% if current_user.role == "admin" %>
+  <% if current_user.present? && current_user.role == "admin" %>
     <div style="float: right; padding-top: 10px;">
-        <a class="btn btn-default" href="/signup">Sign Up</a>
+      <a class="btn btn-default" href="/signup">Sign Up</a>
     </div>
   <% end %>
 
