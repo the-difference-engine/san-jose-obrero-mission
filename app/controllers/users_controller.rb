@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  before_action :authenticate_admin!
+  
   def new
     @role = ["admin", "case_manager", "residential aide", "security"]
     render 'new.html.erb'

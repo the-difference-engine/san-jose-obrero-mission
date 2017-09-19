@@ -1,4 +1,6 @@
 class BedsController < ApplicationController
+  before_action :authenticate_user!
+  
 
   def index
     @beds = Bed.all
