@@ -4,6 +4,7 @@
   <% else %>
     <a href="/logout">Log Out</a>
   <% end %>
+  <!-- if current_user.role.nil? ? "You need to be an Admin" : <a href="/signup">Sign Up</a> -->
   <% if current_user.role == "admin" %>
     <a href="/signup">Sign Up</a>
   <% end %>
@@ -37,5 +38,8 @@
         <%= link_to  'Delete', "/residents/#{resident.id.to_s}", method: :delete %>
         </div>
       </div>
-    </div>
+    </div> 
+
+    <button type="button" class="btm btn-success">Success</button>
+    
   <% end %>
