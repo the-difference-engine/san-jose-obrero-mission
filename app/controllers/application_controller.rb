@@ -9,4 +9,17 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     redirect_to '/login' unless current_user
   end
+
+  def authenticate_admin!
+    redirect_to 'login' unless current_user.role == 'admin' 
+  end
+
+  def authenticate_case_manager!
+    redirect_to '/login' unless current_user.role == 'case_manager' || current_user.role == 'admin'
+  end
+ 
+  def authenticate_residential_aide!
+    redirect_to 'login' unless current_user.role == 'residential_aide' || current_user.role == 'admin' || current_user.role == 'case_manager'
+  end
+  
 end

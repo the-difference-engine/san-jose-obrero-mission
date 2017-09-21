@@ -1,5 +1,6 @@
 class ResidentsController < ApplicationController 
-
+  before_action :authenticate_user!
+  before_action :authenticate_case_manager!
   def index 
     @residents = Resident.all 
     render "index.html.erb" 
