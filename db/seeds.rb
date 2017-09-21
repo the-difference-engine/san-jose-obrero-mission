@@ -1,10 +1,18 @@
 Bed.delete_all()
 Resident.delete_all()
+User.delete_all()
 
 connection = ActiveRecord::Base.connection()
 connection.execute('ALTER SEQUENCE beds_id_seq RESTART WITH 1')
 connection.execute('ALTER SEQUENCE residents_id_seq RESTART WITH 1')
+connection.execute('ALTER SEQUENCE users_id_seq RESTART WITH 1')
 
+User.create([
+    {email: 'a@mail.com', password: 'password' , role: 0},
+    {email: 'cm@mail.com', password: 'password' , role: 1},
+    {email: 'ra@mail.com', password: 'password' , role: 2},
+    {email: 's@mail.com', password: 'password' , role: 3}
+  ])
 
 ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "asian", "american indian"]
 50.times do
