@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_admin!
   
   def new
-    @role = ["admin", "case_manager", "residential aide", "security"]
+    @role = ["admin", "case_manager", "residential_aide", "security"]
     render 'new.html.erb'
   end
 
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:success] = 'Successfully created account!'
-      redirect_to '/'
+      redirect_to '/residents'
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/signup'

@@ -1,19 +1,26 @@
-<div id="app">
+<!-- <div id="app">
+  {{ message }}
+</div> -->
+
   <% if !current_user %>
-    <a href="/login">Login</a>
+    <div style="float: right; padding-left: 20px; padding-top: 10px;">
+        <a class="btn btn-default" href="/login">Login</a>
+    </div>
   <% else %>
-    <a href="/logout">Log Out</a>
-  <% end %>
-  <% if current_user.role == "admin" %>
-    <a href="/signup">Sign Up</a>
+    <div style="float: right; padding-left: 20px; padding-top: 10px;">
+        <a class="btn btn-default" href="/logout">Log Out</a>
+    </div>
   <% end %>
 
-    <br>
-  {{ message }}
-</div>
+  <% if current_user.present? && current_user.role == "admin" %>
+    <div style="float: right; padding-top: 10px;">
+      <a class="btn btn-default" href="/signup">Sign Up</a>
+    </div>
+  <% end %>
 
 <h1>All Residents!</h1> 
 
+<div style="float: left; padding-right: 50px;"><a href="/beds" class="btn btn-default">Beds</a></div>
 <div><a href="/residents/new" class="btn btn-default">New Resident</a></div>
 <br>
 <div class="row">
