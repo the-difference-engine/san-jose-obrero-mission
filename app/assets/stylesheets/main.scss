@@ -23,7 +23,7 @@
 }
 
 .navbar-fixed-left + .container {
-  padding-left: 160px;
+  padding-left: 60px;
 }
 
 .container {
@@ -32,5 +32,12 @@
 
 .wrapper {
   margin-left: 140px;
+}
+
+.header {
+  position: fixed;
+  margin-top: -35px;
+  margin-left: 170px;
+
 }
 
