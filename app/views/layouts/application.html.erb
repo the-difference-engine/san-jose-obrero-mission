@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SjomApp</title>
-  <%= csrf_meta_tags %>
+    <head>
+        <title>SjomApp</title>
+        <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-<body>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header"> 
+                    <%= image_tag "Logo-Web-copia.png", class: "logo", alt: "company logo" %>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><h4>Operations Portal</h4></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-user"></span> Joe Manager</a>
+                    </li>
+                    <li class="right-margin">
+                        <button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span> Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+        <!--navigation-->
+        <div class="navbar navbar-default navbar-fixed-left">
+            <ul class="nav navbar-nav">
+                <li><a href="#home"><i class="fa fa-home"></i><span> Residents </span></a></li>
+                <li><a href="#info"><i class="fa fa-info-circle"></i><span> Beds </span></a></li>
+                <li><a href="#love"><i class="fa fa-heart"></i><span> Meals </span></a></li>
+            </ul>
+        </div>
+        <!--end navigation-->
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header"> 
-        <%= image_tag "Logo-Web-copia.png", class: "logo", alt: "company logo" %>
-      </div>
-      <ul class="nav navbar-nav">
-        <li><h4>Operations Portal</h4></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Joe Manager</a></li>
-        <li class="right-margin"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span> Logout</button><li>
+
+        <!-- <ul class="nav nav-pills nav-stacked">
+            <li>Residents</li>
+            <li>Beds</li>
+            <li>Meals</li>
         </ul>
-      </div>
-    </nav> 
-    <!--navigation-->
-    <div class="navbar navbar-default navbar-fixed-left">
-      <ul class="nav navbar-nav">
-        <li><a href="#home"><i class="fa fa-home"></i><span> Residents </span></a></li>
-        <li><a href="#info"><i class="fa fa-info-circle"></i><span> Beds </span></a></li>
-        <li><a href="#love"><i class="fa fa-heart"></i><span> Meals </span></a></li>
-      </ul>
-    </div>
-    <!--end navigation-->
+        -->
 
-
-    <!-- <ul class="nav nav-pills nav-stacked">
-      <li>Residents</li>
-      <li>Beds</li>
-      <li>Meals</li>
-   </ul>
- -->
-
- <div class="container">
-  <% flash.each do |name, message| %>
-  <div class="alert alert-<%= name %> alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p><%= message %></p>
-  </div>
-  <% end %>
-  <%= yield %>
-</div>
-</body>
+            <% flash.each do |name, message| %>
+                <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p><%= message %></p>
+                </div>
+            <% end %>
+            <%= yield %>
+        </div>
+    </body>
 </html>
