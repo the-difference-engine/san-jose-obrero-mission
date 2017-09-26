@@ -10,8 +10,13 @@
   height: 50px;
 } 
 
+.top-navbar {
+  background-color: #D3D2D3;
+}
+
 .navbar-fixed-left {
   width: 140px;
+  margin-top: 50px;
   position: fixed;
   border-radius: 0;
   height: 100%;
@@ -34,10 +39,8 @@
   margin-left: 140px;
 }
 
-.header {
-  position: fixed;
-  margin-top: -35px;
-  margin-left: 170px;
+.dashboard-count {
+  font-weight: normal;
+  font-size: 50%;
 
 }
-
