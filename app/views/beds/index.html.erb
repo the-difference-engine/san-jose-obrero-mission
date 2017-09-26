@@ -1,5 +1,54 @@
-<h1>Hello Beds!</h1>
-<div style="padding-bottom: 10px;"><a href="/residents" class="btn btn-default">Residents Dashboard</a></div>
+<div class="container bed-container">
+<h2>Residents <span class="dashboard-count">10</span></h2>
+  <!-- <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>    -->         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Admitted</th>
+        <th>Released</th>
+        <th>Tenure</th>
+        <th>Status</th>
+        <th>Bed #</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Picture</td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>11/11/2011</td>
+        <td>22/22/2012</td>
+        <td>45</td>
+        <td>Current</td>
+        <td>Current</td>
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>11/11/2011</td>
+        <td>22/22/2012</td>
+        <td>45</td>
+        <td>Current</td>
+        <td>Current</td>
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>11/11/2011</td>
+        <td>22/22/2012</td>
+        <td>45</td>
+        <td>Current</td>
+        <td>Current</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <div class="row">
   <% @beds.each do |bed| %>
@@ -12,4 +61,4 @@
       </div>
     </div>
   <% end %>
-</div>
+</div> 
