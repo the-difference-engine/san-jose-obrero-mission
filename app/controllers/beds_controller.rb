@@ -3,6 +3,7 @@ class BedsController < ApplicationController
   
 
   def index
+    this is a cool change that brakes stuff
     @beds = Bed.all
     render "index.html.erb"
   end
