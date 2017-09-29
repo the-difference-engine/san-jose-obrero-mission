@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  root "static_pages#landing"
   get "/residents" => "residents#index"
   get "/residents/new" => "residents#new"
   post "/residents" => "residents#create"
