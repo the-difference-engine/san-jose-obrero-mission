@@ -4,7 +4,8 @@ class BedsController < ApplicationController
 
   def index
     @beds = Bed.all
-    render "index.html.erb"
+    render json: @bed
+    #render "index.html.erb"
   end
 
   def show
