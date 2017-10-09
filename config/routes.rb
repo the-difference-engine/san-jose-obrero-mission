@@ -24,9 +24,13 @@ Rails.application.routes.draw do
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
+ 
+
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :residents, only: [:index, :create, :show, :update, :destroy]
+      resources :beds, only: [:index, :create, :show, :update, :destroy]
+      resources :users, only: [:index, :create, :show, :update, :destroy]
     end
   end
 end
