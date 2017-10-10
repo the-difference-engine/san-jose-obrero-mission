@@ -1,4 +1,4 @@
- class Api::V1::UserSerializer < ActiveModel::Serializer
+ class Api::V1::ResidentSerializer < ActiveModel::Serializer
     attributes :first_name,
                :last_name,
                :date,
@@ -14,7 +14,8 @@
                :prior_living_situation,
                :number_of_shelters,
                :chronically_homeless,
-               :image_id
+               :image
+ end
                           
 
 
