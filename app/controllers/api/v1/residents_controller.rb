@@ -8,20 +8,20 @@ module Api
         end
 
         def create
-          @resident = Resident.create!(resident_params)
-          json_response(@resident, :created)
+          resident = Resident.create!(resident_params)
+          render json: resident
         end
 
 
   
         def show
           # Resident = Resident.find(params[:id])
-          json_response(@resident)
+          render json: @resident
         end
 
         def update
           @resident.update(resident_params)
-          head :no_content
+          render json: @resident
         end
 
         def destroy
