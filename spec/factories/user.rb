@@ -10,5 +10,5 @@ FactoryGirl.define do
     role 0
   end
 
-  # keep going for the rest
+  # TODO keep going for the rest
 end

@@ -1,5 +1,4 @@
 require 'rails_helper'
-include RequestSpecHelper
 
 RSpec.describe SessionsController, type: :controller do
 
