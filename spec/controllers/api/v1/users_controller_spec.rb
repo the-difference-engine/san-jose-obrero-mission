@@ -10,16 +10,20 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       expect(response).to have_http_status(200)
     end
 
-    it 'expect to return 3 users' do
-      create(:user,
-             role: 1)
+    it 'expect to return 4 users' do
+      create(:user)
       create(:admin_user)
+      create(:case_manager)
+      create(:residential_aide)
+      create(:security)
 
       get :index, format: :json
       json = JSON.parse(response.body)
       expect(json).not_to be_empty
-      expect(json.size).to eq(4)
-      expect(json[1]["email"]).to eq('test2@email.com')
+      expect(json.size).to eq(5)
+      expect(json[0]["email"]).to eq('test1@email.com')
+      expect(json[2]["role"]).to eq("case_manager")
+      expect(json[1]["role"]).to eq("admin")
     end
   end
 end
