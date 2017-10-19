@@ -21,9 +21,9 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       json = JSON.parse(response.body)
       expect(json).not_to be_empty
       expect(json.size).to eq(5)
-      expect(json[0]["email"]).to eq('admin@email.com')
-      expect(json[1]["role"]).to eq("case_manager")
-      expect(json[0]["role"]).to eq("admin")
+      expect(json[0]["email"]).to eq('test1@email.com')
+      expect(json[2]["role"]).to eq("case_manager")
+      expect(json[1]["role"]).to eq("admin")
     end
   end
 end

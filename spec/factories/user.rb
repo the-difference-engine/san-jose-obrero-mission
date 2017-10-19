@@ -28,5 +28,4 @@ FactoryGirl.define do
     role 3
   end
 
-  # TODO keep going for the rest
 end
