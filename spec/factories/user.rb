@@ -10,5 +10,23 @@ FactoryGirl.define do
     role 0
   end
 
+  factory :case_manager, class: User do
+    email 'cm@email.com'
+    password 'password'
+    role 1
+  end
+
+  factory :residential_aide, class: User do
+    email 'ra@email.com'
+    password 'password'
+    role 2
+  end
+
+  factory :security, class: User do
+    email 's@email.com'
+    password 'password'
+    role 3
+  end
+
   # TODO keep going for the rest
 end
