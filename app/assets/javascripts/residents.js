@@ -1,4 +1,5 @@
 var residentsPayload = [
+    ["first_name", "last_name", "date", "hmis_number", "hmis_entry_date", "documented", "gender", "ethnicity", "created_at", "updated_at", "bed_id", "resident_race", "cause_of_homeslessness", "length_of_homelessness", "prior_living_situation", "number_of_shelters", "chronically_homeless", "image"],
     {
         "first_name": "Gabe",
         "last_name": "Weimann",
@@ -901,29 +902,17 @@ var residentsPayload = [
     }
 ];
 
-var residentsTitles = ["first_name", "last_name", "date", "hmis_number", "hmis_entry_date", "documented", "gender", "ethnicity", "created_at", "updated_at", "bed_id", "resident_race", "cause_of_homeslessness", "length_of_homelessness", "prior_living_situation", "number_of_shelters", "chronically_homeless", "image"];
-
 
 
 $(function() {
-    var thead = $("<thead />"), td;
-    td = $("<td />");
-  $.each(residentsTitles, function(_, titles) {
-    console.log(titles);
-    td.append("<td>"+titles+"</td>");
     var tbody = $("<tbody />"),tr;
-  console.log(tbody);
   $.each(residentsPayload,function(_,obj) {
-      // console.log(_);
-      // console.log(obj);
-      tr = $("<tr />");
+    tr = $("<tr />");
       $.each(obj,function(_,text) {
         tr.append("<td>"+text+"</td>");
-        // console.log(text);
       });
-      // console.log(tr);
-      tr.appendTo(tbody);
-    });
+    tr.appendTo(tbody);
+  });
     tbody.appendTo("#table1");    
-  });  
 });
+
