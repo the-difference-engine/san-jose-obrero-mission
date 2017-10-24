@@ -1,5 +1,6 @@
  class Api::V1::ResidentSerializer < ActiveModel::Serializer
-    attributes :first_name,
+    attributes :full_name,
+               :first_name,
                :last_name,
                :date,
                :hmis_number,
