@@ -2,10 +2,11 @@
   var bedsPayload = [ 
 
   {
-   "name": "name",
-   "top_or_bottom": "top_or_bottom",
-   "occupied": "occupied"
+   "name": "Bunk Name",
+   "top_or_bottom": "Top or Bottom",
+   "occupied": "Occupied"
  },
+ 
  {
    "name": "No statement can catch the ChuckNorrisException.",
    "top_or_bottom": "bottom",
