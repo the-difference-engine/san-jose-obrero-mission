@@ -1,4 +1,3 @@
-
 var residentsPayload = [
     ["","Full Name", "Gender", "Admitted", "Released", "Tenure", "Status", "bed #"],
     {
@@ -14,6 +13,9 @@ var residentsPayload = [
 ];
 
 
+var residentsPayload =  $.getJSON( "http://localhost:3000/api/v1/residents", function( data ) {
+  console.log(data);
+  });
 
 $(function() {
   var tbody = $("<tbody />"),tr;
