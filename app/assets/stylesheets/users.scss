@@ -1,18 +1,40 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0px;
+}
 
 .nav-width {
   max-width: 105px;
   border-color: black;
- 
+}
+.box-width {
+ width: 30%;
+}
+
+#red {
+  color: #990000;
+  font-weight: bold;
+}
+
+#box {
+  width: 1100px;
+  height: 50px;
+  margin-bottom: 50px;
+  border-color: white;
+  background-color: transparent;
+  font-size: 30px;
+  font-family: italic;
+  font-weight: bold;
+  color: red;
 }
 
 .logo-center {
   background-image: url("Logo-Web-copia.png") no-repeat center center fixed;
   height: auto;
+  width: 60%;
+  margin: 0 450px ;
+  position: absolute;
 
-  margin: 0 450px;
-  display: block;
-  
 }

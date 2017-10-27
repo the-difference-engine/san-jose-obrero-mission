@@ -1,14 +1,52 @@
+<div id="box">You Have Been Successfully Logged Out</div>
 
   <div> <%= image_tag "Logo-Web-copia.png", class: "logo logo-center", alt: "company logo" %> </div> 
 
-<h1>Login</h1>
+<h1 id="red">Login</h1>
 <%= form_tag "/login", method: :post do %>
   <div class="form-group">
-    Email: <input type="email" name="email" class="form-control">
+    Email: <input type="email" name="email"  placeholder="Enter Email" class="form-control box-width">
   </div>
   <div>
-    Password: <input type="password" name="password" class="form-control">
+    Password: <input type="password" name="password" placeholder="Enter Password" class="form-control box-width">
   </div>
   <br>
   <input type="submit" class="btn btn-danger" value="Log In" class="form-control">
 <% end %>
+
+
+
+
+
+
+<script type="text/javascript">
+var box = document.getElementById('box');
+
+function fadeOut(elem, speed) {
+
+  if (!elem.style.opacity) {
+    elem.style.opacity = 1;
+  }
+  setInterval(function() {
+
+    elem.style.opacity -= 0.02;
+ 
+  }, speed / 20);
+}
+
+fadeOut(box, 2000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- </body> -->
