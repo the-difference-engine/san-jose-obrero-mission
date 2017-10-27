@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   patch "/beds/:id" => "beds#update"
 
   get "/signup" => "users#new"
+  get "/users" => "users#index"
   post "/users" => "users#create"
 
   get "/login" => "sessions#new"

@@ -1,3 +1,18 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-width {
+  max-width: 105px;
+  border-color: black;
+ 
+}
+
+.logo-center {
+  background-image: url("Logo-Web-copia.png") no-repeat center center fixed;
+  height: auto;
+
+  margin: 0 450px;
+  display: block;
+  
+}
