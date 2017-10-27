@@ -4,7 +4,7 @@ module Api
       before_action :set_user, only: [:show, :update, :destroy]
 
       def index
-        render json: User.all
+        render json: {users: User.all, table_headers: table_headers}
       end
 
       def show
@@ -27,6 +27,10 @@ module Api
       end
 
       private
+
+        def table_headers
+         ["email", "role"]
+        end  
 
         def user_params
           params.permit(:id, :email, :role, :password)
