@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  root "static_pages#landing"
+  # root "static_pages#landing"
   get "/residents" => "residents#index"
   get "/residents/new" => "residents#new"
   post "/residents" => "residents#create"
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get "/users" => "users#index"
   post "/users" => "users#create"
 
+  get "" => "sessions#new"
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
