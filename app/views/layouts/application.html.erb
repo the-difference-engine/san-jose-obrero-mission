@@ -11,7 +11,7 @@
 <body>
  <% if session[:user_id] %>
  <!--navigation-->
- <nav class="navbar navbar-default navbar-fixed-top top-navbar">
+ <nav class="navbar navbar-default navbar-fixed-top top-navbar navv">
   <div class="container-fluid">
     <div class="navbar-header"> 
       <%= image_tag "Logo-Web-copia.png", class: "logo", alt: "company logo" %>
@@ -24,7 +24,7 @@
       <li class="right-margin" id="button"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents/new"> Add Resident</button></li>
       <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/signup"> Sign Up</button></li>
       <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents"> Home</button></li>
-      <li class="right-margin" id="button1"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/logout"> Logout</button></li>
+      <li class="right-margin" id="button1"><button class="btn btn-default navbar-btn sharp" onclick="alert('You have now Logged Out')"><span class="glyphicon glyphicon-log-in"></span><a href="/logout"> Logout</button></li>
     </ul>
   </div>
 </nav> 
@@ -49,5 +49,23 @@
     <%= yield %>
   </div>
 </div>
+
+<script type="text/javascript">
+var box = document.getElementById('box');
+
+function fadeOut(element, speed) {
+  // window.location.href = "/login";
+  if (!element.style.opacity) {
+    element.style.opacity = 1;
+  } 
+  setInterval(function() {
+
+    element.style.opacity -= 0.02;
+ 
+  }, speed / 20);
+}
+
+fadeOut(box, 2000);
+</script>
 </body>
 </html>

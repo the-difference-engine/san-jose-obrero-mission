@@ -1,6 +1,7 @@
-
+   <% if current_user == nil %>
+   <% else %>
     <div id="box">You Have Been Successfully Logged Out</div>
-
+  <% end %>
   <div> <%= image_tag "Logo-Web-copia.png", class: "logo logo-center", alt: "company logo" %> </div> 
 
 <h1 id="red">Login</h1>
@@ -20,23 +21,7 @@
 
 
 
-<script type="text/javascript">
-var box = document.getElementById('box');
 
-function fadeOut(elem, speed) {
-
-  if (!elem.style.opacity) {
-    elem.style.opacity = 1;
-  }
-  setInterval(function() {
-
-    elem.style.opacity -= 0.02;
- 
-  }, speed / 20);
-}
-
-fadeOut(box, 2000);
-</script>
 
 
 

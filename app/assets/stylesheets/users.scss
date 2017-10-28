@@ -4,12 +4,21 @@
 * {
   margin: 0px;
 }
+.navv {
+  background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
+  background-size: cover;
+}
 
 .nav-width {
   max-width: 105px;
-  border-color: black;
-  height: 1000px;
+  border-color: white;
+  border-style: dotted;
+  font-size: 15px;
+  height: 650px;
+  background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
+  background-size: cover;
 }
+
 .box-width {
  width: 30%;
 }
@@ -32,7 +41,7 @@
 }
 
 body {
- padding-top: 15px; 
+ padding-top: 12px; 
 }
 
 #button {
