@@ -20,8 +20,11 @@
       <li><h4>Operations Portal</h4></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Joe Manager</a></li>
-      <li class="right-margin"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/logout"> Logout</button></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user" id="name"></span> <%= current_user.email %> - <%= current_user.role %></a></li>
+      <li class="right-margin" id="button"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents/new"> Add Resident</button></li>
+      <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/signup"> Sign Up</button></li>
+      <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents"> Home</button></li>
+      <li class="right-margin" id="button1"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/logout"> Logout</button></li>
     </ul>
   </div>
 </nav> 

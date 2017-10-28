@@ -8,6 +8,7 @@
 .nav-width {
   max-width: 105px;
   border-color: black;
+  height: 1000px;
 }
 .box-width {
  width: 30%;
@@ -28,6 +29,26 @@
   font-family: italic;
   font-weight: bold;
   color: red;
+}
+
+body {
+ padding-top: 15px; 
+}
+
+#button {
+  margin-right: 10px;
+}
+
+#button1 {
+ margin-top: -30px;
+}
+
+#button2 {
+ margin-top: -30px;
+}
+
+#name {
+ margin-left: 10px;
 }
 
 .logo-center {
