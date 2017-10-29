@@ -1,7 +1,6 @@
-   <% if current_user == nil %>
-   <% else %>
+ 
     <div id="box">You Have Been Successfully Logged Out</div>
-  <% end %>
+
   <div> <%= image_tag "Logo-Web-copia.png", class: "logo logo-center", alt: "company logo" %> </div> 
 
 <h1 id="red">Login</h1>
@@ -16,6 +15,24 @@
   <input type="submit" class="btn btn-danger" value="Log In" class="form-control">
 <% end %>
 
+<script type="text/javascript">
+function fadeOut(element, speed) {
+  if (!element.style.opacity) {
+    element.style.opacity = 1;
+  } 
+  setInterval(function() {
+    element.style.opacity -= 0.02;
+  }, speed / 20);
+}
+var box = document.getElementById('box');
+
+if (localStorage.getItem("justLoggedOut") === "true") {
+  fadeOut(box, 2000);
+} else {
+  box.style.opacity = 0;
+}
+localStorage.setItem("justLoggedOut", null);
+</script>
 
 
 
