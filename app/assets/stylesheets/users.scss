@@ -5,18 +5,18 @@
   margin: 0px;
 }
 .navv {
-  background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
-  background-size: cover;
+  // background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
+  // background-size: cover;
+  border-color: black;
+  border-style: solid;
 }
 
 .nav-width {
   max-width: 105px;
-  border-color: white;
-  border-style: dotted;
+  border-color: black;
+  border-style: solid;
   font-size: 15px;
-  height: 650px;
-  background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
-  background-size: cover;
+  height: 700px;
 }
 
 .box-width {
@@ -40,9 +40,7 @@
   color: red;
 }
 
-body {
- padding-top: 12px; 
-}
+
 
 #button {
   margin-right: 10px;
