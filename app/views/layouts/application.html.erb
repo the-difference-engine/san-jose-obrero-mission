@@ -11,7 +11,7 @@
 <body>
  <% if session[:user_id] %>
  <!--navigation-->
- <nav class="navbar navbar-default navbar-fixed-top top-navbar">
+ <nav class="navbar navbar-default navbar-fixed-top top-navbar navv">
   <div class="container-fluid">
     <div class="navbar-header"> 
       <%= image_tag "Logo-Web-copia.png", class: "logo", alt: "company logo" %>
@@ -20,17 +20,20 @@
       <li><h4>Operations Portal</h4></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Joe Manager</a></li>
-      <li class="right-margin"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span> Logout</button></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user" id="name"></span> <%= current_user.email %> - <%= current_user.role %></a></li>
+      <li class="right-margin" id="button"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents/new"> Add Resident</button></li>
+      <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/signup"> Add User</button></li>
+      <li class="right-margin" id="button2"><button class="btn btn-default navbar-btn sharp "><span class="glyphicon glyphicon-log-in"></span><a href="/residents"> Home</button></li>
+      <li class="right-margin" id="button1"><button class="btn btn-default navbar-btn sharp" onclick="localStorage.setItem('justLoggedOut', 'true');"><span class="glyphicon glyphicon-log-in"></span><a href="/logout"> Logout</button></li>
     </ul>
   </div>
 </nav> 
 
-<div class="navbar navbar-default navbar-fixed-left">
+<div class="navbar navbar-default navbar-fixed-left nav-width">
   <ul class="nav navbar-nav">
-    <li><a href="#home"><i class="fa fa-home"></i><span> Residents </span></a></li>
-    <li><a href="#info"><i class="fa fa-info-circle"></i><span> Beds </span></a></li>
-    <li><a href="#love"><i class="fa fa-heart"></i><span> Meals </span></a></li>
+    <li><a href="/residents"><i class="fa fa-home"></i><span> Residents </span></a></li>
+    <li><a href="/beds"><i class="fa fa-info-circle"></i><span> Beds </span></a></li>
+    <li><a href="/users"><i class="fa fa-heart"></i><span> Users </span></a></li>
   </ul>
 </div>
 <% end %>
@@ -46,5 +49,9 @@
     <%= yield %>
   </div>
 </div>
+
+<script type="text/javascript">
+
+</script>
 </body>
 </html>

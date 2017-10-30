@@ -1,0 +1,54 @@
+<div class="container bed-container">
+<h2>Users <span class="dashboard-count">4</span></h2>
+  <!-- <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>    -->         
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Full Name</th>
+        <th>Role</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Picture</td>
+        <td>Eric Davis</td>
+        <td>User Role</td>
+        <td>Current</td>
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>Sandi Metz</td>
+        <td>User Role</td>
+        <td>Current</td>
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>Dezel Washington</td>
+        <td>User Role</td>
+        <td>Current</td>
+      </tr>
+       <tr>
+        <td>Picture</td>
+        <td>China Coleman</td>
+        <td>User Role</td>
+        <td>Current</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="row">
+  <% @users.each do |user| %>
+    <div class="col-md-3">
+      <div class="well">
+        <h4><a href="/users/<%= user.id %>">User</a></h4>
+        <h4>Email Address: <%= user.email %></h4>
+        <h4>Role: <%= user.role %></h4>
+      
+      </div>
+    </div>
+  <% end %>
+</div> 

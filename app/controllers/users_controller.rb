@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_admin!
+
+  def index 
+    @users = User.all 
+    render "index.html.erb" 
+  end 
   
   def new
     @role = ["admin", "case_manager", "residential_aide", "security"]
