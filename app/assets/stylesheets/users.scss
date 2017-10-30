@@ -7,16 +7,16 @@
 .navv {
   // background-image: url("http://ak2.picdn.net/shutterstock/videos/6203612/thumb/1.jpg") ;
   // background-size: cover;
-  border-color: black;
+
   border-style: solid;
 }
 
 .nav-width {
   max-width: 105px;
-  border-color: black;
-  border-style: solid;
+
+  position: fixed;
   font-size: 15px;
-  height: 700px;
+  height: 1000px;
 }
 
 .box-width {
