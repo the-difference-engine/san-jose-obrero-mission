@@ -12,14 +12,20 @@ $(function() {
     });
     tr.appendTo(tbody);
   $("<tbody />"),tr;
+  var t = 1
   $.each(residentsPayload.residents,function(_,obj) {
     tr = $("<tr />");
+        obj.id = t;
+        t += 1;
         tr.append("<td class='residentstable'> "+obj.id+" </td>");
         tr.append("<td class='residentstable'> "+obj.full_name+" </td>");
         tr.append("<td class='residentstable'> "+obj.gender+" </td>");
-        tr.append("<td class='residentstable'> "+obj.date+" </td>");
-        tr.append("<td class='residentstable'> "+obj.date+" </td>");
-        tr.append("<td class='residentstable'> "+obj.length_of_homelessness+" </td>");
+        var date = new Date(obj.date);
+        var rando = Math.floor((Math.random() * 3) + 1);
+        var tenure = (date.getMonth()+1+rando)-(date.getMonth()+1)
+        tr.append("<td class='residentstable'> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+        tr.append("<td class='residentstable'> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+        tr.append("<td class='residentstable'> "+(tenure+ " month(s)")+" </td>");
         tr.append("<td class='residentstable'> "+obj.documented+" </td>");
         tr.append("<td class='residentstable'> "+obj.bed_id+" </td>");
     tr.appendTo(tbody);
@@ -54,7 +60,6 @@ $(function() {
 var residentsPayload = {
     "residents": [
         {
-        "id": 1,
         "full_name": "Sage Quitzon",
         "first_name": "Sage",
         "last_name": "Quitzon",
