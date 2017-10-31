@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem "faker", "~> 1.6.6"
 gem 'pry'
 gem 'active_model_serializers'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,7 +41,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :test do
   gem "factory_girl_rails", "~> 4.7.0"
-  gem "faker", "~> 1.6.6"
   gem "capybara", "~> 2.4.3"
   gem "database_cleaner", "1.3.0"
   gem "launchy", "~> 2.4.2"
