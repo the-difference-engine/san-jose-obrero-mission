@@ -1,0 +1,280 @@
+Last login: Sun Oct 29 13:25:41 on ttys000
+~$ cd actualize/
+~/actualize$ cd san-jose-obrero-mission/
+~/actualize/san-jose-obrero-mission$ subl .
+~/actualize/san-jose-obrero-mission$ git add --all
+~/actualize/san-jose-obrero-mission$ git commit -m"fixxed navbar and changed name to Add User"
+[ed_navigation 142534b] fixxed navbar and changed name to Add User
+ 2 files changed, 9 insertions(+), 11 deletions(-)
+~/actualize/san-jose-obrero-mission$ git push origin ed_navigation
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 793 bytes | 0 bytes/s, done.
+Total 9 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+To https://github.com/the-difference-engine/san-jose-obrero-mission.git
+   7fe6dcb..142534b  ed_navigation -> ed_navigation
+~/actualize/san-jose-obrero-mission$ cd ..
+~/actualize$ clear
+
+
+
+
+
+
+
+
+~/actualize$ ls
+Barbershop/                meeting-manager-example-5/
+Blog/                      mini-capstone/
+Calculator.rb              mrericdavis.github.io/
+Capstone/                  newfolder/
+Chicago-API-Clients/       newjs.html
+Couch/                     online_resume/
+Dogs/                      params-game-app/
+Hat/                       params-security-app-5/
+Igotthis/                  personal/
+Pants/                     practice.html.erb
+PigGame/                   practice.rb
+Plays/                     react/
+SecondTest/                sample-app/
+Shirts/                    sample-exercises-app/
+Stripe/                    sample-team-app/
+Task/                      san-jose-obrero-mission/
+Todo/                      special/
+Windows/                   test-todo-app/
+contacts-app/              vuejs-people-app/
+index.html                 weather-api-client/
+js-async-examples/         witchHunt/
+js_intro.js
+~/actualize$ clear
+
+
+
+
+
+
+
+
+~/actualize$ mkdir projects
+~/actualize$ cd projects/
+~/actualize/projects$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/actualize/projects$ git init demo
+Initialized empty Git repository in /Users/ericdavis/actualize/projects/demo/.git/
+~/actualize/projects$ ls
+demo/
+~/actualize/projects$ cd demo
+~/actualize/projects/demo$ ls
+~/actualize/projects/demo$ ls -al
+total 0
+drwxr-xr-x   3 ericdavis  staff   102B Oct 30 09:40 ./
+drwxr-xr-x   3 ericdavis  staff   102B Oct 30 09:40 ../
+drwxr-xr-x  10 ericdavis  staff   340B Oct 30 09:40 .git/
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+~/actualize/projects/demo$ mate README.md
+-bash: mate: command not found
+~/actualize/projects/demo$ touch demofile
+~/actualize/projects/demo$ ls
+demofile
+~/actualize/projects/demo$ subl .
+~/actualize/projects/demo$ clear
+
+
+
+
+
+
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	demofile
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/actualize/projects/demo$ git add demofile
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   demofile
+
+~/actualize/projects/demo$ git commit -m"first file in demo repo"
+[master (root-commit) 0a29c5c] first file in demo repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demofile
+~/actualize/projects/demo$ git status
+On branch master
+nothing to commit, working directory clean
+~/actualize/projects/demo$ ls -al
+total 8
+drwxr-xr-x   4 ericdavis  staff   136B Oct 30 09:47 ./
+drwxr-xr-x   3 ericdavis  staff   102B Oct 30 09:40 ../
+drwxr-xr-x  13 ericdavis  staff   442B Oct 30 09:50 .git/
+-rw-r--r--   1 ericdavis  staff    21B Oct 30 09:48 demofile
+~/actualize/projects/demo$ clear
+
+~/actualize/projects/demo$ cd .git/
+~/actualize/projects/demo/.git$ ls -al
+total 40
+drwxr-xr-x  13 ericdavis  staff   442B Oct 30 09:50 ./
+drwxr-xr-x   4 ericdavis  staff   136B Oct 30 09:47 ../
+-rw-r--r--   1 ericdavis  staff    24B Oct 30 09:50 COMMIT_EDITMSG
+-rw-r--r--   1 ericdavis  staff    23B Oct 30 09:40 HEAD
+drwxr-xr-x   2 ericdavis  staff    68B Oct 30 09:40 branches/
+-rw-r--r--   1 ericdavis  staff   137B Oct 30 09:40 config
+-rw-r--r--   1 ericdavis  staff    73B Oct 30 09:40 description
+drwxr-xr-x  11 ericdavis  staff   374B Oct 30 09:40 hooks/
+-rw-r--r--   1 ericdavis  staff   137B Oct 30 09:50 index
+drwxr-xr-x   3 ericdavis  staff   102B Oct 30 09:40 info/
+drwxr-xr-x   4 ericdavis  staff   136B Oct 30 09:50 logs/
+drwxr-xr-x   7 ericdavis  staff   238B Oct 30 09:50 objects/
+drwxr-xr-x   4 ericdavis  staff   136B Oct 30 09:40 refs/
+~/actualize/projects/demo/.git$ cd ..
+~/actualize/projects/demo$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/actualize/projects/demo$ rm -rf .git
+~/actualize/projects/demo$ ls -al
+total 8
+drwxr-xr-x  3 ericdavis  staff   102B Oct 30 09:52 ./
+drwxr-xr-x  3 ericdavis  staff   102B Oct 30 09:40 ../
+-rw-r--r--  1 ericdavis  staff    21B Oct 30 09:48 demofile
+~/actualize/projects/demo$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+~/actualize/projects/demo$ cd ..
+~/actualize/projects$ cd demo
+~/actualize/projects/demo$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~/actualize/projects/demo$ git init .
+Initialized empty Git repository in /Users/ericdavis/actualize/projects/demo/.git/
+~/actualize/projects/demo$ ls -al
+total 8
+drwxr-xr-x   4 ericdavis  staff   136B Oct 30 09:54 ./
+drwxr-xr-x   3 ericdavis  staff   102B Oct 30 09:40 ../
+drwxr-xr-x  10 ericdavis  staff   340B Oct 30 09:54 .git/
+-rw-r--r--   1 ericdavis  staff    21B Oct 30 09:48 demofile
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	demofile
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/actualize/projects/demo$ touch License.md
+~/actualize/projects/demo$ subl .
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	License.md
+	demofile
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/actualize/projects/demo$ git add .
+~/actualize/projects/demo$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   License.md
+	new file:   demofile
+
+~/actualize/projects/demo$ git commit 
+
+Adding both a demofile
+and a LICENSE file to the repo
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   License.md
+#       new file:   demofile
+#
+-- INSERT --
