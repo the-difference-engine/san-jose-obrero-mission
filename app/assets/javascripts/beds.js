@@ -4,11 +4,6 @@ var bedsPayload = {
   "beds": [
 
     {
-      "name": "Bunk Name",
-      "occupied": "Occupied"
-    },
-
-    {
       "name": "No statement can catch the ChuckNorrisException.",
       "top_or_bottom": "bottom",
       "occupied": false
@@ -322,18 +317,21 @@ var bedsPayload = {
  
   "table_headers": [
     "name",
-    "top_or_bottom",
+    "top or bottom",
     "occupied"  
             
   ]
 }; 
 
 $(function() {
-  var tbody = $("<tbody />"),tr;
+  var tbody = $("<tbody />"), tr;
   $.each(bedsPayload.beds,function(_,obj) {
+
     tr = $("<tr />");
+
     $.each(obj,function(_,text) {
-      tr.append("<td>"+text+"</td>")
+
+      tr.append("<td>"+ text +"</td>")
     }); 
     tr.appendTo(tbody);
   });
