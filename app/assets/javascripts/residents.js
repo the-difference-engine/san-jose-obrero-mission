@@ -5,54 +5,39 @@
 //   });
 
 $(function() {
-  var tbody = 
-    tr = $("<th />");
-    tr.append($("<td></td>"));
-    $.each(residentsPayload.table_headers,function(_,text) {
-    tr.append("<th class='residentstable'>"+text+"</th>");
-    });
-    tr.appendTo(tbody);
-  $("<tbody />"),tr;
-  var t = 1
+  var table = $("<table />").addClass("table table-striped table-hover");
+  var tr = $("<tr />");
+  tr.append($("<th />"));
+  var thead = $("<thead />"),tr;
+  $.each(residentsPayload.table_headers,function(_,text) {
+    tr.append("<th> "+text+" </th>");
+    tr.appendTo(thead);
+  });
+
+  var tbody = $("<tbody />"),tr;
+  var t = 1;
   $.each(residentsPayload.residents,function(_,obj) {
     tr = $("<tr />");
-        obj.id = t;
-        t += 1;
-        tr.append("<td class='residentstable'> "+obj.id+" </td>");
-        tr.append("<td class='residentstable'> "+obj.full_name+" </td>");
-        tr.append("<td class='residentstable'> "+obj.gender+" </td>");
-        var date = new Date(obj.date);
-        var rando = Math.floor((Math.random() * 3) + 1);
-        var tenure = (date.getMonth()+1+rando)-(date.getMonth()+1)
-        tr.append("<td class='residentstable'> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
-        tr.append("<td class='residentstable'> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
-        tr.append("<td class='residentstable'> "+(tenure+ " month(s)")+" </td>");
-        tr.append("<td class='residentstable'> "+obj.documented+" </td>");
-        tr.append("<td class='residentstable'> "+obj.bed_id+" </td>");
+    obj.id = t;
+    t += 1;
+    tr.append("<td> "+obj.id+" </td>");
+    tr.append("<td> "+obj.full_name+" </td>");
+    tr.append("<td> "+obj.gender+" </td>");
+    var date = new Date(obj.date);
+    var rando = Math.floor((Math.random() * 3) + 1);
+    var tenure = (date.getMonth()+1+rando)-(date.getMonth()+1)
+    tr.append("<td> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+    tr.append("<td> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+    tr.append("<td> "+(tenure+ " month(s)")+" </td>");
+    tr.append("<td> "+obj.documented+" </td>");
+    tr.append("<td> "+obj.bed_id+" </td>");
     tr.appendTo(tbody);
   });
-  tbody.appendTo("#table1");    
+  thead.appendTo(table);    
+  tbody.appendTo(table);
+  table.appendTo("#table1");    
 });
 
-
-// $(function() {
-//   var tbody = 
-//     tr = $("<th />");
-//     $.each(residentsPayload.table_headers,function(_,text) {
-//     tr.append($("<td></td>"))
-//     tr.append("<th class='residentstable'>"+text+"</th>");
-//     });
-//     tr.appendTo(tbody);
-//   $("<tbody />"),tr;
-//   $.each(residentsPayload.residents,function(_,obj) {
-//     tr = $("<tr />");
-//       $.each(obj,function(_,text) {
-//         tr.append("<td class='residentstable'>"+text+"</td>");
-//       });
-//     tr.appendTo(tbody);
-//   });
-//   tbody.appendTo("#table1");    
-// });
 
 
 
