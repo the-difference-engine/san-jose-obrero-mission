@@ -20,10 +20,10 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       get :index, format: :json
       json = JSON.parse(response.body)
       expect(json).not_to be_empty
-      expect(json.size).to eq(5)
-      expect(json[0]["email"]).to eq('test1@email.com')
-      expect(json[2]["role"]).to eq("case_manager")
-      expect(json[1]["role"]).to eq("admin")
+      expect(json["users"].size).to eq(5)
+      expect(json["users"][0]["email"]).to eq('test1@email.com')
+      expect(json["users"][2]["role"]).to eq("case_manager")
+      expect(json["users"][1]["role"]).to eq("admin")
     end
   end
 end

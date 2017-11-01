@@ -28,6 +28,12 @@ module Api
           @resident.destroy
           head :no_content
         end
+
+        private
+
+        def table_headers
+          # ['Full Name', ‘Gender’, ‘Admitted’, ‘Released’, ‘Tenure’, ‘Status’, ‘Bed Number’]
+        end
       end
     end
-  end
+end
