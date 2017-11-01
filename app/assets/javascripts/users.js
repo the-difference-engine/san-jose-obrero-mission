@@ -1,29 +1,25 @@
-
 $(function() {
-var thead = $("<thead />"),th;
-  // $.each(userPayload.table_headers,function(key,obj) {
-  //   th = $("<th />");
-  //   tr = $("<tr />");
-  //   tr.append("<td>"+obj.role+"</td>" + "<td>"+obj.email+"</td>");
-  //   th.append("<td>"+key+"</td>");
-  // });
-
-var tbody = $("<tbody />"),tr;
-  $.each(userPayload,function(key,value) { 
-
-  $.each(value, function(key,obj) {
-
-    th = $("<th />");
-    tr = $("<tr />");
-    tr.append("<td>"+obj.role+"</td>" + "<td>"+obj.email+"</td>" + "<td>"+obj.password_digest+"</td>");
-    th.append("<td>"+key+"</td>");
+    var table = $("<table />").addClass("table table-striped table-hover");
+    var tr = $("<tr />");
+    tr.append($("<th />"));
+    var thead = $("<thead />"),tr;
+  $.each(userPayload.table_headers,function(_,text) {
+        tr.append("<th> "+text+" </th>");
+        tr.appendTo(thead);
   });
+
+    var tbody = $("<tbody />"),tr;
+  $.each(userPayload.users,function(_,obj) {
+        tr = $("<tr />");
+        tr.append("<td></td>");
+        tr.append("<td> "+obj.email+" </td>");
+        tr.append("<td> "+obj.role+" </td>");
+        tr.appendTo(tbody);
       
-      // $.each(obj,function(_,text) {
-      // });
-    tr.appendTo(tbody);
   });
-  tbody.appendTo("#usersTable");
+    thead.appendTo(table);    
+    tbody.appendTo(table);
+    table.appendTo("#users_table");    
 });
 
 var userPayload = {
@@ -40,7 +36,7 @@ var userPayload = {
             "id": 2,
             "email": "cm@mail.com",
             "password_digest": "$2a$10$CBsn3DaNKzI3WHeNXQo9a.U8UvYpXXFYR0A5MAjJMtpGPW0kxF/Yi",
-            "role": "case_manager",
+            "role": "case manager",
             "created_at": "2017-10-26T23:50:43.717Z",
             "updated_at": "2017-10-26T23:50:43.717Z"
         },
@@ -48,7 +44,7 @@ var userPayload = {
             "id": 3,
             "email": "ra@mail.com",
             "password_digest": "$2a$10$kCiGKAemVhJoQdfE3HPJMeXwM4GeWE9EAbcqmhf1G9zoPNKafFlT.",
-            "role": "residential_aide",
+            "role": "residential aide",
             "created_at": "2017-10-26T23:50:43.791Z",
             "updated_at": "2017-10-26T23:50:43.791Z"
         },
