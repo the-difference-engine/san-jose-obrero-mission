@@ -1,16 +1,26 @@
 $(function() {
-  var tbody = $("<tbody />"), tr;
-  $.each(bedsPayload.beds,function(_,obj) {
-
-    tr = $("<tr />");
-
-    $.each(obj,function(_,text) {
-
-      tr.append("<td>"+ text +"</td>")
-    }); 
-    tr.appendTo(tbody);
+    var table = $("<table />").addClass("table table-striped table-hover");
+    var tr = $("<tr />");
+    tr.append($("<th />"));
+    var thead = $("<thead />"),tr;
+  $.each(bedsPayload.table_headers,function(_,text) {
+        tr.append("<th> "+text+" </th>");
+        tr.appendTo(thead);
   });
-  tbody.appendTo("#table_beds_payload");
+
+    var tbody = $("<tbody />"),tr;
+  $.each(bedsPayload.beds,function(_,obj) {
+        tr = $("<tr />");
+        tr.append("<td></td>");
+        tr.append("<td> "+obj.name+" </td>");
+        tr.append("<td> "+obj.top_or_bottom+" </td>");
+        tr.append("<td> "+obj.occupied+" </td>");
+        tr.appendTo(tbody);
+      
+  });
+    thead.appendTo(table);    
+    tbody.appendTo(table);
+    table.appendTo("#table_beds_payload");    
 });
 
 var bedsPayload = {
