@@ -1,42 +1,44 @@
-// var residentsPayload =  $.getJSON( "http://localhost:3000/api/v1/residents", function( data ) {
-//   console.log(data);
-//   });
+var url = 'http://localhost:3000/api/v1/residents';
+fetch(url)
+  .then((resp) => resp.json()) // Transform the data into json
+  .then(function(data) {
 
-$(function() {
-  var table = $("<table />").addClass("table table-striped table-hover");
-  var tr = $("<tr />");
-  tr.append($("<th />"));
-  var thead = $("<thead />"),tr;
-  $.each(residentsPayload.table_headers,function(_,text) {
-    tr.append("<th> "+text+" </th>");
-    tr.appendTo(thead);
-  });
+    $(function() {
+      var table = $("<table />").addClass("table table-striped table-hover");
+      var tr = $("<tr />");
+      tr.append($("<th />"));
+      var thead = $("<thead />");
+      $.each(data.table_headers,function(_,text) {
+        tr.append("<th> "+text+" </th>");
+        tr.appendTo(thead);
+      });
 
-  var tbody = $("<tbody />"),tr;
-  var t = 1;
-  $.each(residentsPayload.residents,function(_,obj) {
-    tr = $("<tr />");
-    obj.id = t;
-    t += 1;
-    tr.append("<td> "+obj.id+" </td>");
-    tr.append("<td> "+obj.full_name+" </td>");
-    tr.append("<td> "+obj.gender+" </td>");
-    var date = new Date(obj.date);
-    var rando = Math.floor((Math.random() * 3) + 1);
-    var tenure = (date.getMonth()+1+rando)-(date.getMonth()+1)
-    tr.append("<td> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
-    tr.append("<td> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
-    tr.append("<td> "+(tenure+ " month(s)")+" </td>");
-    tr.append("<td> "+obj.documented+" </td>");
-    tr.append("<td> "+obj.bed_id+" </td>");
-    tr.appendTo(tbody);
-  });
-  thead.appendTo(table);    
-  tbody.appendTo(table);
-  table.appendTo("#table1");    
-});
+      var tbody = $("<tbody />");
+      var t = 1;
+      $.each(data.residents,function(_,obj) {
+        tr = $("<tr />");
+        obj.id = t;
+        t += 1;
+        tr.append("<td> "+obj.id+" </td>");
+        tr.append("<td> "+obj.full_name+" </td>");
+        tr.append("<td> "+obj.gender+" </td>");
+        var date = new Date(obj.date);
+        var rando = Math.floor((Math.random() * 3) + 1);
+        var tenure = (date.getMonth()+1+rando)-(date.getMonth()+1)
+        tr.append("<td> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+        tr.append("<td> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </td>");
+        tr.append("<td> "+(tenure+ " month(s)")+" </td>");
+        tr.append("<td> "+obj.documented+" </td>");
+        tr.append("<td> "+obj.bed_id+" </td>");
+        tr.appendTo(tbody);
+      });
+      thead.appendTo(table);    
+      tbody.appendTo(table);
+      table.appendTo("#table1");    
+    });
+  })
 
-var residentsPayload = {
+var residentsPayloadOLD = {
     "residents": [
         {
         "full_name": "Sage Quitzon",
