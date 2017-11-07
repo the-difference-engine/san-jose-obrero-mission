@@ -2,19 +2,33 @@
 //   console.log(data);
 //   });
 
+var url = "http://localhost:3000/api/v1/residents";
+fetch(url)
+.then((resp) => resp.json())
+.then(function(data) {
+
+console.log("This is where the data begins");
+console.log(data);
+console.log("This is where the data ends");
+console.log(data.table_headers);
+
+
+
+
+
 $(function() {
   var table = $("<table />").addClass("table table-striped table-hover");
   var tr = $("<tr />");
   tr.append($("<th />"));
   var thead = $("<thead />"),tr;
-  $.each(residentsPayload.table_headers,function(_,text) {
+  $.each(data.table_headers,function(_,text) {
     tr.append("<th> "+text+" </th>");
     tr.appendTo(thead);
   });
 
   var tbody = $("<tbody />"),tr;
   var t = 1;
-  $.each(residentsPayload.residents,function(_,obj) {
+  $.each(data.residents,function(_,obj) {
     tr = $("<tr />");
     obj.id = t;
     t += 1;
@@ -34,6 +48,7 @@ $(function() {
   thead.appendTo(table);    
   tbody.appendTo(table);
   table.appendTo("#table1");    
+});
 });
 
 var residentsPayload = {

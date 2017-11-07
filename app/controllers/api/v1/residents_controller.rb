@@ -4,7 +4,9 @@ module Api
   
         # GET /v1/users
         def index
-          render json: Resident.all
+
+          render json: { residents: Resident.all, table_headers: table_headers }
+          
         end
 
         def create
@@ -32,7 +34,7 @@ module Api
         private
 
         def table_headers
-          # ['Full Name', ‘Gender’, ‘Admitted’, ‘Released’, ‘Tenure’, ‘Status’, ‘Bed Number’]
+          ["Full Name", "Gender", "Admitted", "Released", "Tenure", "Status", "Bed Number"]
         end
       end
     end
