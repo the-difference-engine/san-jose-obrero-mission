@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'annotate'
 gem "faker", "~> 1.6.6"
 gem 'pry'
 gem 'active_model_serializers'
