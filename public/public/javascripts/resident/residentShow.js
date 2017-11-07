@@ -1,7 +1,6 @@
 function getResident(residentId) {
   // var url = "https://qa-san-jose.herokuapp.com/api/v1/residents" + residentId;
   var url = "http://localhost:3000/api/v1/residents" + residentId;
-  
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
     console.log(url)
