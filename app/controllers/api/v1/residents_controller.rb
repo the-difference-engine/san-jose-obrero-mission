@@ -10,7 +10,7 @@ module Api
         end
 
         def create
-          resident = Resident.create!(resident_params)
+          resident = Resident.create!(postRequest)
           render json: resident
         end
 

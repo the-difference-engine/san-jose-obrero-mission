@@ -3,6 +3,39 @@
 //   });
 
 var url = "http://localhost:3000/api/v1/residents";
+
+
+var postData = {
+    first_name: params[:first_name].capitalize,
+    last_name: params[:last_name].capitalize,
+    date: params[:date].to_datetime,
+    hmis_number: params[:hmis_number],
+    hmis_entry_date: params[:hmis_entry_date].to_datetime,
+    documented: params[:documented],
+    gender: params[:gender],
+    ethnicity: params[:ethnicity],
+    bed_id: params[:bed_id],
+    image: params[:image],
+    resident_race: params[:resident_race],
+    cause_of_homeslessness: params[:cause_of_homelessness],
+    length_of_homelessness: params[:length_of_homelessness],
+    prior_living_situation: params[:prior_living_situation],
+    number_of_shelters: params[:number_of_shelters].to_i,
+    chronically_homeless: params[:chronicallyhomeless]
+
+};
+
+var postRequest = new Request(url, {
+    method: "POST", 
+    body: postData,
+
+});
+fetch(postRequest)
+.then(function() {
+
+
+});
+
 fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
