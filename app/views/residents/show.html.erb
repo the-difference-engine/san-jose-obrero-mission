@@ -2,24 +2,9 @@
 <div><a class="btn btn-default" href="/residents">Home</a></div>
 <br>
 
-<div class="row">
-    <div class="col-md-3">
-      <div class="well">
-        <div><h2>Name: <%= @resident.first_name %>   <%= @resident.last_name %></h2></div>
-        <h3>Bed: Bed Name</h3>
-        <h5>Gender: <%= @resident.gender %></h5>
-        <h5>Ethnicity: <%= @resident.ethnicity %></h5>
-        <h5>Date: <%= @resident.date.strftime("%b %d, %Y") %></h5>
-        <h5>HMIS Number: <%= @resident.hmis_number %></h5>
-        <h5>HMIS Entry Date: <%= @resident.hmis_entry_date.strftime("%b %d, %Y") %></h5>
-        <h5>Documented: <%= @resident.documented.to_s.capitalize %></h5>
-        <br>
-        <div>
-        <a class="btn btn-default" href="/residents/<%= @resident.id %>/edit">Update Resident</a>
-        </div>
-        <br>
-        <div class="btn btn-default">
-        <%= link_to  'Delete', "/residents/#{@resident.id.to_s}", method: :delete %>
-        </div>
-      </div>
-    </div>
+<div id="prerequisites_needs"></div>
+<div id="identification"></div>
+<div id="house_meetings"></div>
+<div id="buss_passes"></div>
+
+
