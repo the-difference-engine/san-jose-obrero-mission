@@ -10,8 +10,11 @@ module Api
         end
 
         def create
-          resident = Resident.create!(postRequest)
-          render json: resident
+
+          resident = Resident.new(resident_params)
+          if resident.save!
+            render json: resident
+          end
         end
 
 
@@ -33,9 +36,31 @@ module Api
 
         private
 
-        def table_headers
-          ["Full Name", "Gender", "Admitted", "Released", "Tenure", "Status", "Bed Number"]
-        end
+          def resident_params
+            params.require(:resident).permit(
+              :first_name,
+              :last_name,
+              :date,
+              :hmis_number,
+              :hmis_entry_date,
+              :documented,
+              :gender,
+              :ethnicity,
+              :bed_id,
+              :resident_race,
+              :cause_of_homelessness,
+              :length_of_homelessness,
+              :prior_living_situation,
+              :number_of_shelters,
+              :chronically_homeless,
+              :image
+            )
+
+          end
+
+          def table_headers
+            ["Full Name", "Gender", "Admitted", "Released", "Tenure", "Status", "Bed Number"]
+          end
       end
     end
 end
