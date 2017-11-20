@@ -1,140 +1,164 @@
 <h1>Register a Resident</h1>
 
-<div id="app">
-  {{ message }}
-</div>
 
-<div><a href="/residents" class="btn btn-default">Cancel</a></div>
+<h2>Add New Resident:</h2>
+<br>
 
-<div>
-<%= form_tag '/residents', method: :post do %>
+  <form id="residentForm" name="residents" action="/residents">
 
-  <div>First Name: <input type="text" name="first_name"></div>
-  <div>Last Name: <input type="text" name="last_name"></div>
-  <div>Date: <input type="date" name="date"></div>
-  <div>HMIS Number: <input type="text" name="hmis_number"></div>
-  <div>HMIS Entry Date: <input type="date" name="hmis_entry_date"></div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label class="control-label" for="first_name">FIRST NAME</label>
+        <input type="text" name="first_name" placeholder="John" class="form-control">
+      </div>
 
+      <div class="form-group col-md-6">
+        <label class="control-label" for="last_name">LAST NAME</label>
+        <input type="text" name="last_name" placeholder="Doe" class="form-control">
+      </div>
 
+    <div class="form-group col-md-4">
+      <label for="date">DATE</label>
+      <input type="date" name="date" class="form-control">
+    </div>
 
-  <div>Documented: 
-    <select name="documented">
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
+    <div class="form-group col-md-4">
+      <label for="hmis_number">HMIS NUMBER</label>
+      <input type="text" class="form-control" name="hmis_number" placeholder="123456">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="hmis_entry_date">HMIS ENTRY DATE</label>
+      <input type="date" class="form-control" name="hmis_entry_date">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="documented">DOCUMENTED</label>
+      <select name="documented" class="form-control">
+        <option selected>Choose...</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="gender">GENDER</label>
+      <select name="gender" class="form-control">
+        <option selected>Choose...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="transgender_f_to_m">Transgender: Female to Male</option>
+        <option value="transgender_m_to_f">Transgender: Male to Female</option>
+        <option value="does_not_identify">I do not identify with the above options</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="ethnicity">ETHNICITY</label>
+      <select name="ethnicity" class="form-control">
+        <option selected>Choose...</option>
+        <option value="hispanic">Hispanic/Latino</option>
+        <option value="Non-Hispanic/Non-Latino">Non-Hispanice/Non-Latino</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="resident_race">RACE</label>
+      <select name="resident_race" class="form-control"> 
+        <option selected>Choose...</option>
+        <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
+        <option value="Asian">Asian</option>
+        <option value="Black/African American">Black/African American</option>
+        <option value="Native Hawaiian/Other Pacific Islander">Native Hawaiian/Other Pacific Islander</option>
+        <option value="White">White</option>
+        <option value="American Indian/Alaskan Native & White">American Indian/Alaskan Native and White</option>
+        <option value="Asian & White">Asian and White </option>
+        <option value="Black/African American & White">Black/African American and White</option>
+        <option value="American Indian/alaskan Native/Black/African American">American Indian/alaskan Native/Black/African American</option>
+        <option value="American">American</option>
+        <option value="Other Multi-Racial (including Hispanic)">Other Multi-Racial (including Hispanic)</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="cause_of_homelessness">CAUSE OF HOMELESSNESS</label>
+      <select name="cause_of_homelessness" class="form-control">
+        <option selected>Choose...</option> 
+        <option value="Loss of job">Loss of job</option>
+        <option value="Insufficient Income">Insufficient Income</option>
+        <option value="Mismanagement of Income">Mismanagement of Income</option>
+        <option value="Loss of public assistance">Loss of public assistance</option>
+        <option value="Natural Disaster/Fire">Natural Disaster/Fire</option>
+        <option value="Eviction">Eviction</option>
+        <option value="No Affordable Housing">No Affordable Housing</option>
+        <option value="In-Transit/Traveling">In-Transit/Traveling</option>
+        <option value="Condemned/Substandard Housing">Condemned/Substandard Housing</option>
+        <option value="Lack of Utilities">Lack of Utilities</option>
+        <option value="Family Dispute">Family Dispute</option>
+        <option value="Domestic Violence">Domestic Violence</option>
+        <option value="Neighborhood Violence/Gang Intimidation">Neighborhood Violence/Gang Intimidation</option>
+        <option value="Release from Correctional Institution">Release from Correctional Institution</option>
+        <option value="Release from Mental Health Facility">Release from Mental Health Facility</option>
+        <option value="Drug Abuse">Drug Abuse</option>
+        <option value="Alcohol Abuse">Alcohol Abuse</option>
+        <option value="Medical Condition/ Phyically Disabled">Medical Condition/ Phyically Disabled</option>
+        <option value="Foreclosure">Foreclosure</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="length_of_homelessness">LENGTH OF HOMELESSNESS</label>
+      <input type="text" class="form-control" name="length_of_homelessness" placeholder="years">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
+      <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="chronically_homeless">CHRONICALLY HOMELESS</label>
+      <select name="chronically_homeless" class="form-control">
+        <option selected>Choose...</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="prior_living_situation">PRIOR LIVING SITUATION AS OF LAST NIGHT</label>
+      <select name="prior_living_situation" class="form-control">
+        <option selected>Choose...</option>
+        <option value="Non-housing">Non-housing(street, park, etc.)</option>
+        <option value="Emergency Shelter">Emergency Shelter</option>
+        <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
+        <option value="Psychiatric Facility">Psychiatric Facility</option>
+        <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
+        <option value="Hospitals">Hospitals</option>
+        <option value="Jail or Prison">Jail or Prison</option>
+        <option value="Domestic Violence Situation">Domestic Violence Situation</option>
+        <option value="Living with relatives/friends">Living with relatives/friends</option>
+        <option value="Rental housing/Eviction">Rental housing/Eviction</option>
+        <option value="Disaster/Fire">Disaster/Fire</option>
+        <option value="Condemned Housing">Condemned Housing</option>
+        <option value="Public Housing">Public Housing(CHA)</option>
+        <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
+        <option value="Other">Other Specify</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-1">
+      <label for="bed_id">BED</label>
+      <select name="bed_id" class="form-control">
+        <option value="1">1</option>
+      </select>
+    </div>
+    <div class="form-group pull-right">
+    <button onclick="submitResidentsForm()" type="submit" class="btn btn-primary">Add Resident</button>
+    <a href="/residents" class="btn btn-default">Cancel</a>
+    </div>
+
   </div>
 
-
-
-
-  <div>Gender: 
-    <select name="gender">
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="transgender_f_to_m">Transgender: Female to Male</option>
-      <option value="transgender_m_to_f">Transgender: Male to Female</option>
-      <option value="does_not_identify">I do not identify with the above options</option>
-    </select>
-  </div>
-
-
-  <div>Ethnicity:
-    <select name="ethnicity"> 
-      <option value="hispanic">Hispanic/Latino</option>
-      <option value="Non-Hispanic/Non-Latino">Non-Hispanice/Non-Latino</option>
-    </select>
-  </div>
-
-
-  <div>Race:
-    <select name="resident_race"> 
-      <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
-      <option value="Asian">Asian</option>
-      <option value="Black/African American">Black/African American</option>
-      <option value="Native Hawaiian/Other Pacific Islander">Native Hawaiian/Other Pacific Islander</option>
-      <option value="White">White</option>
-      <option value="American Indian/Alaskan Native & White">American Indian/Alaskan Native and White</option>
-      <option value="Asian & White">Asian and White </option>
-      <option value="Black/African American & White">Black/African American and White</option>
-      <option value="American Indian/alaskan Native/Black/African American">American Indian/alaskan Native/Black/African American</option>
-      <option value="American">American</option>
-      <option value="Other Multi-Racial (including Hispanic)">Other Multi-Racial (including Hispanic)</option>
-    </select>
-  </div>
-
-
-  <div>Cause of Homelessness:
-    <select name="cause_of_homelessness"> 
-      <option value="Loss of job">Loss of job</option>
-      <option value="Insufficient Income">Insufficient Income</option>
-      <option value="Mismanagement of Income">Mismanagement of Income</option>
-      <option value="Loss of public assistance">Loss of public assistance</option>
-      <option value="Natural Disaster/Fire">Natural Disaster/Fire</option>
-      <option value="Eviction">Eviction</option>
-      <option value="No Affordable Housing">No Affordable Housing</option>
-      <option value="In-Transit/Traveling">In-Transit/Traveling</option>
-      <option value="Condemned/Substandard Housing">Condemned/Substandard Housing</option>
-      <option value="Lack of Utilities">Lack of Utilities</option>
-      <option value="Family Dispute">Family Dispute</option>
-      <option value="Domestic Violence">Domestic Violence</option>
-      <option value="Neighborhood Violence/Gang Intimidation">Neighborhood Violence/Gang Intimidation</option>
-      <option value="Release from Correctional Institution">Release from Correctional Institution</option>
-      <option value="Release from Mental Health Facility">Release from Mental Health Facility</option>
-      <option value="Drug Abuse">Drug Abuse</option>
-      <option value="Alcohol Abuse">Alcohol Abuse</option>
-      <option value="Medical Condition/ Phyically Disabled">Medical Condition/ Phyically Disabled</option>
-      <option value="Foreclosure">Foreclosure</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-
-  <div>Length of homelesness: 
-    <input type="text" name="length_of_homelessness">
-  </div>
-
-
-  <div>Number of Shelters in the past year: 
-    <input type="text" name="number_of_shelters">
-  </div>
-
-    <div>Documented: 
-    <select name="chronically_homeless">
-      <option value="true">Yes</option>
-      <option value="false">No</option>
-    </select>
-  </div>
-
-
-
-   <div>Prior Living Situation as of Last Night:
-    <select name="prior_living_situation"> 
-      <option value="Non-housing">Non-housing(street, park, etc.)</option>
-      <option value="Emergency Shelter">Emergency Shelter</option>
-      <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
-      <option value="Psychiatric Facility">Psychiatric Facility</option>
-      <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
-      <option value="Hospitals">Hospitals</option>
-      <option value="Jail or Prison">Jail or Prison</option>
-      <option value="Domestic Violence Situation">Domestic Violence Situation</option>
-      <option value="Living with relatives/friends">Living with relatives/friends</option>
-      <option value="Rental housing/Eviction">Rental housing/Eviction</option>
-      <option value="Disaster/Fire">Disaster/Fire</option>
-      <option value="Condemned Housing">Condemned Housing</option>
-      <option value="Public Housing">Public Housing(CHA)</option>
-      <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
-      <option value="Other">Other Specify</option>
-    </select>
-  </div>
-
-
-  <div>Bed:
-    <select name="bed_id"> 
-      <% @beds.each do |bed| %>
-        <% if bed.occupied == false %>
-          <option value="<%= bed.id %>"><%= bed.id %></option>
-        <% end %>
-      <% end %>
-    </select>
-  <%#</div> <input type="submit" value="submit"> </li>%>
-<% end %>
-</div>
+  </form>
