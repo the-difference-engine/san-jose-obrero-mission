@@ -1,6 +1,8 @@
-.residentstable {
-  padding-right: 50px; 
+// TODO the below needs to go into the main scss
+hr.dashed {
+  border-top: 1px dashed #8c8b8b;
 }
+
 
 .body-container {
   margin-top: 100px;
@@ -22,95 +24,96 @@
 .top-navbar {
   padding: 10px;
   background-color: #D3D2D3;
+
+hr.solid {
+  border-top: 1px solid #8c8b8b;
 }
 
-.navbar-fixed-left {
-  width: 140px;
-  margin-top: 50px;
-  position: fixed;
-  border-radius: 0;
-  height: 100%;
-}
-
-.navbar-fixed-left .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
-  width: 139px;
-}
-
-.navbar-fixed-left + .container {
-  padding-left: 60px;
-}
-
-.container {
-  height: 1000px;
-}
-
-.wrapper {
-  margin-left: 140px;
-}
-
-.dashboard-count {
-  font-weight: normal;
-  font-size: 50%;
-
-} 
-
-// @import "bourbon";
-
-body {
-  background: #eee !important;  
-}
-
-.wrapper {  
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin-left: 10px;
-}
-
-.form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-
-  .form-signin-heading,
-  .checkbox {
-    margin-bottom: 30px;
-  }
-
-  .checkbox {
-    font-weight: normal;
-  }
-
-  .checkbox-radio {
-    font-weight: normal;
-  }
-
-  .form-control {
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    // @include box-sizing(border-box);
-
-    &:focus {
-      z-index: 2;
-    }
-  }
-
-  input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  input[type="password"] {
-    margin-bottom: 20px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
+.image-container {
+  border-radius: 50%;
+  width: 75px;
 
 }
+.head-section-container {
+  display: grid;
+  grid-template-columns: 80px 150px auto 65px 65px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
 
+.box {
+  //background-color: #444;
+  //color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 150%;
+  margin: auto 0;
+}
+
+.personal-information {
+  display: grid;
+  grid-template-columns: 300px auto 200px 200px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.personal-info-box {
+  @extend .box;
+  font-size: 100%;
+}
+
+.admittance-section {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.admit-box {
+  @extend .box;
+  font-size: 100%;
+}
+
+.cause-homelessness-section {
+  display: grid;
+  grid-template-columns: 400px 200px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.cause-homelessness-box {
+  @extend .box;
+  font-size: 100%;
+}
+
+.number-of-shelters-section {
+  display: grid;
+  grid-template-columns: 400px 200px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.number-of-shelters-box {
+  @extend .box;
+  font-size: 100%;
+}
+
+
+.footer-section-container {
+  display: grid;
+  grid-template-columns: 80px 150px auto 65px 65px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
 
 
