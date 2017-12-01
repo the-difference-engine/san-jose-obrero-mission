@@ -4,9 +4,7 @@ module Api
   
         # GET /v1/users
         def index
-
           render json: { residents: Resident.all, table_headers: table_headers }
-          
         end
 
         def create
@@ -20,8 +18,9 @@ module Api
 
   
         def show
-          # Resident = Resident.find(params[:id])
-          render json: @resident
+          resident = Resident.find(params[:id])
+          binding.pry
+          render json: resident
         end
 
         def update
