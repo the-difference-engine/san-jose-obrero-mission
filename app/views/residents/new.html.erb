@@ -163,7 +163,7 @@
         </select>
     </div>
     <div class="prior-living-situation-box b">
-      <label for="length_of_prior_situation">Length of prior living situation?</label><br />
+      <label for="lengthOfPriorSituation">Length of prior living situation?</label><br />
       <input type="text" class="form-control" name="lengthOfPriorSituation">
     </div>
   </div>
@@ -174,11 +174,11 @@
 
     <div class="number-of-shelters-section">
         <div class="number-of-shelters-box a">
-            <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
-            <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
+            <label for="numberOfShelters">Number of Shelters in the past year</label>
+            <input type="text" class="form-control" name="numberOfShelters" placeholder="1">
         </div>
         <div class="number-of-shelters-box b"> 
-            <label for="chronically_homeless">CHRONICALLY HOMELESS(Homeless for 12 months to 3 years with a disability)?</label><br />
+            <label for="chronicallyHomeless">Chronically Homeless(Homeless for 12 months to 3 years with a disability)?</label><br />
             <label class="checkbox-inline">
                 <input
                 name="chronicallyHomeless"
@@ -199,14 +199,14 @@
         
     <hr class="dashed">
 
-    <label for="specialNeeds">Special Needs / Conditions</label><br />
+    <label for="specialNeeds">Special Needs/Conditions</label><br />
     <label class="checkbox-inline">
 
         <input
         name="specialNeedsNone"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        None.
+        None
     </label><br/>
 
     <label class="checkbox-inline">
@@ -229,14 +229,14 @@
         <label class="checkbox-inline">
             <input
             name="soughtTreatment"
-            type="checkbox"
+            type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
             name="soughtTreatment"
-            type="checkbox"
+            type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
         </label>
@@ -251,7 +251,7 @@
         Mental Illness
     </label><br/>
     <div class="well">
-        <label class="control-label" for="first_name">Type Mental Illness</label>
+        <label class="control-label" for="mentalIllnessType">Type of Mental Illness</label>
         <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control">
     </div>
     <label class="checkbox-inline">
@@ -297,7 +297,7 @@
 
     <hr class="dashed">
 
-    <label for="disabled">Disabled?</label><br />
+    <label class="control-label" for="disabled">Disabled?</label><br />
         <label class="checkbox-inline">
             <input
             name="disabled"
@@ -314,46 +314,62 @@
         </label>   
 
         <div class="well">
-            <label for="specialNeeds">Does the client have documentation of this?</label><br />
+            <label class="control-label" for="disabilityDocumentation">Does the client have documentation of this?</label><br />
             <label class="checkbox-inline">
                 <input
                 name="disabilityDocumentation"
-                type="checkbox"
+                type="radio"
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 Yes
             </label>
             <label class="checkbox-inline">
                 <input
                 name="disabilityDocumentation"
-                type="checkbox"
+                type="radio"
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 No
             </label><br>
-            <label class="control-label" for="disability_type">Type of Disability</label>
+            <label class="control-label" for="disabilityType">Type of Disability</label>
             <input type="text" name="disabilityType" class="form-control">
         </div>
-    
-
-    
-    
 
     <hr class="dashed">
     
-    <label for="veteran">Veteran?</label><br />
+    <label for="veteran">Veteran</label><br />
     <label class="checkbox-inline">
+        <input
+        name="veteran"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        Yes
+    </label>
+    <label class="checkbox-inline">
+        <input
+        name="veteran"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        No
+    </label>   
+
+    <div class="well">
+        <label for="veteranDocumentation">Does the client have documentation of this?</label><br />
+        <label class="checkbox-inline">
             <input
-            name="veteran"
+            name="veteranDocumentation"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
-            name="veteran"
+            name="veteranDocumentation"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
-        </label> 
+        </label><br>
+        <label class="control-label" for="dischargeType">Type of Military Discharge</label>
+        <input type="text" name="dischargeType" class="form-control">
+    </div>
 
     <hr class="dashed">
 
