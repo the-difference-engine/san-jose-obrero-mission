@@ -140,7 +140,7 @@
     <hr class="dashed">
     <br>
     <div class="cause-homelessness-section a">
-        <div class="prior_living_situation_box">
+      <div class="prior_living_situation_box">
             <label for="prior_living_situation_box">Prior Living Situation</label>
        <select name="prior_living_situation" class="form-control">
          <option selected>Choose...</option>
@@ -160,46 +160,72 @@
          <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
          <option value="Other">Other Specify</option>
        </select>
-    </div>
+      </div>
 
        <div class="cause-homelessness-box">
             <label for="How long in prior living situation">How long in living situation</label>
             <input type="text" class="form-control" name="cause_of_homelessness" placeholder="years">
        </div>
+    </div>
     
     <hr class="dashed">
     <br>
-    <div class="number-of-shelters-box">
+    
+    <div class="number-of-shelters-section">
+      <div class="number_of_shelters_box">
        <label for="number of shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
        <br>
        <input type="text" class="form-control" name="number-of-shelters-section" placeholder="1">
+      </div>
     <div>
     <br>
+    <br>
+    
+    <div class="chronically-homelessness">
+     <label for="chronically homelessness">Chronically Homelessness (Homeless for 12 months to 3 years with a disability)?</label>
+     <label class="checkbox-inline">
+        <input
+        name="specialNeedsNone"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        yes
+        <input
+        name="specialNeedsNone"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        no
 
-    <label for="specialNeeds">Special Needs / Conditions</label><br />
-    <label class="checkbox-inline">
+    </label><br/>
+     <br>
+    </div>
+    <div>
+
+     <label for="specialNeeds">Special Needs / Conditions</label><br />
+     <label class="checkbox-inline">
         <input
         name="specialNeedsNone"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         None.
-    </label><br/>
+     </label><br/>
 
-    <label class="checkbox-inline">
+     <label class="checkbox-inline">
         <input
         name="specialNeedsSubstanceAbuse"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         Substance Abuse (SA)
-    </label><br/>
+     </label><br/>
 
-    <label class="checkbox-inline">
+     <label class="checkbox-inline">
         <input
         name="specialNeedsAlcoholAbuse"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         Alcohol Abuse (AA)
-    </label><br/>
+     </label>
+    </div>
+    
     <div class="well">
         <label for="specialNeeds">Have they sought treatment?</label><br />
         <label class="checkbox-inline">
@@ -228,4 +254,5 @@
     </label><br/>
     <div class="well">
         <label class="control-label" for="first_name">Type Mental Illness</label>
-        <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control&...
+        <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control&...">
+    </div>
