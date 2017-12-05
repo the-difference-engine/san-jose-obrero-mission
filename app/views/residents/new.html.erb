@@ -133,47 +133,65 @@
         </div>
         <div class="cause-homelessness-box b">
             <label for="length_of_homelessness">Length of Homelessness</label>
-            <input type="text" class="form-control" name="length_of_homelessness" placeholder="years">
+            <input type="text" class="form-control" name="length_of_homelessness" placeholder="Years">
         </div>
     </div>
 
-    <hr class="dashed">
-    <br>
-    <p>Prior living situation</p>
-    <br>
-    <hr class="dashed">
-    <br>
+  <hr class="dashed">
+
+  <div class="prior-living-situation-section">
+    <div class="prior-living-situation-box a">
+      <label for="prior_living_situation">Prior Living Situation</label>
+        <select name="priorLivingSituation" class="form-control">
+          <option selected>Choose...</option>
+          <option value="Non-housing">Non-housing(street, park, etc.)</option>
+          <option value="Emergency Shelter">Emergency Shelter</option>
+          <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
+          <option value="Psychiatric Facility">Psychiatric Facility</option>
+          <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
+          <option value="Hospitals">Hospitals</option>
+          <option value="Jail or Prison">Jail or Prison</option>
+          <option value="Domestic Violence Situation">Domestic Violence Situation</option>
+          <option value="Living with relatives/friends">Living with relatives/friends</option>
+          <option value="Rental housing/Eviction">Rental housing/Eviction</option>
+          <option value="Disaster/Fire">Disaster/Fire</option>
+          <option value="Condemned Housing">Condemned Housing</option>
+          <option value="Public Housing">Public Housing(CHA)</option>
+          <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
+          <option value="Other">Other Specify</option>
+        </select>
+    </div>
+    <div class="prior-living-situation-box b">
+      <label for="length_of_prior_situation">Length of prior living situation?</label><br />
+      <input type="text" class="form-control" name="lengthOfPriorSituation">
+    </div>
+  </div>
+  
+  <hr class="dashed">
     
 
 <div class="number-of-shelters-section">
-    <div class="number-of-shelters-box a">
-            <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
-            <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
-        </div>
-
-        <div class="number-of-shelters-box b">
-         
-        <label for="chronically_homeless">CHRONICALLY HOMELESS</label><br />
-        <label class="checkbox-inline">
-            <input
-            name="chronicallyHomeless"
-            type="radio"
-            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-            Yes
-        </label>
-        <label class="checkbox-inline">
-            <input
-            name="chronicallyHomeless"
-            type="radio"
-            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-            No
-        </label>
-  
-
-
-            
-        </div>
-
+  <div class="number-of-shelters-box a">
+      <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
+      <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
+  </div>
+  <div class="number-of-shelters-box b">
+    <label for="chronically_homeless">CHRONICALLY HOMELESS</label><br />
+    <label class="checkbox-inline">
+        <input
+        name="chronicallyHomeless"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        Yes
+    </label>
+    <label class="checkbox-inline">
+        <input
+        name="chronicallyHomeless"
+        type="radio"
+        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+        No
+    </label> 
+  </div>
 </div>
         
 
