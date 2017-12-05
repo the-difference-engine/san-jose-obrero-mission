@@ -139,93 +139,75 @@
 
     <hr class="dashed">
     <br>
-    <div class="cause-homelessness-section a">
-      <div class="prior_living_situation_box">
-            <label for="prior_living_situation_box">Prior Living Situation</label>
-       <select name="prior_living_situation" class="form-control">
-         <option selected>Choose...</option>
-         <option value="Non-housing">Non-housing(street, park, etc.)</option>
-         <option value="Emergency Shelter">Emergency Shelter</option>
-         <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
-         <option value="Psychiatric Facility">Psychiatric Facility</option>
-         <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
-         <option value="Hospitals">Hospitals</option>
-         <option value="Jail or Prison">Jail or Prison</option>
-         <option value="Domestic Violence Situation">Domestic Violence Situation</option>
-         <option value="Living with relatives/friends">Living with relatives/friends</option>
-         <option value="Rental housing/Eviction">Rental housing/Eviction</option>
-         <option value="Disaster/Fire">Disaster/Fire</option>
-         <option value="Condemned Housing">Condemned Housing</option>
-         <option value="Public Housing">Public Housing(CHA)</option>
-         <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
-         <option value="Other">Other Specify</option>
-       </select>
-      </div>
-
-       <div class="cause-homelessness-box">
-            <label for="How long in prior living situation">How long in living situation</label>
-            <input type="text" class="form-control" name="cause_of_homelessness" placeholder="years">
-       </div>
-    </div>
-    
+    <p>Prior living situation</p>
+    <br>
     <hr class="dashed">
     <br>
     
-    <div class="number-of-shelters-section">
-      <div class="number_of_shelters_box">
-       <label for="number of shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
-       <br>
-       <input type="text" class="form-control" name="number-of-shelters-section" placeholder="1">
-      </div>
-    <div>
-    <br>
-    <br>
-    
-    <div class="chronically-homelessness">
-     <label for="chronically homelessness">Chronically Homelessness (Homeless for 12 months to 3 years with a disability)?</label>
-     <label class="checkbox-inline">
-        <input
-        name="specialNeedsNone"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        yes
-        <input
-        name="specialNeedsNone"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        no
 
-    </label><br/>
-     <br>
-    </div>
-    <div>
+<div class="number-of-shelters-section">
+    <div class="number-of-shelters-box a">
+            <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
+            <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
+        </div>
 
-     <label for="specialNeeds">Special Needs / Conditions</label><br />
-     <label class="checkbox-inline">
+        <div class="number-of-shelters-box b">
+         
+        <label for="chronically_homeless">CHRONICALLY HOMELESS</label><br />
+        <label class="checkbox-inline">
+            <input
+            name="chronicallyHomeless"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Yes
+        </label>
+        <label class="checkbox-inline">
+            <input
+            name="chronicallyHomeless"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            No
+        </label>
+  
+
+
+            
+        </div>
+
+</div>
+        
+
+
+    <br>
+    <hr class="dashed">
+    <br>
+    <p>Number of shelters in the past year</p>
+    <br>
+    <hr class="dashed">
+    <label for="specialNeeds">Special Needs / Conditions</label><br />
+    <label class="checkbox-inline">
         <input
         name="specialNeedsNone"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         None.
-     </label><br/>
+    </label><br/>
 
-     <label class="checkbox-inline">
+    <label class="checkbox-inline">
         <input
         name="specialNeedsSubstanceAbuse"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         Substance Abuse (SA)
-     </label><br/>
+    </label><br/>
 
-     <label class="checkbox-inline">
+    <label class="checkbox-inline">
         <input
         name="specialNeedsAlcoholAbuse"
         type="checkbox"
         style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
         Alcohol Abuse (AA)
-     </label>
-    </div>
-    
+    </label><br/>
     <div class="well">
         <label for="specialNeeds">Have they sought treatment?</label><br />
         <label class="checkbox-inline">
@@ -254,5 +236,117 @@
     </label><br/>
     <div class="well">
         <label class="control-label" for="first_name">Type Mental Illness</label>
-        <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control&...">
+        <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control">
     </div>
+
+
+    <hr class="dashed">
+    <br>
+    <p>Disabled</p>
+    <br>
+    <hr class="dashed">
+    <br>
+    <p>Veteran</p>
+    <br>
+    <hr class="dashed">
+    <br>
+    <p>Does the client speak and reqd English well?</p>
+    <br>
+    <hr class="dashed">
+    <br>
+    <p>Is teh client taking prescribed medications</p>
+    <br>
+    <hr class="solid">
+    <div class="footer-section-container">
+        <div class="box a">
+            <button onclick="submitResidentsForm()" type="submit" class="btn btn-md btn-default">Delete</button>
+        </div>
+        <div class="box b"></div>
+        <div class="box c"></div>
+        <div class="box d">
+            <button onclick="submitResidentsForm()" type="submit" class="btn btn-md btn-success">Save</button>
+        </div>
+        <div class="box d">
+            <a href="/residents" class="btn btn-md btn-default">Cancel</a>
+        </div>
+    </div>
+</form>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<%#TODO this below can get deleted%>
+
+
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+        </div>
+
+        <div class="form-group col-md-4">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="documented">DOCUMENTED</label>
+            <select name="documented" class="form-control">
+                <option selected>Choose...</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+
+
+
+        <div class="form-group col-md-4">
+        </div>
+
+        <div class="form-group col-md-4">
+        </div>
+
+
+
+        
+
+
+
+
+
+        <div class="form-group col-md-4">
+            <label for="prior_living_situation">PRIOR LIVING SITUATION AS OF LAST NIGHT</label>
+            <select name="prior_living_situation" class="form-control">
+                <option selected>Choose...</option>
+                <option value="Non-housing">Non-housing(street, park, etc.)</option>
+                <option value="Emergency Shelter">Emergency Shelter</option>
+                <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
+                <option value="Psychiatric Facility">Psychiatric Facility</option>
+                <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
+                <option value="Hospitals">Hospitals</option>
+                <option value="Jail or Prison">Jail or Prison</option>
+                <option value="Domestic Violence Situation">Domestic Violence Situation</option>
+                <option value="Living with relatives/friends">Living with relatives/friends</option>
+                <option value="Rental housing/Eviction">Rental housing/Eviction</option>
+                <option value="Disaster/Fire">Disaster/Fire</option>
+                <option value="Condemned Housing">Condemned Housing</option>
+                <option value="Public Housing">Public Housing(CHA)</option>
+                <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
+                <option value="Other">Other Specify</option>
+            </select>
+        </div>
+    </div>
+
+    <br>
+
+
+<script>
+    $('input[type="checkbox"]').on('change', function() {
+        $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+    });
+</script>
+
