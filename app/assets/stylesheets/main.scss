@@ -108,6 +108,21 @@ hr.solid {
   font-size: 100%;
 }
 
+.prior-living-situation-section {
+  display: grid;
+  grid-template-columns: 400px 220px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.prior-living-situation-box {
+  @extend .box;
+  font-size: 100%;
+
+}
+
 
 .footer-section-container {
   display: grid;
