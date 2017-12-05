@@ -19,7 +19,6 @@ module Api
   
         def show
           resident = Resident.find(params[:id])
-          binding.pry
           render json: resident
         end
 

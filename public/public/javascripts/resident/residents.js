@@ -1,5 +1,4 @@
 function submitResidentsForm() {
-  debugger
     var url = "http://localhost:3004/api/v1/residents";
     var data = {
         resident: {
