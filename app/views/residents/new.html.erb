@@ -163,7 +163,9 @@
         </select>
     </div>
     <div class="prior-living-situation-box b">
-      <label for="lengthOfPriorSituation">Length of prior living situation?</label><br />
+
+      <label for="length_of_prior_situation">Length of prior living situation?</label><br />
+
       <input type="text" class="form-control" name="lengthOfPriorSituation">
     </div>
   </div>
@@ -174,11 +176,11 @@
 
     <div class="number-of-shelters-section">
         <div class="number-of-shelters-box a">
-            <label for="numberOfShelters">Number of Shelters in the past year</label>
-            <input type="text" class="form-control" name="numberOfShelters" placeholder="1">
+            <label for="number_of_shelters">NUMBER OF SHELTERS IN PAST YEAR</label>
+            <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
         </div>
         <div class="number-of-shelters-box b"> 
-            <label for="chronicallyHomeless">Chronically Homeless(Homeless for 12 months to 3 years with a disability)?</label><br />
+            <label for="chronically_homeless">CHRONICALLY HOMELESS(Homeless for 12 months to 3 years with a disability)?</label><br />
             <label class="checkbox-inline">
                 <input
                 name="chronicallyHomeless"
@@ -195,11 +197,11 @@
             </label>    
         </div>
     </div>
-
         
     <hr class="dashed">
 
-    <label for="specialNeeds">Special Needs/Conditions</label><br />
+    <label for="specialNeeds">Special Needs / Conditions</label><br />
+
     <label class="checkbox-inline">
 
         <input
@@ -297,7 +299,9 @@
 
     <hr class="dashed">
 
-    <label class="control-label" for="disabled">Disabled?</label><br />
+
+    <label for="disabled">Disabled?</label><br />
+
         <label class="checkbox-inline">
             <input
             name="disabled"
@@ -314,71 +318,150 @@
         </label>   
 
         <div class="well">
-            <label class="control-label" for="disabilityDocumentation">Does the client have documentation of this?</label><br />
+
+            <label for="specialNeeds">Does the client have documentation of this?</label><br />
             <label class="checkbox-inline">
                 <input
                 name="disabilityDocumentation"
-                type="radio"
+                type="checkbox"
+
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 Yes
             </label>
             <label class="checkbox-inline">
                 <input
                 name="disabilityDocumentation"
-                type="radio"
+
+                type="checkbox"
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 No
             </label><br>
-            <label class="control-label" for="disabilityType">Type of Disability</label>
-            <input type="text" name="disabilityType" class="form-control">
+            <label class="control-label" for="disability_type">Type of Disability</label>
+            <input type="text" name="disabilityType" placeholder="paraplegic" class="form-control">
         </div>
+    
+
+    
+    
 
     <hr class="dashed">
-    
-    <label for="veteran">Veteran</label><br />
-    <label class="checkbox-inline">
-        <input
-        name="veteran"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        Yes
-    </label>
-    <label class="checkbox-inline">
-        <input
-        name="veteran"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        No
-    </label>   
-
-    <div class="well">
-        <label for="veteranDocumentation">Does the client have documentation of this?</label><br />
+    <label for="disabled">Veteran?</label><br />
         <label class="checkbox-inline">
             <input
-            name="veteranDocumentation"
+            name="disabled"
+
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
-            name="veteranDocumentation"
+
+            name="disabled"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
-        </label><br>
-        <label class="control-label" for="dischargeType">Type of Military Discharge</label>
-        <input type="text" name="dischargeType" class="form-control">
-    </div>
+        </label>   
+
+        <div class="well">
+            <label for="specialNeeds">Does the client have documentation of this?</label><br />
+            <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                Yes
+            </label>
+            <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                No
+            </label><br>
+            <label class="control-label" for="veteran_type">Type of Military Discharge</label>
+            <input type="text" name="veteranType" placeholder="Honorable" class="form-control">
+        </div>
+    
+    
 
     <hr class="dashed">
 
     <br>
-    <p>Does the client speak and reqd English well?</p>
-    <br>
+    <label for="disabled">Does the client speak and read English well?</label><br />
+        <label class="checkbox-inline">
+            <input
+            name="disabled"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Yes
+        </label>
+        <label class="checkbox-inline">
+            <input
+            name="disabled"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            No
+        </label>   
+
+        <div class="well">
+            <label for="specialNeeds">What is his/her native or primary language?</label><br />
+           <!--  <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                Yes
+            </label>
+            <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                No
+            </label><br>
+            <label class="control-label" for="veteran_type">Type of Military Discharge</label> -->
+            <input type="text" name="veteranType" placeholder="German" class="form-control">
+        </div>
+    
+    
     <hr class="dashed">
-    <br>
-    <p>Is teh client taking prescribed medications</p>
+    
+    <label for="disabled">Is the client taking prescibed medications?</label><br>
+        <label class="checkbox-inline">
+            <input
+            name="disabled"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Yes
+        </label>
+        <label class="checkbox-inline">
+            <input
+            name="disabled"
+            type="radio"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            No
+        </label>   
+
+        <div class="well">
+            <label for="specialNeeds"></label><br />
+            <!-- <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                Yes
+            </label>
+            <label class="checkbox-inline">
+                <input
+                name="veteranDocumentation"
+                type="checkbox"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                No
+            </label><br> -->
+            <label class="control-label" for="veteran_type">Notes</label>
+            <input type="text" name="veteranType" placeholder="Statins, Blood Pressure medicine" class="form-control">
+        </div>
     <br>
     <hr class="solid">
     <div class="footer-section-container">
