@@ -1,37 +1,34 @@
 function getResident(residentId) {
   var url = "http://localhost:3004/api/v1/residents/" + residentId;
-  //var url = "http://localhost:3004/api/v1/residents/5";
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
-        debugger
-console.log(url)
+    console.log(url)
     fetch(url, {
         method: 'GET',
         headers: myHeaders,
         mode: 'cors',
         cache: 'default'
     })
-    .then((resp) => resp.json())
+    .then(function(response) {
+      return response.json();
+    })
     .then(function(data) {
-
-      //$(function() {
-        //debugger
-        //var table = $("<div />").addClass("table2");
-        //var tr = $("<div />").addClass("table-row");
-        //tr.append($("<span />")).addClass("table-head");
-        //var thead = $("<span />").addClass("table-head");
-        //$.each(data,function(_,text) {
-          //tr.append("<span class='table-head'> "+text+" </span>");
-          //tr.appendTo(thead);
-        //});
-
-        //tr.append("<div class='table-cell'> "+data.full_name+" </div>");
-        //var tbody = $("<div />").addClass("tbody");
-        //thead.appendTo(table);
-        //tbody.appendTo(table);
-        //table.appendTo("#table1");
-      //});
-      console.log(data)
-        console.log('this shit worked')
+      var nameAge = data.full_name + ' ' +  data.age + ' yo | ' + data.gender;
+      document.querySelector('#name-age').innerHTML = nameAge;
+      document.querySelector('#personal-information').innerHTML = personalInformation(data);
+    })
+    .catch(function(error) {
+      console.log(JSON.stringify(error));
     });
+}
+
+
+var id = location.pathname.split('/')[2]
+getResident(id)
+
+function personalInformation(resident) {
+  return  '<div class="personal-info-container">' +
+              '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
+              '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' + 
+          '</div>';
 }

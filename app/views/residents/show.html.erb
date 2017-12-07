@@ -1,12 +1,8 @@
-<h2>Resident: </h2>
-<div><a class="btn btn-default" href="/residents">Home</a></div>
-<br>
-
 <div class="head-section-container">
     <div class="box a">
         <%= image_tag 'fun-me.JPG', class: 'image-container' %>
     </div>
-    <div class="box b">Troy Leach | Age: 76 Male</div>
+    <div id="name-age" class="box b"></div>
     <div class="box c"></div>
     <div class="box d">
         <button onclick="submitResidentsForm()" type="submit" class="btn btn-md btn-success">Save</button>
@@ -15,5 +11,9 @@
         <a href="/residents" class="btn btn-md btn-default">Cancel</a>
     </div>
 </div>
-<div id='#table1'></div>
+<hr class='solid'>
+<div id="personal-information"></div>
+<hr class='dashed'>
+
+
 <script type="text/javascript" src="/public/javascripts/resident/residentsNew.js"></script>

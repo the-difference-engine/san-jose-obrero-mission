@@ -9,4 +9,11 @@ RSpec.describe Resident, type: :model do
       expect(resident2.full_name).to eq('Rob Rinkle')
     end
   end
+
+  describe '#age' do
+    it 'expect age of resident' do
+      resident = create(:resident)
+      expect(resident.age).to eq(48)
+    end
+  end
 end

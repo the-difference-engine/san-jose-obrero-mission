@@ -79,7 +79,7 @@ function getAllResidents () {
         var tbody = $("<div />").addClass("tbody");
         var t = 1;
         $.each(data.residents,function(_,obj) {
-          tr = $(`<a onclick=getResident(${obj.id}) href="residents/${obj.id}"></a>`).addClass("table-row");
+          tr = $(`<a href="residents/${obj.id}"></a>`).addClass("table-row");
           //tr = $(`<a href="residents/${obj.id}"></a>`).addClass("table-row");
           obj.id = t;
           t += 1;
