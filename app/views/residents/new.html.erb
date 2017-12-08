@@ -16,15 +16,15 @@
 <form id="residentForm" name="resident" action="/residents">
     <div class="personal-information">
         <div class="personal-info-box a">
-            <label class="control-label" for="first_name">FIRST NAME</label>
-            <input type="text" name="first_name" placeholder="John" class="form-control">
+            <label class="control-label" for="firstName">First Name</label>
+            <input type="text" name="firstName" placeholder="John" class="form-control">
         </div>
         <div class="personal-info-box b">
-            <label class="control-label" for="last_name">LAST NAME</label>
-            <input type="text" name="last_name" placeholder="Doe" class="form-control">
+            <label class="control-label" for="lastName">Last Name</label>
+            <input type="text" name="lastName" placeholder="Doe" class="form-control">
         </div>
         <div class="personal-info-box c">
-            <label for="gender">GENDER</label>
+            <label for="gender">Gender</label>
             <select name="gender" class="form-control">
                 <option selected>Choose...</option>
                 <option value="male">Male</option>
@@ -39,7 +39,7 @@
             <input type="date" name="dateOfBirth" class="form-control">
         </div>
         <div class="personal-info-box e">
-            <label for="ethnicity">ETHNICITY</label>
+            <label for="ethnicity">Ethnicity</label>
             <select name="ethnicity" class="form-control">
                 <option selected>Choose...</option>
                 <option value="hispanic">Hispanic/Latino</option>
@@ -47,8 +47,8 @@
             </select>
         </div>
         <div class="personal-info-box f">
-            <label for="resident_race">RACE</label>
-            <select name="resident_race" class="form-control"> 
+            <label for="residentRace">Race</label>
+            <select name="residentRace" class="form-control"> 
                 <option selected>Choose...</option>
                 <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
                 <option value="Asian">Asian</option>
@@ -64,17 +64,16 @@
             </select>
         </div>
         <div class="personal-info-box g">
-            <label for="resident_status">Status</label>
-            <select name="resident_status" class="form-control"> 
+            <label for="residentStatus">Status</label>
+            <select name="residentStatus" class="form-control"> 
                 <option selected>Choose...</option>
                 <option value="active">Active</option>
                 <option value="notActive">Not Active</option>
             </select>
         </div>
         <div class="personal-info-box h">
-
-            <label for="bed_id">BED</label>
-            <select name="bed_id" class="form-control">
+            <label for="bedId">Bed</label>
+            <select name="bedId" class="form-control">
                 <option value="1">1</option>
             </select>
         </div>
@@ -96,19 +95,21 @@
             <input type="text" class="form-control" name="tenure" placeholder="33 days">
         </div>
         <div class="admit-box d">
-            <label for="hmis_number">HMIS NUMBER</label>
-            <input type="text" class="form-control" name="hmis_number" placeholder="123456">
+            <label for="hmisNumber">HMIS Number</label>
+            <input type="text" class="form-control" name="hmisNumber" placeholder="123456">
         </div>
         <div class="admit-box e">
-            <label for="hmis_entry_date">HMIS ENTRY DATE</label>
-            <input type="date" class="form-control" name="hmis_entry_date">
+            <label for="hmisEntryDate">HMIS Entry Date</label>
+            <input type="date" class="form-control" name="hmisEntryDate">
         </div>
     </div>
+
     <hr class="dashed">
+
     <div class="cause-homelessness-section">
         <div class="cause-homelessness-box a">
-            <label for="cause_of_homelessness">Cause of Homelessness</label>
-            <select name="cause_of_homelessness" class="form-control">
+            <label for="causeOfHomelessness">Cause of Homelessness</label>
+            <select name="causeOfHomelessness" class="form-control">
                 <option selected>Choose...</option> 
                 <option value="Loss of job">Loss of job</option>
                 <option value="Insufficient Income">Insufficient Income</option>
@@ -133,57 +134,54 @@
             </select>
         </div>
         <div class="cause-homelessness-box b">
-            <label for="length_of_homelessness">Length of Homelessness</label>
-            <input type="text" class="form-control" name="length_of_homelessness" placeholder="Years">
+            <label for="lengthOfHomelessness">Length of Homelessness</label>
+            <input type="text" class="form-control" name="lengthOfHomelessness" placeholder="Enter days, months or years">
         </div>
     </div>
 
-  <hr class="dashed">
 
-  <div class="prior-living-situation-section">
-    <div class="prior-living-situation-box a">
-      <label for="prior_living_situation">Prior Living Situation</label>
-        <select name="priorLivingSituation" class="form-control">
-          <option selected>Choose...</option>
-          <option value="Non-housing">Non-housing(street, park, etc.)</option>
-          <option value="Emergency Shelter">Emergency Shelter</option>
-          <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
-          <option value="Psychiatric Facility">Psychiatric Facility</option>
-          <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
-          <option value="Hospitals">Hospitals</option>
-          <option value="Jail or Prison">Jail or Prison</option>
-          <option value="Domestic Violence Situation">Domestic Violence Situation</option>
-          <option value="Living with relatives/friends">Living with relatives/friends</option>
-          <option value="Rental housing/Eviction">Rental housing/Eviction</option>
-          <option value="Disaster/Fire">Disaster/Fire</option>
-          <option value="Condemned Housing">Condemned Housing</option>
-          <option value="Public Housing">Public Housing(CHA)</option>
-          <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
-          <option value="Other">Other Specify</option>
-        </select>
+    <hr class="dashed">
+
+    <div class="prior-living-situation-section">
+        <div class="prior-living-situation-box a">
+        <label for="priorLivingSituation">Prior Living Situation</label>
+            <select name="priorLivingSituation" class="form-control">
+            <option selected>Choose...</option>
+            <option value="Non-housing">Non-housing(street, park, etc.)</option>
+            <option value="Emergency Shelter">Emergency Shelter</option>
+            <option value="Transitional housing for homeless persons">Transitional housing for homeless persons</option>
+            <option value="Psychiatric Facility">Psychiatric Facility</option>
+            <option value="Substance abuse treatment facility">Substance abuse treatment facility</option>
+            <option value="Hospitals">Hospitals</option>
+            <option value="Jail or Prison">Jail or Prison</option>
+            <option value="Domestic Violence Situation">Domestic Violence Situation</option>
+            <option value="Living with relatives/friends">Living with relatives/friends</option>
+            <option value="Rental housing/Eviction">Rental housing/Eviction</option>
+            <option value="Disaster/Fire">Disaster/Fire</option>
+            <option value="Condemned Housing">Condemned Housing</option>
+            <option value="Public Housing">Public Housing(CHA)</option>
+            <option value="Non-Lease holder">Non-Lease holder(CHA)</option>
+            <option value="Other">Other Specify</option>
+            </select>
+        </div>
+        <div class="prior-living-situation-box b">
+            <label for="lengthOfPriorSituation">Length of Prior Living Situation</label><br />
+            <input type="text" class="form-control" name="lengthOfPriorSituation" placeholder="Enter days, months or years">
+        </div>
+
     </div>
-    <div class="prior-living-situation-box b">
-
-      <label for="length_of_prior_situation">Length of prior living situation?</label><br />
-
-      <input type="text" class="form-control" name="lengthOfPriorSituation">
-    </div>
-  </div>
   
-  <hr class="dashed">
+    <hr class="dashed">
     
-
 
     <div class="number-of-shelters-section">
         <div class="number-of-shelters-box a">
-
-
-            <label for="number_of_shelters">Number of Shelters in the Past Year</label>
-
-            <input type="text" class="form-control" name="number_of_shelters" placeholder="1">
+            <label for="numberOfShelters">Number of Shelters In The Past Year</label>
+            <input type="text" class="form-control" name="numberOfShelters" placeholder="Enter days, months or years">
         </div>
         <div class="number-of-shelters-box b"> 
-            <label for="chronically_homeless">CHRONICALLY HOMELESS(Homeless for 12 months to 3 years with a disability)?</label><br />
+            <label for="chronicallyHomeless">Chronically Homeless<span style="color: #808080">(Homeless for 12 months to 3 years with a disability)</span>?</label><br />
+
             <label class="checkbox-inline">
                 <input
                 name="chronicallyHomeless"
@@ -200,64 +198,63 @@
             </label>    
         </div>
     </div>
-        
+    
     <hr class="dashed">
 
-    <label for="specialNeeds">Special Needs / Conditions</label><br />
 
-    <label class="checkbox-inline">
-
-        <input
-        name="specialNeedsNone"
-        type="checkbox"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        None
-    </label><br/>
-
-    <label class="checkbox-inline">
-        <input
-        name="specialNeedsSubstanceAbuse"
-        type="checkbox"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        Substance Abuse (SA)
-    </label><br/>
-
-    <label class="checkbox-inline">
-        <input
-        name="specialNeedsAlcoholAbuse"
-        type="checkbox"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        Alcohol Abuse (AA)
-    </label><br/>
-    <div class="well">
-        <label for="specialNeeds">Have they sought treatment?</label><br />
+    <div class="special-needs-section">
+        <label for="specialNeeds">Special Needs/Conditions</label><br />
         <label class="checkbox-inline">
             <input
-            name="soughtTreatment"
-            type="radio"
-            style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
-            Yes
-        </label>
-        <label class="checkbox-inline">
-            <input
-            name="soughtTreatment"
-            type="radio"
+            name="specialNeedsNone"
+            type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-            No
-        </label>
-    </div>
+            None
+        </label><br/>
 
+        <label class="checkbox-inline">
+            <input
+            name="specialNeedsSubstanceAbuse"
+            type="checkbox"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Substance Abuse (SA)
+        </label><br/>
+        <label class="checkbox-inline">
+            <input
+            name="specialNeedsAlcoholAbuse"
+            type="checkbox"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Alcohol Abuse (AA)
+        </label><br/>
+        <div class="well">
+            <label for="specialNeeds">Have they sought treatment?</label><br />
+            <label class="checkbox-inline">
+                <input
+                name="soughtTreatment"
+                type="radio"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                Yes
+            </label>
+            <label class="checkbox-inline">
+                <input
+                name="soughtTreatment"
+                type="radio"
+                style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+                No
+            </label>
+        </div>
 
-    <label class="checkbox-inline">
-        <input
-        name="MentalIllness"
-        type="checkbox"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        Mental Illness
-    </label><br/>
-    <div class="well">
-        <label class="control-label" for="mentalIllnessType">Type of Mental Illness</label>
-        <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control">
+        <label class="checkbox-inline">
+            <input
+            name="MentalIllness"
+            type="checkbox"
+            style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
+            Mental Illness
+        </label><br/>
+        <div class="well">
+            <label class="control-label" for="mentalIllnessType">Type of Mental Illness</label>
+            <input type="text" name="mentalIllnessType" placeholder="Manic Depression" class="form-control">
+        </div>
     </div>
     <label class="checkbox-inline">
         <input
@@ -300,10 +297,12 @@
 
 
 
+
     <hr class="dashed">
 
 
-    <label for="disabled">Disabled?</label><br />
+    <div class="disabled-section">
+        <label class="control-label" for="disabled">Disabled?</label><br />
 
         <label class="checkbox-inline">
             <input
@@ -342,37 +341,19 @@
             <label class="control-label" for="disability_type">Type of Disability</label>
             <input type="text" name="disabilityType" placeholder="paraplegic" class="form-control">
         </div>
-    
 
-    
-    
+    </div>
+
 
     <hr class="dashed">
 
     
-    
-    <label for="veteran">Veteran?</label><br />
-    <label class="checkbox-inline">
-        <input
-        name="veteran"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
-        Yes
-    </label>
-    <label class="checkbox-inline">
-        <input
-        name="veteran"
-        type="radio"
-        style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-        No
-    </label>   
 
-    <div class="well">
-        <label for="veteranDocumentation">Does the client have documentation of this?</label><br />
-
+    <div class="veteran-section">
+        <label class="control-label" for="veteran">Veteran?</label><br />
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="veteran"
 
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
@@ -381,33 +362,36 @@
         <label class="checkbox-inline">
             <input
 
-            name="disabled"
+            name="veteran"
+
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
         </label>   
 
         <div class="well">
-            <label for="specialNeeds">Does the client have documentation of this?</label><br />
+            <label for="veteranDocumentation">Does the client have documentation of this?</label><br />
             <label class="checkbox-inline">
                 <input
                 name="veteranDocumentation"
-                type="checkbox"
+                type="radio"
+
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 Yes
             </label>
             <label class="checkbox-inline">
                 <input
                 name="veteranDocumentation"
-                type="checkbox"
+
+                type="radio"
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                 No
             </label><br>
-            <label class="control-label" for="veteran_type">Type of Military Discharge</label>
-            <input type="text" name="veteranType" placeholder="Honorable" class="form-control">
+            <label class="control-label" for="dischargeType">Type of Military Discharge</label>
+            <input type="text" name="dischargeType" class="form-control">
         </div>
-    
-    
+    </div>
+
 
     <hr class="dashed">
 
