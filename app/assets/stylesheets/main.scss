@@ -60,7 +60,7 @@ hr.solid {
 
 .cause-homelessness-section {
   display: grid;
-  grid-template-columns: 400px 200px;
+  grid-template-columns: 400px 270px;
   grid-gap: 10px;
   margin-bottom: 10px;
   //background-color: #fff;
@@ -72,10 +72,25 @@ hr.solid {
   font-size: 100%;
 }
 
+.prior-living-situation-section {
+  display: grid;
+  grid-template-columns: 400px 270px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
+.prior-living-situation-box {
+  @extend .box;
+  font-size: 100%;
+  
+}
+
 .number-of-shelters-section {
   display: grid;
-  grid-template-columns: 300px 600px;
-  grid-gap: 100px;
+  grid-template-columns: 270px 510px;
+  grid-gap: 150px;
   margin-bottom: 10px;
   //background-color: #fff;
   //color: #444;
@@ -86,21 +101,20 @@ hr.solid {
   font-size: 100%;
 }
 
-.prior-living-situation-section {
-  display: grid;
-  grid-template-columns: 400px 220px;
-  grid-gap: 10px;
+
+.well {
+  padding: 10px;
   margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
 }
 
-.prior-living-situation-box {
-  @extend .box;
-  font-size: 100%;
-
-}
-
+// .special-needs-section {
+//   display: grid;
+//   grid-template-columns: 270px 510px;
+//   grid-gap: 150px;
+//   margin-bottom: 10px;
+//   //background-color: #fff;
+//   //color: #444;
+// }
 
 .footer-section-container {
   display: grid;
