@@ -1,8 +1,6 @@
-// TODO the below needs to go into the main scss
-hr.dashed {
-  border-top: 1px dashed #8c8b8b;
+.residentstable {
+  padding-right: 50px; 
 }
-
 
 .body-container {
   margin-top: 100px;
@@ -24,128 +22,90 @@ hr.dashed {
 .top-navbar {
   padding: 10px;
   background-color: #D3D2D3;
-
-hr.solid {
-  border-top: 1px solid #8c8b8b;
 }
 
-.image-container {
-  border-radius: 50%;
-  width: 75px;
-
-  height: 75px;
-
-}
-.head-section-container {
-  display: grid;
-  grid-template-columns: 80px 150px auto 65px 65px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
+.navbar-fixed-left {
+  width: 140px;
+  margin-top: 50px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
 }
 
-
-.box {
-  //background-color: #444;
-  //color: #fff;
-  border-radius: 5px;
-  padding: 2px;
-  font-size: 150%;
-  margin: auto 0;
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
 }
 
-.personal-information {
-  display: grid;
-  grid-template-columns: 300px auto 200px 200px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
+.navbar-fixed-left + .container {
+  padding-left: 60px;
 }
 
-.personal-info-box {
-  @extend .box;
-  font-size: 100%;
+.container {
+  height: 1000px;
 }
 
-.admittance-section {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
+.wrapper {
+  margin-left: 140px;
 }
 
-.admit-box {
-  @extend .box;
-  font-size: 100%;
+.dashboard-count {
+  font-weight: normal;
+  font-size: 50%;
+
+} 
+
+// @import “bourbon”;
+
+body {
+  background: #eee !important;  
 }
 
-.cause-homelessness-section {
-  display: grid;
-  grid-template-columns: 400px 270px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
+.wrapper {  
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 10px;
 }
 
-.cause-homelessness-box {
-  @extend .box;
-  font-size: 100%;
-}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
 
-.prior-living-situation-section {
-  display: grid;
-  grid-template-columns: 400px 270px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
-}
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 30px;
+  }
 
-.prior-living-situation-box {
-  @extend .box;
-  font-size: 100%;
-  
-}
+  .checkbox {
+    font-weight: normal;
+  }
 
-.number-of-shelters-section {
-  display: grid;
-  grid-template-columns: 270px 510px;
-  grid-gap: 150px;
-  margin-bottom: 10px;
-  //background-color: #fff;
-  //color: #444;
-}
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    // @include box-sizing(border-box);
 
-.number-of-shelters-box {
-  @extend .box;
-  font-size: 100%;
-}
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input[type=“text”] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  input[type=“password”] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
 
-.well {
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-// .special-needs-section {
-//   display: grid;
-//   grid-template-columns: 270px 510px;
-//   grid-gap: 150px;
-//   margin-bottom: 10px;
-//   //background-color: #fff;
-//   //color: #444;
-// }
-
-.footer-section-container {
-  display: grid;
-  grid-template-columns: 80px 150px auto 65px 65px;
-  grid-gap: 10px;
-  margin-bottom: 10px;
 }
 
 

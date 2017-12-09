@@ -13,7 +13,9 @@ function getResident(residentId) {
       return response.json();
     })
     .then(function(data) {
+     
       var nameAge = data.full_name + ' ' +  data.age + ' yo | ' + data.gender;
+
       document.querySelector('#name-age').innerHTML = nameAge;
       document.querySelector('#personal-information').innerHTML = personalInformation(data);
     })
@@ -23,12 +25,19 @@ function getResident(residentId) {
 }
 
 
-var id = location.pathname.split('/')[2]
-getResident(id)
+var id = location.pathname.split('/')[2];
+getResident(id);
 
 function personalInformation(resident) {
   return  '<div class="personal-info-container">' +
               '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
               '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' + 
+              '<span>Status:</span> ' + '<span>' + resident.status + '</span><br />' + 
+              '<span>Status:</span> ' + '<span>' + resident.status + '</span><br />' + 
+              
+              
           '</div>';
 }
+
+
+
