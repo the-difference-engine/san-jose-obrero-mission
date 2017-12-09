@@ -33,8 +33,6 @@ function personalInformation(resident) {
               '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
               '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' + 
               '<span>Status:</span> ' + '<span>' + resident.status + '</span><br />' + 
-              '<span>Status:</span> ' + '<span>' + resident.status + '</span><br />' + 
-              
               
           '</div>';
 }
