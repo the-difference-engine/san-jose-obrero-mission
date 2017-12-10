@@ -2,7 +2,7 @@ function getResident(residentId) {
   var url = "http://localhost:3004/api/v1/residents/" + residentId;
     var myHeaders = new Headers();
     myHeaders.append('Content-Type', 'application/json');
-    console.log(url)
+    console.log(url);
     fetch(url, {
         method: 'GET',
         headers: myHeaders,
@@ -32,7 +32,9 @@ function personalInformation(resident) {
   return  '<div class="personal-info-container">' +
               '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
               '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' + 
-              '<span>Status:</span> ' + '<span>' + resident.status + '</span><br />' + 
+              '<span>Gender:</span> ' + '<span>' + resident.gender + '</span><br />' + 
+              
+
               
           '</div>';
 }
