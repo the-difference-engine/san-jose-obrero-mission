@@ -44,9 +44,7 @@ function submitResidentsForm() {
               informationType: document.forms.resident.informationType.value,
               dateSetup: document.forms.resident.dateSetup.value,
               dateExpiration: document.forms.resident.dateExpiration.value,
-              daysLeft: document.forms.resident.daysLeft.value,
-
-
+              daysLeft: document.forms.resident.daysLeft.value
 
         }
     };
