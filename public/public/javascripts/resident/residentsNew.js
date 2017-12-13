@@ -44,7 +44,19 @@ function submitResidentsForm() {
               informationType: document.forms.resident.informationType.value,
               dateSetup: document.forms.resident.dateSetup.value,
               dateExpiration: document.forms.resident.dateExpiration.value,
-              daysLeft: document.forms.resident.daysLeft.value
+              daysLeft: document.forms.resident.daysLeft.value,
+              companyName: document.forms.resident.companyName.value,
+              address: document.forms.resident.address.value,
+              city: document.forms.resident.city.value,
+              state: document.forms.resident.state.value,
+              zip: document.forms.resident.zip.value,
+              phone: document.forms.resident.phone.value,
+              supervisor: document.forms.resident.supervisor.value, 
+              stateDate: document.forms.resident.stateDate.value,
+              endDate: document.forms.resident.endDate.value,
+              marketing: document.forms.resident.marketing.value,
+
+
 
         }
     };
