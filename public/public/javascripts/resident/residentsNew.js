@@ -1,7 +1,7 @@
 function submitResidentsForm() {
     var url = "http://localhost:3000/api/v1/residents";
 
-    debugger
+   debugger
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
@@ -46,7 +46,28 @@ function submitResidentsForm() {
               dateExpiration: document.forms.resident.dateExpiration.value,
               daysLeft: document.forms.resident.daysLeft.value,
 
+              pilsenWellness: document.forms.resident.pilsenWellness.value,
+              failureComplete: document.forms.resident.failureComplete.value,
+              commentBox: document.forms.resdient.commentBox.value,
+              dateDisciplinary: document.forms.resident.dateDisciplinary.value,
+              noShowNoCall: document.forms.resdient.noShowNoCall.value,
+              programActivities: document.forms.resident.programActivities.value,
+              lackHygiene: document.forms.resident.lackHygiene.value,
+              failureTofollowPolicy: document.forms.resident.failureTofollowPolicy.value,
+              confrontationalBehavior: document.forms.resident.confrontationalBehavior.value,
+              damageTosjom: document.forms.resident.damageTosjom.value,
+              noShowcaseManager: document.forms.resident.noShowcaseManager.value,
+              failureTomeetExpectations: document.forms.resident.failureTomeetExpectations.value,
+              fighting: document.forms.resident.fighting.value,
 
+              bottomBunk: document.forms.resident.bottomBunk.value,
+              pilsenWell: document.forms.resident.pilsenWell.value,
+              backgroundCheck: document.forms.resident.backgroundCheck.value,
+              previousPart: document.forms.resdient.previousPart.value,
+              referral: document.forms.resident.referral.value,
+              tbTest: document.forms.resdient.tbTest.value,
+
+             
 
         }
     };
