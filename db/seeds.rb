@@ -15,7 +15,7 @@ User.create([
   ])
 
 ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "asian", "american indian"]
-50.times do
+25.times do
   Resident.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -28,11 +28,11 @@ ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "
     bed_id: rand(10000),
     resident_race: Faker::ChuckNorris.fact,
     cause_of_homeslessness: Faker::ChuckNorris.fact,
-    length_of_homelessness: rand(5).to_s + ' ' + 'years',
+    length_of_homelessness: rand(100),
     prior_living_situation: Faker::ChuckNorris.fact,
     number_of_shelters: rand(100),
-    chronically_homeless: false,
-    image: 'image'
+    chronically_homeless: rand(2) == 1 ? 'Active' : 'Not Active',
+    image: Faker::Avatar.image
     )
 end
 
