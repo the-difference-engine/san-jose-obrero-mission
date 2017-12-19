@@ -6,7 +6,6 @@ module Api
       def index
         residents = Resident.order("length_of_homelessness DESC")
 
-
         # TODO this has to be fixed I am not accessing the ser.
         render json: { residents: residents, table_headers: table_headers }
       end
