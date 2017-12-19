@@ -1,7 +1,7 @@
 function submitResidentsForm() {
     console.log('did this work')
     var url = "http://localhost:3000/api/v1/residents";
-// debugger
+debugger
    
     var data = {
         resident: {

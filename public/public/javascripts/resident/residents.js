@@ -26,7 +26,7 @@ function getAllResidents () {
           tr.append("<div class='table-cell'> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </div>");
           tr.append("<div class='table-cell'> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </div>");
           tr.append("<div class='table-cell'> "+(obj.length_of_homelessness + " day(s)")+" </div>");
-          tr.append("<div class='table-cell'> "+obj.documented+" </div>");
+          tr.append(`<div class='table-cell'> ${obj.documented || 'false'} </div>`);
           tr.append("<div class='table-cell'> "+obj.bed_id+" </div>");
           tr.appendTo(rowWrapper);
           rowWrapper.appendTo(tbody);
