@@ -11,9 +11,32 @@
         <a href="/residents" class="btn btn-md btn-default" disabled = true >Cancel</a>
     </div>
 </div>
-<hr class='solid'>
 <div id="personal-information"></div>
-<hr class='dashed'>
-
+<br>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#show-general" role="tab" aria-controls="show-general"><h4>General</h4></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#show-indentification" role="tab" aria-controls="show-indentification"><h4>Identification</h4></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#show-employment" role="tab" aria-controls="Employment"><h4>Employment & Education</h4></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#show-disciplinary" role="tab" aria-controls="disciplinary"><h4>Disciplinary</h4></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#show-requirements" role="tab" aria-controls="Requirements"><h4>Requirements Checklist</h4></a>
+      </li>
+</ul>
+<br>
+<div class="tab-content">
+    <div class="tab-pane active container-fluid" id="show-general" role="tabpanel">Hello General</div>
+    <div class="tab-pane" id="show-indentification" role="tabpanel">Hello Indentification</div>
+    <div class="tab-pane" id="show-employment" role="tabpanel">Hello Employment</div>
+    <div class="tab-pane" id="show-disciplinary" role="tabpanel">Hello Disciplinary</div>
+    <div class="tab-pane" id="show-requirements" role="tabpanel">Hello Requirements</div>
+</div>
 
 <script type="text/javascript" src="/public/javascripts/resident/residentShow.js"></script>
