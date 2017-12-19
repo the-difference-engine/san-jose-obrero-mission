@@ -28,9 +28,9 @@
             <option selected>Choose...</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="transgender_f_to_m">Transgender: Female to Male</option>
-            <option value="transgender_m_to_f">Transgender: Male to Female</option>
-            <option value="does_not_identify">I do not identify with the above options</option>
+            <option value="Transgender: Female to Male">Transgender: Female to Male</option>
+            <option value="Transgender: Male to Female">Transgender: Male to Female</option>
+            <option value="Does Not Identify">I do not identify with the above options</option>
         </select>
     </div>
     <div class="personal-info-box d">
@@ -268,7 +268,7 @@
 
     <label class="checkbox-inline">
     <input
-    name="MentalIllness"
+    name="mentalIllness"
     type="checkbox"
     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
     Mental Illness
@@ -279,7 +279,7 @@
     </div>
     <label class="checkbox-inline">
     <input
-    name="HIV and/or AIDs(HIV)"
+    name="hivAndaids"
     type="checkbox"
     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
     HIV and/or AIDs(HIV)
@@ -293,21 +293,21 @@
     </label><br/>
     <label class="checkbox-inline">
     <input
-    name="Victim of Domestic Violence"
+    name="victimofDomesticViolence"
     type="checkbox"
     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
     Victim of Domestic Violence
     </label><br/>
     <label class="checkbox-inline">
     <input
-    name="Pregnant / Parenting Teen)"
+    name="pregnantParentingTeen"
     type="checkbox"
     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
     Pregnant / Parenting Teen
     </label><br/>
     <label class="checkbox-inline">
     <input
-    name="Ex-Offender(Criminal Record)"
+    name="exOffenderCriminalRecord"
     type="checkbox"
     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
     Ex-Offender(Criminal Record)
@@ -505,37 +505,37 @@
 <br>
     <div class="ID-Card-box b">
         <label for="ID-Card">ID Card</label><br />
-        <input type="text" class="form-control" placeholder="12345678910" name="ID-Card">
+        <input type="text" class="form-control" placeholder="12345678910" name="idCard">
     </div>
 
     <br>
     <div class="Driver-License-box b">
-      <label for="Driver-License">Driver's License</label><br />
-      <input type="text" class="form-control" placeholder="12345678910" name="Driver-License">
+      <label for="Driver-License">Drivers License</label><br />
+      <input type="text" class="form-control" placeholder="12345678910" name="driverLicense">
     </div>
 
     <br>
     <div class="Birth-Certificate-box b">
     <label for="Birth-Certificate">Birth Certificate</label><br />
-    <input type="text" class="form-control" placeholder="12345678910" name="Birth-Certificate">
+    <input type="text" class="form-control" placeholder="12345678910" name="birthCertificate">
     </div>
 
     <br>
     <div class="Social-Security-Number-box b">
     <label for="Social-Security-Number">Social Security Number</label><br />
-    <input type="text" class="form-control" placeholder="12345678910" name="Social-Security-Number">
+    <input type="text" class="form-control" placeholder="12345678910" name="socialSecuritynumber">
     </div>
 
     <br>
     <div class="Passport-Number-box b">
     <label for="Passport-Number">Passport Number</label><br />
-    <input type="text" class="form-control" placeholder="12345678910" name="Passport-Number">
+    <input type="text" class="form-control" placeholder="12345678910" name="passportNumber">
     </div>
 
     <br>
     <div class="Permanent-Resident-Card-box b">
     <label for="Permanent-Resident-Card">Permanent Resident Card (Green Card)</label><br />
-    <input type="text" class="form-control" placeholder="12345678910" name="Permanent-Resident-Card">
+    <input type="text" class="form-control" placeholder="12345678910" name="permanentResidentcard">
     </div>
 
     <br>
@@ -544,10 +544,14 @@
   <div class="personal-information">
     <div class="personal-info-box e">
     <label for="type">Type</label>
-    <select name="ethnicity" class="form-control">
+    <select name="informationType" class="form-control">
         <option selected>Choose...</option>
-        <option value="hispanic">Hispanic/Latino</option>
-        <option value="Non-Hispanic/Non-Latino">Non-Hispanice/Non-Latino</option>
+        <option value="idCard">ID Card</option>
+        <option value="driversLicense">Drivers License</option>
+        <option value="birthCertificate">Birth Certificate</option>
+        <option value="socialSecurityNumber">Social Security Number</option>
+        <option value="passPort">Passport Number</option>
+        <option value="residentCard">Permanent Resident Card Number</option>
     </select>
   </div>
 
@@ -555,15 +559,15 @@
      
 <div class="personal-info-box d">
 <label for="Date Setup">Date Setup</label>
-<input type="date" name="DateSetup" class="form-control">
+<input type="date" name="dateSetup" class="form-control">
 </div>
 <div class="personal-info-box d">
 <label for="DateExpiration">Date Expiration</label>
-<input type="date" name="DateExpiration" class="form-control">
+<input type="date" name="dateExpiration" class="form-control">
 </div>
 <div class="personal-info-box b">
 <label class="control-label" for="Days_left">Days Left</label>
-<input type="text" name="Days_left" placeholder="7" class="form-control">
+<input type="text" name="daysLeft" placeholder="7" class="form-control">
 </div>
     
 
@@ -584,100 +588,100 @@
 
     <div class="CompanyName-box b">
     <label for="CompanyName">Company Name</label><br />
-    <input type="text" class="form-control" placeholder="ABC Corp" name="CompanyName">
+    <input type="text" class="form-control" placeholder="ABC Corp" name="companyName">
   </div>
 
   <br>
   <div class="Address-box b">
   <label for="Address">Street Address</label><br />
-  <input type="text" class="form-control" placeholder="ABC Corp" name="Address">
+  <input type="text" class="form-control" placeholder="ABC Corp" name="address">
   </div>
 
   <br>
   <div class="City-box b">
   <label for="City">City</label><br />
-  <input type="text" class="form-control" placeholder="Chicago" name="City">
+  <input type="text" class="form-control" placeholder="Chicago" name="city">
 
   <label for="state">State</label>
   <select name="state" class="form-control">
     <option selected>Choose...</option>
-	<option value="AL">Alabama</option>
-	<option value="AK">Alaska</option>
-	<option value="AZ">Arizona</option>
-	<option value="AR">Arkansas</option>
-	<option value="CA">California</option>
-	<option value="CO">Colorado</option>
-	<option value="CT">Connecticut</option>
-	<option value="DE">Delaware</option>
-	<option value="DC">District Of Columbia</option>
-	<option value="FL">Florida</option>
-	<option value="GA">Georgia</option>
-	<option value="HI">Hawaii</option>
-	<option value="ID">Idaho</option>
-	<option value="IL">Illinois</option>
-	<option value="IN">Indiana</option>
-	<option value="IA">Iowa</option>
-	<option value="KS">Kansas</option>
-	<option value="KY">Kentucky</option>
-	<option value="LA">Louisiana</option>
-	<option value="ME">Maine</option>
-	<option value="MD">Maryland</option>
-	<option value="MA">Massachusetts</option>
-	<option value="MI">Michigan</option>
-	<option value="MN">Minnesota</option>
-	<option value="MS">Mississippi</option>
-	<option value="MO">Missouri</option>
-	<option value="MT">Montana</option>
-	<option value="NE">Nebraska</option>
-	<option value="NV">Nevada</option>
-	<option value="NH">New Hampshire</option>
-	<option value="NJ">New Jersey</option>
-	<option value="NM">New Mexico</option>
-	<option value="NY">New York</option>
-	<option value="NC">North Carolina</option>
-	<option value="ND">North Dakota</option>
-	<option value="OH">Ohio</option>
-	<option value="OK">Oklahoma</option>
-	<option value="OR">Oregon</option>
-	<option value="PA">Pennsylvania</option>
-	<option value="RI">Rhode Island</option>
-	<option value="SC">South Carolina</option>
-	<option value="SD">South Dakota</option>
-	<option value="TN">Tennessee</option>
-	<option value="TX">Texas</option>
-	<option value="UT">Utah</option>
-	<option value="VT">Vermont</option>
-	<option value="VA">Virginia</option>
-	<option value="WA">Washington</option>
-	<option value="WV">West Virginia</option>
-	<option value="WI">Wisconsin</option>
-	<option value="WY">Wyoming</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
 </select>
   </div>
 
   <div class="personal-info-box b">
   <label class="control-label" for="Zip">Zip</label>
-  <input type="text" name="Zip" placeholder="60606" class="form-control">
+  <input type="text" name="zip" placeholder="60606" class="form-control">
   </div>
 
   <div class="personal-info-box b">
   <label class="control-label" for="Phone">Phone Number</label>
-  <input type="text" name="Phone" placeholder="312-506-1700" class="form-control">
+  <input type="text" name="phone" placeholder="312-506-1700" class="form-control">
   </div>
 
   <br>
   <div class="Supervisor-box b">
   <label for="Supervisor">Supervisor Name</label><br />
-  <input type="text" class="form-control" placeholder="Scott Tillman" name="Supervisor">
+  <input type="text" class="form-control" placeholder="Scott Tillman" name="supervisor">
   </div>
 
   <div class="personal-info-box d">
   <label for="Startdate">Start Date</label>
-  <input type="date" name="Startdate" class="form-control">
+  <input type="date" name="startDate" class="form-control">
   </div>
   <div class="personal-info-box d">
   <label for="Enddate">End Date</label>
-  <input type="date" name="Enddate" class="form-control">
+  <input type="date" name="endDate" class="form-control">
   </div>
 
   <br> <br>
@@ -742,7 +746,7 @@ Associates Degree
 
 <div class="Major-box b">
 <label for="Major">Major</label><br />
-<input type="text" class="form-control" placeholder="Marketing" name="Marketing">
+<input type="text" class="form-control" placeholder="Marketing" name="marketing">
 </div>
 
 <br>
@@ -979,3 +983,4 @@ $('input[type="checkbox"]').on('change', function() {
 </script>
 
 <script type="text/javascript" src="/public/javascripts/resident/residentsNew.js"></script>
+
