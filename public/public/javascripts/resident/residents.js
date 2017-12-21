@@ -2,7 +2,7 @@ var initDoc;
 
 function clearFilter(){
     console.log("this worked");
-    document = initDoc;
+    // document = initDoc;
     location.reload();
     // getAllResidents();
 }
@@ -35,22 +35,22 @@ function getAllResidents () {
           rowWrapper = $("<div />").attr("id", "row").addClass("row-wrapper");
           tr = $(`<a href="residents/${obj.id}"></a>`).attr("id", "row").addClass("table-row");
           tr.append(`<img src="${obj.image}" alt="" class="avatar-container">`);
-          tr.append("<div class='table-cell'> " + obj.first_name + ' ' + obj.last_name + " </div>");
+          tr.append("<div class='table-cell'>" + obj.first_name + ' ' + obj.last_name + "</div>");
           tr.append("<div class='table-cell'>" + obj.gender.charAt(0).toUpperCase() + obj.gender.slice(1) + "</div>");
           var date = new Date(obj.date);
           var rando = Math.floor((Math.random() * 3) + 1);
-          tr.append("<div class='table-cell'> "+(date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +" </div>");
-          tr.append("<div class='table-cell'> "+(date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() +" </div>");
-          tr.append("<div class='table-cell'> "+(obj.length_of_homelessness + " day(s)")+" </div>");
-          tr.append("<div class='table-cell'> "+obj.documented+" </div>");
-          tr.append("<div class='table-cell'> "+obj.bed_id+" </div>");
+          tr.append("<div class='table-cell'>" + (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() +"</div>");
+          tr.append("<div class='table-cell'>" + (date.getMonth()+1+rando) + "/" + date.getDate() + "/" + date.getFullYear() + "</div>");
+          tr.append("<div class='table-cell'>" + (obj.length_of_homelessness + " day(s)") + "</div>");
+          tr.append("<div class='table-cell'>" + obj.documented + "</div>");
+          tr.append("<div class='table-cell'>" + obj.bed_id + "</div>");
           tr.appendTo(rowWrapper);
           rowWrapper.appendTo(tbody);
         });
         thead.appendTo(table);
         tbody.appendTo(table);
         table.appendTo("#residents");
-        initDoc = $.extend({}, document);
+        // initDoc = $.extend({}, document);
       });
     });
 }
