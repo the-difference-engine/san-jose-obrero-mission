@@ -57,15 +57,61 @@ function submitResidentsForm() {
         }
     };
 
-    var myHeaders = new Headers();
+var id = location.pathname.split('/')[2];
+getResident(id);
 
-    myHeaders.append('Content-Type', 'application/json');
-
-    fetch(url, {
-        method: 'POST',
-        headers: myHeaders,
-        mode: 'cors',
-        cache: 'default',
-        body: JSON.stringify(data)
-    });
+function getResident(residentId) {
+ var url = "http://localhost:3000/api/v1/residents/" + residentId;
+   var myHeaders = new Headers();
+   myHeaders.append('Content-Type', 'application/json');
+   console.log(url)
+   fetch(url, {
+       method: 'GET',
+       headers: myHeaders,
+       mode: 'cors',
+       cache: 'default'
+   })
+   .then(function(response) {
+     return response.json();
+   })
+   .then(function(data) {
+     console.log('data ', data);
+     var nameAge = data.full_name;
+     document.querySelector('#name-age').innerHTML = nameAge;
+     document.querySelector('#personal-information').innerHTML = personalInformation(data);
+   })
+   .catch(function(error) {
+     console.log(JSON.stringify(error));
+   });
 }
+
+function personalInformation(resident) {
+  return  '<div class="show_wrapper_row1">' +
+             '<div class="resident_show_box a"><h5>Full Name</h5> ' + '<p>' + resident.full_name + '</p></div>' +
+             '<div class="resident_show_box b"><h5>Gender:</h5> ' + '<p>' + resident.gender + '</p></div>' +
+             '<div class="resident_show_box c"><h5>Phone Number:</h5> ' + '<p>' + resident.phone_number + '</p></div>' +
+         '</div>' +
+         '<div class="show_wrapper_row2">' +
+             '<div class="resident_show_box d"><h5>Date of Birth:</h5> ' + '<p>' + resident.date_of_birth + '</p></div>' +
+             '<div class="resident_show_box e"><h5>Age:</h5> ' + '<p>' + resident.age + '</p></div>' +
+             '<div class="resident_show_box f"><h5>Ethnicity:</h5> ' + '<p>' + resident.ethnicity + '</p></div>' +
+             '<div class="resident_show_box g"><h5>Race:</h5> ' + '<p>' + resident.resident_race + '</p></div>' +
+              '<div class="resident_show_box h"><h5>Status:</h5> ' + '<p>' + resident.status + '</p></div>' +
+         '</div>' +
+         '<div class="show_wrapper_row3">' +
+             '<div class="resident_show_box i"><h5>Case Manager:</h5> ' + '<p>' + resident.case_manager + '</p></div>' +
+             '<div class="resident_show_box j"><h5>Bed:</h5> ' + '<p>' + resident.bed_id
+              + '</p></div>' +
+             '<div class="resident_show_box k"><h5>Bed lock combo number:</h5> ' + '<p>' + resident.bed_lock_combo_number + '</p></div>' +
+         '</div>' +
+         '<div class="show_wrapper_row4">' +
+             '<div class="resident_show_box l"><h5>Admitted:</h5>' + '<p>' + resident.admitted_date + '</p></div>' +
+             '<div class="resident_show_box m"><h5>Released:</h5> ' + '<p>' + resident.released_date + '</p></div>' +
+             '<div class="resident_show_box n"><h5>Tenure:</h5> ' + '<p>' + resident.tenure + '</p></div>' +
+             '<div class="resident_show_box o"><h5>HMIS#:</h5> ' + '<p>' + resident.hmis_number
+              + '</p></div>' +
+             '<div class="resident_show_box p"><h5>HMIS Entry Date:</h5> ' + '<p>' + resident.hmis_entry_date
+              + '</p></div>' +
+         '</div>';
+  }
+
