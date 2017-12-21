@@ -1,7 +1,6 @@
 function submitResidentsForm() {
-    var url = "http://localhost:3004/api/v1/residents";
-
-    debugger
+  var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
+    //var url = "http://localhost:3000/api/v1/residents";
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
