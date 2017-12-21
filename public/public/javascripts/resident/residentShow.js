@@ -2,6 +2,7 @@ var id = location.pathname.split('/')[2];
 getResident(id);
 
 function getResident(residentId) {
+
  var url = "https://qa-san-jose.herokuapp.com/api/v1/residents" + residentId;
  //var url = "http://localhost:3000/api/v1/residents/" + residentId;
    var myHeaders = new Headers();
