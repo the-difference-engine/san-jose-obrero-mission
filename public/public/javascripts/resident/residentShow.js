@@ -26,10 +26,11 @@ function getResident(residentId) {
 var id = location.pathname.split('/')[2]
 getResident(id)
 
-
+debugger
 function personalInformation(resident) {
   return  '<div class="personal-info-container">' +
               '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
-              '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' + 
+              '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' +
+                 
           '</div>';
 }

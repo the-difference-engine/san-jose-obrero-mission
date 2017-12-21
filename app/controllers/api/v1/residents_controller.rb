@@ -53,6 +53,7 @@ module Api
           :number_of_shelters,
           :chronically_homeless,
           :image
+          
         )
 
       end
