@@ -18,8 +18,9 @@ function getResident(residentId) {
      return response.json();
    })
    .then(function(data) {
-     //console.log('data ', data);
      var nameAge = data.full_name;
+
+     document.querySelector('#show-page-avatar').innerHTML = setAvatar(data.image);
      document.querySelector('#name-age').innerHTML = nameAge;
      document.querySelector('#personal-information').innerHTML = personalInformation(data);
      displayGeneralTab(data);
@@ -29,6 +30,11 @@ function getResident(residentId) {
    });
 }
 
+function setAvatar(avatar) {
+  var avatar = avatar || "/images/default_avatar.png";
+  var avatarHtml = `<img src='${ avatar }' alt='avatar' class='avatar-container'>`;
+  return avatarHtml
+}
 
 function personalInformation(resident) {
   return '<div class="container-fluid">' +

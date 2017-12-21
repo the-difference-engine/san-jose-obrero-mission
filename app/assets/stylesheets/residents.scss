@@ -92,6 +92,15 @@ hr.solid {
   //color: #444;
 }
 
+.head-section-container-show {
+  display: grid;
+  grid-template-columns: 80px 300px auto 65px 65px;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+  //background-color: #fff;
+  //color: #444;
+}
+
 .box {
   //background-color: #444;
   //color: #fff;
