@@ -1,7 +1,12 @@
 function submitResidentsForm() {
+
     var url = "http://localhost:3000/api/v1/residents";
 
     // debugger
+
+  // var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
+ //var url = "http://localhost:3000/api/v1/residents";
+
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
@@ -45,16 +50,6 @@ function submitResidentsForm() {
               dateSetup: document.forms.resident.dateSetup.value,
               dateExpiration: document.forms.resident.dateExpiration.value,
               daysLeft: document.forms.resident.daysLeft.value,
-              companyName: document.forms.resident.companyName.value,
-              address: document.forms.resident.address.value,
-              city: document.forms.resident.city.value,
-              state: document.forms.resident.state.value,
-              zip: document.forms.resident.zip.value,
-              phone: document.forms.resident.phone.value,
-              supervisor: document.forms.resident.supervisor.value, 
-              stateDate: document.forms.resident.stateDate.value,
-              endDate: document.forms.resident.endDate.value,
-              marketing: document.forms.resident.marketing.value,
 
 
 
@@ -73,4 +68,3 @@ function submitResidentsForm() {
         body: JSON.stringify(data)
     });
 }
-

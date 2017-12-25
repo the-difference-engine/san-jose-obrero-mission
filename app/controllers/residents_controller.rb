@@ -12,6 +12,7 @@ class ResidentsController < ApplicationController
   end 
 
   def create
+    binding.pry
     resident = Resident.create(
                 first_name: params[:first_name].capitalize,
                 last_name: params[:last_name].capitalize,
