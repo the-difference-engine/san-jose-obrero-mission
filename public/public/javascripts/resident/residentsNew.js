@@ -1,7 +1,7 @@
 function submitResidentsForm() {
     var url = "http://localhost:3000/api/v1/residents";
 
-    debugger
+    // debugger
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
