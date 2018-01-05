@@ -1,6 +1,6 @@
 var initDoc;
 
-function clearFilter(){
+function clearFilter() {
     console.log("this worked");
     // document = initDoc;
     location.reload();
@@ -8,8 +8,8 @@ function clearFilter(){
 }
 
 function getAllResidents () {
-  var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
-  //var url = "http://localhost:3000/api/v1/residents";
+//   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
+  var url = "http://localhost:3004/api/v1/residents";
   fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
@@ -79,7 +79,7 @@ function sortMale(){
     var tableBody, rows;
     tableBody = document.getElementById("table-body");
     rows = tableBody.getElementsByTagName("a");
-    for (i=0; i < rows.length; i++){
+    for (i = 0; i < rows.length; i++){
         a = rows[i].getElementsByTagName("div")[1];
         if (a.innerHTML == "Male") {
             rows[i].style.display = "";            
