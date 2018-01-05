@@ -1,6 +1,10 @@
 class Api::V1::BedSerializer < ActiveModel::Serializer
-  attributes :id,
-             :name,
-             :top_or_bottom,
-             :occupied
+  attributes :bed_id,
+             :occupied,
+             :testing_this
+
+
+  def testing_this
+    return true
+  end
 end

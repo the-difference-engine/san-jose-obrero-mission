@@ -6,7 +6,7 @@ module Api
 
       def index
         beds = Bed.all
-        render json: { beds: beds }
+        render json: beds
       end
 
       def show 

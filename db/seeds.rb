@@ -36,7 +36,70 @@ ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "
     )
 end
 
-beds = ["1N", "2N", "3N", "4N", "5N", "6N", "7N", "8N", "9N", "10N", "11N", "12N", "13N", "14N", "15N", "16N", "17N", "18N", "19N", "20N", "1S", "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "11S", "12S", "13S", "14S", "15S", "16S", "17S", "18S", "19S", "20S", "105TB", "105BB", "107TB", "107BB", "201TB", "201BB", "202TB", "202BB", "203TB", "203BB", "204TB", "204BB", "209TB", "209BB", "210TB", "210BB", "211TB", "211BB", "221TB", "221BB", "311TB", "311BB"]
+beds = %w[
+    1N
+    2N
+    3N
+    4N
+    5N
+    6N
+    7N
+    8N
+    9N
+    10N
+    11N
+    12N
+    13N
+    14N
+    15N
+    16N
+    17N
+    18N
+    19N
+    20N
+    1S
+    2S
+    3S
+    4S
+    5S
+    6S
+    7S
+    8S
+    9S
+    10S
+    11S
+    12S
+    13S
+    14S
+    15S
+    16S
+    17S
+    18S
+    19S
+    20S
+    105TB 
+    105BB 
+    107TB 
+    107BB 
+    201TB 
+    201BB 
+    202TB 
+    202BB 
+    203TB 
+    203BB 
+    204TB 
+    204BB 
+    209TB 
+    209BB 
+    210TB 
+    210BB 
+    211TB 
+    211BB 
+    221TB 
+    221BB 
+    311TB 
+    311BB
+]
 
 beds.each do | bed |
   Bed.create(
