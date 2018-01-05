@@ -1,25 +1,40 @@
-<h2>Resident: </h2>
-<div><a class="btn btn-default" href="/residents">Home</a></div>
-<br>
-
-<div class="row">
-    <div class="col-md-3">
-      <div class="well">
-        <div><h2>Name: <%= @resident.first_name %>   <%= @resident.last_name %></h2></div>
-        <h3>Bed: Bed Name</h3>
-        <h5>Gender: <%= @resident.gender %></h5>
-        <h5>Ethnicity: <%= @resident.ethnicity %></h5>
-        <h5>Date: <%= @resident.date.strftime("%b %d, %Y") %></h5>
-        <h5>HMIS Number: <%= @resident.hmis_number %></h5>
-        <h5>HMIS Entry Date: <%= @resident.hmis_entry_date.strftime("%b %d, %Y") %></h5>
-        <h5>Documented: <%= @resident.documented.to_s.capitalize %></h5>
-        <br>
-        <div>
-        <a class="btn btn-default" href="/residents/<%= @resident.id %>/edit">Update Resident</a>
-        </div>
-        <br>
-        <div class="btn btn-default">
-        <%= link_to  'Delete', "/residents/#{@resident.id.to_s}", method: :delete %>
-        </div>
-      </div>
+<div class="head-section-container-show">
+    <div id='show-page-avatar'class="box a"></div>
+    <div id="name-age" class="box b"></div>
+    <div class="box c"></div>
+    <div class="box d">
+        <button onclick="submitResidentsForm()" type="submit" class="btn btn-md btn-success" disabled = true >Edit</button>
     </div>
+    <div class="box d">
+        <a href="/residents" class="btn btn-md btn-default" disabled = true >Cancel</a>
+    </div>
+</div>
+<div id="personal-information"></div>
+<br>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#show-general" role="tab" aria-controls="show-general"><h4>General</h4></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#show-indentification" role="tab" aria-controls="show-indentification"><h4>Identification</h4></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#show-employment" role="tab" aria-controls="Employment"><h4>Employment & Education</h4></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#show-disciplinary" role="tab" aria-controls="disciplinary"><h4>Disciplinary</h4></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#show-requirements" role="tab" aria-controls="Requirements"><h4>Requirements Checklist</h4></a>
+      </li>
+</ul>
+<br>
+<div class="tab-content">
+    <div class="tab-pane active container-fluid" id="show-general" role="tabpanel"> General</div>
+    <div class="tab-pane" id="show-indentification" role="tabpanel"> Indentification</div>
+    <div class="tab-pane" id="show-employment" role="tabpanel"> Employment</div>
+    <div class="tab-pane" id="show-disciplinary" role="tabpanel"> Disciplinary</div>
+    <div class="tab-pane" id="show-requirements" role="tabpanel"> Requirements</div>
+</div>
+
+<script type="text/javascript" src="/public/javascripts/resident/residentShow.js"></script>

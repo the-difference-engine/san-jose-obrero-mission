@@ -3,6 +3,7 @@
                :first_name,
                :last_name,
                :date,
+               :age,
                :hmis_number,
                :hmis_entry_date,
                :documented,
