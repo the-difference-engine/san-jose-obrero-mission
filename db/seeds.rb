@@ -108,3 +108,4 @@ beds.each do | bed |
     resident_id: nil
   )
 end
+

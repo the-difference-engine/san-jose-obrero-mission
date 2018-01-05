@@ -2,6 +2,7 @@ class ResidentsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_case_manager!
   def index 
+    @beds = Bed.all
     @residents = Resident.all 
     render "index.html.erb" 
   end 

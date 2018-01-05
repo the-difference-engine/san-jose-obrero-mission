@@ -1,0 +1,75 @@
+residentProfile
+
+$(function() {
+$.each(residentProfile.table_headers,function(_,text) {
+  var table = $("<table />").addClass("table ");
+  var tr = $("<tr />");
+  tr.append($("<th />"));
+
+  $.each(residentProfile.residents,function(key1, value1) 
+
+    tr.append("<td />")
+    tbody.appendTo
+  end
+
+  thead.appendTo(table);    
+  tbody.appendTo(table);
+  table.appendTo("#table1");  
+
+});
+
+var residentProfile = {
+    {
+    "Identifying Information": {
+        "Name": "Troy leach",
+        "Phone Number": "123-123-1234",
+        "Bed": "B-1",
+        "HMIS": "12345"
+    },
+    "Residency": {
+        "Entry Date": "8/2/2014",
+        "Day 30": "9/2/2014"
+    },
+    "Bus Passes": {
+        "Cost": 4.0,
+        "Quantity": 4,
+        "Total": 16
+    }
+}
+
+
+
+
+}
+
+
+
+  
+
+
+
+
+
+
+})
+  
+
+
+
+
+})
+
+
+each over residentProfile with key, value
+  declare table, tr, tbody, thead, and tableId
+  make the table header
+  append to thead
+  each over values with key1, value1
+    reset tr
+    append key1 to tr
+    append to the tbody
+  end each
+  append thead to tble
+  append tbody to table
+  append tableId to table
+finaly end the outter each loop

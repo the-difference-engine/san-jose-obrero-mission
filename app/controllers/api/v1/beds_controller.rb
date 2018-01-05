@@ -5,7 +5,8 @@ module Api
       before_action :set_bed, only: [:show, :update, :destroy]
 
       def index
-        render json: Bed.all
+        beds = Bed.all
+        render json: beds
       end
 
       def show 
