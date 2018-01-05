@@ -303,3 +303,56 @@ function displayRequirements(resident) {
     '</div>';
 }
 
+function displayIdentificationtab(resident) {
+  document.querySelector('#show-indentification').innerHTML = '<div class="row">' +
+      '<div class="col-lg-6">' +
+      '<label for="ID-Card">ID Card</label>'+ '<p>' +
+      (resident.idCard || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+     ' <label for="Driver-License">Drivers License</label>' + '<p>' +
+     (resident.driverLicense || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+      '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
+      (resident.birthCertificate || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+      '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
+      (resident.socialSecuritynumber || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+      '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
+      (resident.passportNumber || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+      '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
+      (resident.permanentResidentcard || 'N/A') + '</p>' +
+      '</div>' +
+      '<div class="col-lg-6">' +
+      '<label for="Expectations">Expectations</label>'+ '<p>' +
+      (resident.informationType || 'N/A') + '</p>' +
+      '</div>' +
+
+      '<div class="col-lg-6">' +
+      '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
+      (resident.dateSetup || 'N/A') + '</p>' +
+      '</div>' +
+
+      '<div class="col-lg-6">' +
+      '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
+      (resident.dateExpiration || 'N/A') + '</p>' +
+      '</div>' +
+
+      '<div class="col-lg-6">' +
+      '<label for="Days-Left">Days Left</label>'+ '<p>' +
+      (resident.daysLeft || 'N/A') + '</p>' +
+      '</div>' +
+      '</div>';
+}
+
+     
+
+
+      
+
