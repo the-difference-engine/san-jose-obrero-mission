@@ -29,8 +29,26 @@ getResident(id)
 debugger
 function personalInformation(resident) {
   return  '<div class="personal-info-container">' +
+ 
               '<span>Full Name:</span> ' + '<span>' + resident.full_name + '</span><br />' +
+              '<span>Gender:</span> ' + '<span>' + resident.gender + '</span><br />' +
+              '<span>Phone Number:</span> ' + '<span>' + resident.phone + '</span><br />' +
+              '<span>Date of Birth:</span> ' + '<span>' + resident.dateOfBirth + '</span><br />' +
+              '<span>Age:</span> ' + '<span>' + resident.dateOfBirth + '</span><br />' +
               '<span>Ethnicity:</span> ' + '<span>' + resident.ethnicity + '</span><br />' +
+              '<span>Race:</span> ' + '<span>' + resident.resident_race + '</span><br />' +
+              '<span>Status:</span> ' + '<span>' + resident.resident_race + '</span><br />' +
+              '<span>Case Manager:</span> ' + '<span>' + resident.resident_race + '</span><br />' +
+              '<span>Bed:</span> ' + '<span>' + resident.bed_id + '</span><br />' +
+              '<span>Bed Lock Combo:</span> ' + '<span>' + resident.resident_race + '</span><br />' +
+              '<span>Admitted:</span> ' + '<span>' + resident.hmis_entry_date + '</span><br />' +
+              '<span>Released:</span> ' + '<span>' + resident.endDate + '</span><br />' +
+              '<span>Tenure:</span> ' + '<span>' + resident.hmis_entry_date + '</span><br />' +
+              '<span>HMIS#:</span> ' + '<span>' + resident.hmis_number + '</span><br />' +
+              '<span>HMIS Entry Date:</span> ' + '<span>' + resident.hmis_entry_date + '</span><br />' +
+              
+              
+              
                  
           '</div>';
 }
