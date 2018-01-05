@@ -36,19 +36,13 @@ ethnicities=["hispanic", "non-hispanic", "white", "black or african american", "
     )
 end
 
-room_beds = {"North" => 10, "South" => 10, "First Floor Unit #1" => 1, "First Floor Unit #2" => 1, "Second Floor Unit #1" => 1, "Second Floor Unit #2" => 1, "Second Floor Unit #3" => 1, "Second Floor Unit #4" => 1, "Second Floor Unit #5" => 1, "Second Floor Unit #6" => 1, "Second Floor Unit #7" => 1, "Second Floor Unit #8" => 1, "Third Floor Unit #1" => 1}
+beds = ["1N", "2N", "3N", "4N", "5N", "6N", "7N", "8N", "9N", "10N", "11N", "12N", "13N", "14N", "15N", "16N", "17N", "18N", "19N", "20N", "1S", "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "11S", "12S", "13S", "14S", "15S", "16S", "17S", "18S", "19S", "20S", "105TB", "105BB", "107TB", "107BB", "201TB", "201BB", "202TB", "202BB", "203TB", "203BB", "204TB", "204BB", "209TB", "209BB", "210TB", "210BB", "211TB", "211BB", "221TB", "221BB", "311TB", "311BB"]
 
-room_beds.each do |room, beds|
-  (1..beds).each do |bed| 
-    Bed.create(
-      top_or_bottom: "top",
-      occupied: true,
-      name: Faker::ChuckNorris.fact
-      )
-    Bed.create(
-      top_or_bottom: "bottom",
-      occupied: false,
-      name: Faker::ChuckNorris.fact
-      )
-  end
+beds.each do | bed |
+  Bed.create(
+    bed_id: bed,
+    occupied: false,
+    resident_id: nil
+  )
 end
+
