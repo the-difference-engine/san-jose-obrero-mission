@@ -351,6 +351,73 @@ function displayIdentificationtab(resident) {
       '</div>';
 }
 
+function displayEmploymenttab(resident) {
+  document.querySelector('#show-employment').innerHTML = '<div class="row">' +
+  '<div class="col-lg-6">' +
+      '<label for="Employment">Employment History</label>'+ '<p>' +
+      (resident.disabled || 'N/A') + '</p>' +
+      '</div>' +
+  '<div class="col-lg-6">' +
+      '<label for="CompanyName">Company Name</label>'+ '<p>' +
+      (resident.CompanyName || 'N/A') + '</p>' +
+      '</div>' +
+  '<div class="col-lg-6">' +
+      '<label for="Address">Street Address</label>'+ '<p>' +
+      (resident.Address || 'N/A') + '</p>' +
+      '</div>' +
+  '<div class="col-lg-6">' +
+      '<label for="City">City</label>'+ '<p>' +
+      (resident.City || 'N/A') + '</p>' +
+      '</div>' +
+  
+  '<div class="col-lg-6">' +
+      '<label for="City">City</label>'+ '<p>' +
+      (resident.City || 'N/A') + '</p>' +
+      '<label for="state">State</label>'+ '<p>' +
+      (resident.state || 'N/A') + '</p>' +
+      '<label class="control-label" for="Zip">Zip</label>'+ '<p>' +
+      (resident.Zip || 'N/A') + '</p>' +
+      '</div>' +
+
+  '<div class="col-lg-6">' +
+      '<label class="control-label" for="Phone">Phone Number</label>'+ '<p>' +
+      (resident.Phone || 'N/A') + '</p>' +
+      '</div>' +
+
+  '<div class="col-lg-6">' +
+      '<label for="Supervisor">Supervisor Name</label>'+ '<p>' +
+      (resident.Supervisor || 'N/A') + '</p>' +
+      '</div>' +
+  '<div class="col-lg-6">' +
+      '<label for="Startdate">Start Date</label>'+ '<p>' +
+      (resident.Startdate || 'N/A') + '</p>' +
+      '</div>' +
+  
+  '<div class="col-lg-6">' +
+  '<label for="Enddate">End Date</label>'+ '<p>' +
+      (resident.Enddate || 'N/A') + '</p>' +
+      '</div>' +
+      '</div>';
+}
+  
+      //disabled buttons on new
+
+function displayDisciplinarytab(resident) {
+        document.querySelector('#show-disciplinary').innerHTML = '<div class="row">' +
+        '<div class="col-lg-6">' +
+      '<label for="Employment">Employment History</label>'+ '<p>' +
+      (resident.disabled || 'N/A') + '</p>' +
+      '</div>' +
+      '</div>';
+    }
+      
+  
+  
+  
+
+  
+  
+
      
 
 

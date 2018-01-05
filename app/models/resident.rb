@@ -22,6 +22,64 @@
 #  chronically_homeless   :boolean
 #  image                  :string
 #
+#
+# specialNeedsNone :string
+# specialNeedsSubstanceAbuse :string
+# specialNeedsAlcoholAbuse :string
+# mentalIllness :string
+# mentalIllnessType :string
+# hivAndaids :string
+# victimofDomesticViolence :string
+# pregnantParentingTeen :string
+# exOffenderCriminalRecord :string
+# disabled :boolean
+# disabilityDocumentation :string
+# disabilityType :string
+# veteran :string
+# veteranDocumentation :string
+# dischargeType :string
+# veteranType :string
+# idCard :string
+# driverLicense :integer
+# birthCertificate :string
+# socialSecuritynumber :integer
+# passportNumber :integer
+# permanentResidentcard :string
+# informationType :string
+# dateSetup :datetime not null
+# dateExpiration :datetime not null
+# daysLeft :integer
+# companyName :string
+# address :string
+# city :string
+# zip :integer
+# phone :integer
+# supervisor :string
+# startDate :datetime not null
+# endDate :datetime not null
+# marketing :string
+#
+# pilsenWellness :string
+# failureComplete :string
+# commentBox :varchar(max)
+# dateDisciplinary :datetime
+# noShowNoCall :string
+# programActivities :string
+# lackHygiene :string
+# failureTofollowPolicy :string
+# confrontationalBehavior :string
+# damageTosjom :string
+# noShowcaseManager :string
+# failureTomeetExpectations :string
+# fighting :string
+#
+# bottomBunk :string
+# pilsenWell :string
+# backgroundCheck: :string
+# previousPart :string
+# referral :string
+# tbTest :string
+#
 
 class Resident < ApplicationRecord
   has_one :bed
