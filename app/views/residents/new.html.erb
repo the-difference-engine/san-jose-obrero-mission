@@ -105,25 +105,25 @@
     </div>
     <br><br>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <ul class="nav nav-tabs"  id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#general" role="tab" aria-controls="general">General</a>
+            <a class="nav-link active" style="background:#a31b1b; color:white;" data-toggle="tab" href="#general" role="tab" aria-controls="general">General</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#identification" role="tab" aria-controls="identification">Identification</a>
+            <a class="nav-link" style="background:#a31b1b; color:white;" data-toggle="tab" href="#identification" role="tab" aria-controls="identification">Identification</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Employment" role="tab" aria-controls="Employment">Employment & Education</a>
+            <a class="nav-link"style="background:#a31b1b; color:white;" data-toggle="tab" href="#Employment" role="tab" aria-controls="Employment">Employment & Education</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#disciplinary" role="tab" aria-controls="disciplinary">Disciplinary</a>
+            <a class="nav-link" style="background:#a31b1b; color:white;" data-toggle="tab" href="#disciplinary" role="tab" aria-controls="disciplinary">Disciplinary</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#Requirements" role="tab" aria-controls="Requirements">Requirements Checklist</a>
+            <a class="nav-link" style="background:#a31b1b; color:white;" data-toggle="tab" href="#Requirements" role="tab" aria-controls="Requirements">Requirements Checklist</a>
         </li>
     </ul>
 
-    <div class="tab-content">
+    <div class="tab-content" >
         <div class="tab-pane active" id="general"       role="tabpanel">
 
 
@@ -319,7 +319,7 @@
 
             <label class="checkbox-inline">
                 <input
-                name="disabled"
+                name="disabledYes"
                 type="radio"
                 style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
                 Yes
@@ -385,7 +385,7 @@
                 <label class="checkbox-inline">
                     <input
 
-                    name="disabled"
+                    name="veteranDocumentation"
                     type="radio"
                     style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
                     No
@@ -397,35 +397,35 @@
         </div>
         <label class="checkbox-inline">
             <input
-            name="HIV and/or AIDs(HIV)"
+            name="checkBoxhiv"
             type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             HIV and/or AIDs(HIV)
         </label><br/>
         <label class="checkbox-inline">
             <input
-            name="Chronical Healith Problem"
+            name="checkBoxhealthProblems"
             type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
-            Chronical Healith Problem
+            Chronical Health Problem
         </label><br/>
         <label class="checkbox-inline">
             <input
-            name="Victim of Domestic Violence"
+            name="checkBoxvictimOfviolence"
             type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Victim of Domestic Violence
         </label><br/>
         <label class="checkbox-inline">
             <input
-            name="Pregnant / Parenting Teen)"
+            name="checkBoxpregnantTeen"
             type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Pregnant / Parenting Teen
         </label><br/>
         <label class="checkbox-inline">
             <input
-            name="Ex-Offender(Criminal Record)"
+            name="checkBoxexOffender"
             type="checkbox"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             Ex-Offender(Criminal Record)
@@ -437,66 +437,66 @@
         <label for="disabled">Does the client speak and read English well?</label><br />
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="speak_english"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="speak_english"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
         </label>
 
         <div class="well">
-            <label for="specialNeeds">What is his/her native or primary language?</label><br />
-            <input type="text" name="veteranType" placeholder="German" class="form-control">
+            <label for="primarylanguage">What is his/her native or primary language?</label><br />
+            <input type="text" name="primaryLanguage" placeholder="German" class="form-control">
         </div>
         <hr class="dashed">
         <label for="disabled">Is the client taking prescibed medications?</label><br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="prescribed_medication"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="prescribed_medication"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
         </label>
 
         <div class="well">
-            <label for="specialNeeds"></label><br />
-            <label class="control-label" for="veteran_type">Notes</label>
-            <input type="text" name="veteranType" placeholder="Statins, Blood Pressure medicine" class="form-control">
+            <label for="medNotes"></label><br />
+            <label class="control-label" for="medNotes">Notes</label>
+            <input type="text" name="medNotes" placeholder="Statins, Blood Pressure medicine" class="form-control">
         </div>
         <hr class="dashed">
         <label for="disabled">Does the client have any allegies?</label><br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="allergies"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Yes
         </label>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="allergies"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000;">
             No
         </label>
 
         <div class="well">
-            <label for="specialNeeds"></label></br>
-            <label class="control-label" for="veteran_type">Notes</label>
-            <input type="text" name="veteranType" placeholder="Peanuts" class="form-control">
+            <label for="allergyNotes"></label></br>
+            <label class="control-label" for="allergyNotes">Notes</label>
+            <input type="text" name="allergyNotes" placeholder="Peanuts" class="form-control">
         </div> 
 
     </div>
@@ -578,7 +578,7 @@
         <label for="Employment">Employment History</label><br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="fullTime"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Full-Time
@@ -690,7 +690,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="partTime"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Part-Time
@@ -699,7 +699,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="selfEmployed"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Self-Employed
@@ -708,16 +708,16 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="temp"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
-            Temp
+            Temporary
         </label>
         <br>
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="seasonal"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Seasonal
@@ -729,7 +729,7 @@
         <label for="Education">Education</label><br />
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="highSchool"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             High School
@@ -737,7 +737,7 @@
         <br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="associatesDegree"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Associates Degree
@@ -752,7 +752,7 @@
         <br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="bachelorsDegree"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Bachelors Degree
@@ -761,7 +761,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="mastersDegree"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Masters Degree
@@ -770,7 +770,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="other"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Other
@@ -785,7 +785,7 @@
         <br><br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="pilsenWellness"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Pilsen Wellness
@@ -794,22 +794,23 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="failureCompletedoChore"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
-            Failure do complete/do chore
+            Failure to complete/do chore
         </label>
         <br><br>
 
         <label>Comment</label>
+        
         <br>
-        <textarea rows="6" cols="85">
+        <textarea name="comment" rows="6" cols="85">
             Lorem ipsum dolor et
         </textarea>
 
         <div class="personal-info-box d">
             <label for="date">Date</label>
-            <input type="date" name="date" class="form-control">
+            <input type="date" name="dateDisciplinary" class="form-control">
         </div>
 
         <br>
@@ -817,7 +818,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="noShownoCall"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             No Show/No Call
@@ -826,7 +827,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="noShowprogramActivities"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             No Show: program activities/house meeting
@@ -835,7 +836,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="lackHygienecleanliness"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Lack of hygiene/cleanliness in dormitory
@@ -844,7 +845,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="failureTofollowSmokingpolicy"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Failure to follow smoking/loitering policy
@@ -853,7 +854,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="confrontationalBehavior"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Confrontational/problematic behavior
@@ -862,7 +863,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="damageTosjomProperty"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Damage to SJOM/others property
@@ -871,7 +872,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="noShowforCasemanagerApp"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             No Show for case manager appointment
@@ -880,7 +881,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="failureTomeetBehavioralexpectation"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Failure to meet behavioral expectations/rules
@@ -889,7 +890,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="fighting"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Fighting
@@ -898,11 +899,11 @@
 
 
     </div>
-    <div class="tab-pane"        id="Requirements"   role="tabpanel">
+    <div class="tab-pane "        id="Requirements"   role="tabpanel">
         <br>
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="bottomBunkrequested"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Bottom bunk requested
@@ -911,7 +912,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="pilsenWellnessReq"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Pilsen Wellness
@@ -920,7 +921,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="backgroundCheck"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Background Check
@@ -929,7 +930,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="previousPart"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Previous Part
@@ -938,7 +939,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="referral"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             Referral
@@ -947,7 +948,7 @@
 
         <label class="checkbox-inline">
             <input
-            name="disabled"
+            name="tbTest"
             type="radio"
             style="border:2px dotted #00f;display:inline-block;background:#ff0000; margin-left: -20px;">
             TB Test

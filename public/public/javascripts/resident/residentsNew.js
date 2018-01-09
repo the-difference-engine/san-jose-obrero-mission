@@ -45,6 +45,58 @@ function submitResidentsForm() {
               dateExpiration: document.forms.resident.dateExpiration.value,
               daysLeft: document.forms.resident.daysLeft.value,
 
+              checkBoxhiv: document.forms.resident.checkBoxhiv.value,
+              checkBoxhealthProblems: document.forms.resident.checkBoxhealthProblems.value,
+              checkBoxvictimOfviolence: document.forms.checkBoxvictimOfviolence.value,
+              checkBoxpregnantTeen: document.forms.checkBoxpregnantTeen.value,
+              checkBoxexOffender: document.forms.checkBoxexOffender.value,
+              speak_english: document.forms.speak_english.value,
+              primaryLanguage: document.forms.primaryLanguage.value,
+              prescribed_medication: document.forms.prescribed_medication.value,
+              medNotes: document.forms.medNotes.value,
+              allergies: document.forms.allergies.value,
+              allergyNotes: document.forms.allergyNotes.value,
+
+              partTime: document.forms.partTime.value,
+              selfEmployed: document.forms.selfEmployed.value,
+              temp: document.forms.temp.value,
+              seasonal: document.forms.temp.value,
+              highSchool: document.forms.temp.value,
+              associatesDegree: document.forms.associatesDegree.value,
+              Marketing: document.forms.Marketing.value,
+              bachelorsDegree: document.forms.bachelorsDegree.value,
+              mastersDegree: document.forms.mastersDegree.value,
+              other: document.forms.other.value,
+
+
+              pilsenWellness: document.forms.pilsenWellness.value,
+              failureCompletedoChore: document.forms.failureCompletedoChore.value,
+              comment: document.forms.comment.value,
+              dateDisciplinary: document.forms.dateDisciplinary.value,
+              noShownoCall: document.forms.noShownoCall.value,
+              noShowprogramActivities: document.forms.noShowprogramActivities.value,
+              lackHygienecleanliness: document.forms.lackHygienecleanliness.value,
+              failureTofollowSmokingpolicy: document.forms.failureTofollowSmokingpolicy.value,
+              confrontationalBehavior: document.forms.confrontationalBehavior.value,
+              damageTosjomProperty: document.forms.damageTosjomProperty.vaule,
+              noShowforCasemanagerApp: document.forms.noShowforCasemanagerApp.value,
+              failureTomeetBehavioralexpectation: document.forms.failureTomeetBehavioralexpectation.value,
+              fighting: document.forms.fighting.value,
+
+
+              bottomBunkrequested: document.forms.bottomBunkrequested.value,
+              pilsenWellnessReq: document.forms.pilsenWellnessReq.value,
+              backgroundCheck: document.forms.backgroundCheck.value,
+              previousPart: document.forms.previousPart.value,
+              referral: document.forms.referral.value,
+              tbTest: document.forms.tbTest.value,
+              
+    
+
+
+
+
+
 
 
         }
