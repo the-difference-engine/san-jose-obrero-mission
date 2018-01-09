@@ -1,6 +1,6 @@
 function getAllResidents () {
-  var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
-  //var url = "http://localhost:3000/api/v1/residents";
+  // var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
+  var url = "http://localhost:3000/api/v1/residents";
   fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
