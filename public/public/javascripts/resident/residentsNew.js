@@ -1,6 +1,8 @@
+debugger
 function submitResidentsForm() {
 //   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
  var url = "http://localhost:3000/api/v1/residents";
+
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
@@ -89,7 +91,7 @@ function submitResidentsForm() {
               backgroundCheck: document.forms.backgroundCheck.value,
               previousPart: document.forms.previousPart.value,
               referral: document.forms.referral.value,
-              tbTest: document.forms.tbTest.value,
+              tbTest: document.forms.tbTest.value
               
     
 

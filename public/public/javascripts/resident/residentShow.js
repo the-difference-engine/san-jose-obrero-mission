@@ -104,6 +104,37 @@ function personalInformation(resident) {
             '</table>' +
           '</div>'
 }
+  return '<div class="container-fluid">' +
+            '<div class="row">' +
+                '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
+                '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
+                '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
+            '</div>' +
+            '<div class="row">' +
+                '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
+                '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
+                '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
+                '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
+                '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
+            '</div>' +
+            '<div class="row">' +
+                '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
+                '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
+                  + '</p></div>' +
+                '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
+            '</div>' +
+            '<div class="row">' +
+                '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admitted_date || 'N/A')+ '</p></div>' +
+                '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.released_date || 'N/A') + '</p></div>' +
+                '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.tenure || 'N/A') + '</p></div>' +
+                '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.hmis_number
+                  + '</p></div>' +
+                '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.hmis_entry_date
+                  + '</p></div>' +
+            '</div>' +
+         '</div>';
+  }
+
 
 function displayGeneralTab(resident) {
   document.querySelector('#show-general').innerHTML = 

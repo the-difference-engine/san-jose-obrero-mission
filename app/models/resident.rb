@@ -33,17 +33,17 @@
 # pregnantParentingTeen :string
 # exOffenderCriminalRecord :string
 # disabled :boolean
-# disabilityDocumentation :string
+# disabilityDocumentation :boolean
 # disabilityType :string
-# veteran :string
-# veteranDocumentation :string
+# veteran :boolean
+# veteranDocumentation :boolean
 # dischargeType :string
 # veteranType :string
 # idCard :string
-# driverLicense :integer
+# driverLicense :string
 # birthCertificate :string
-# socialSecuritynumber :integer
-# passportNumber :integer
+# socialSecuritynumber :string
+# passportNumber :string
 # permanentResidentcard :string
 # informationType :string
 # dateSetup :datetime not null

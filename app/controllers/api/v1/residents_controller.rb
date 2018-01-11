@@ -13,6 +13,7 @@ module Api
 
       def create
         resident = Resident.new(resident_params)
+        binding.pry
         if resident.save!
           render json: resident
         end
@@ -53,6 +54,7 @@ module Api
           :number_of_shelters,
           :chronically_homeless,
           :image
+
         )
 
       end
