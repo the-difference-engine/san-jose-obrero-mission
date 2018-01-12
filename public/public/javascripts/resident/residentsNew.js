@@ -1,13 +1,13 @@
 debugger
 function submitResidentsForm() {
 //   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
- var url = "http://localhost:3000/api/v1/residents";
+//  var url = "http://localhost:3000/api/v1/residents";
 
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
               last_name: document.forms.resident.last_name.value,
-              date: document.forms.resident.date.value,
+              dateOfBirth: document.forms.resident.dateOfBirth.value,
               hmis_number: document.forms.resident.hmis_number.value,
               hmis_entry_date: document.forms.resident.hmis_entry_date.value,
               gender: document.forms.resident.gender.value,
@@ -35,7 +35,7 @@ function submitResidentsForm() {
               veteran: document.forms.resident.veteran.value,
               veteranDocumentation: document.forms.resident.veteranDocumentation.value,
               dischargeType: document.forms.resident.dischargeType.value,
-              veteranType: document.forms.resident.veteranType.value,
+            //   veteranType: document.forms.resident.veteranType.value,
               idCard: document.forms.resident.idCard.value,
               driverLicense: document.forms.resident.driverLicense.value,
               birthCertificate: document.forms.resident. birthCertificate.value,
@@ -49,49 +49,49 @@ function submitResidentsForm() {
 
               checkBoxhiv: document.forms.resident.checkBoxhiv.value,
               checkBoxhealthProblems: document.forms.resident.checkBoxhealthProblems.value,
-              checkBoxvictimOfviolence: document.forms.checkBoxvictimOfviolence.value,
-              checkBoxpregnantTeen: document.forms.checkBoxpregnantTeen.value,
-              checkBoxexOffender: document.forms.checkBoxexOffender.value,
-              speak_english: document.forms.speak_english.value,
-              primaryLanguage: document.forms.primaryLanguage.value,
-              prescribed_medication: document.forms.prescribed_medication.value,
-              medNotes: document.forms.medNotes.value,
-              allergies: document.forms.allergies.value,
-              allergyNotes: document.forms.allergyNotes.value,
+              checkBoxvictimOfviolence: document.forms.resident.checkBoxvictimOfviolence.value,
+              checkBoxpregnantTeen: document.forms.resident.checkBoxpregnantTeen.value,
+              checkBoxexOffender: document.forms.resident.checkBoxexOffender.value,
+              speak_english: document.forms.resident.speak_english.value,
+              primaryLanguage: document.forms.resident.primaryLanguage.value,
+              prescribed_medication: document.forms.resident.prescribed_medication.value,
+              medNotes: document.forms.resident.medNotes.value,
+              allergies: document.forms.resident.allergies.value,
+              allergyNotes: document.forms.resident.allergyNotes.value,
 
-              partTime: document.forms.partTime.value,
-              selfEmployed: document.forms.selfEmployed.value,
-              temp: document.forms.temp.value,
-              seasonal: document.forms.temp.value,
-              highSchool: document.forms.temp.value,
-              associatesDegree: document.forms.associatesDegree.value,
-              Marketing: document.forms.Marketing.value,
-              bachelorsDegree: document.forms.bachelorsDegree.value,
-              mastersDegree: document.forms.mastersDegree.value,
-              other: document.forms.other.value,
-
-
-              pilsenWellness: document.forms.pilsenWellness.value,
-              failureCompletedoChore: document.forms.failureCompletedoChore.value,
-              comment: document.forms.comment.value,
-              dateDisciplinary: document.forms.dateDisciplinary.value,
-              noShownoCall: document.forms.noShownoCall.value,
-              noShowprogramActivities: document.forms.noShowprogramActivities.value,
-              lackHygienecleanliness: document.forms.lackHygienecleanliness.value,
-              failureTofollowSmokingpolicy: document.forms.failureTofollowSmokingpolicy.value,
-              confrontationalBehavior: document.forms.confrontationalBehavior.value,
-              damageTosjomProperty: document.forms.damageTosjomProperty.vaule,
-              noShowforCasemanagerApp: document.forms.noShowforCasemanagerApp.value,
-              failureTomeetBehavioralexpectation: document.forms.failureTomeetBehavioralexpectation.value,
-              fighting: document.forms.fighting.value,
+              partTime: document.forms.resident.partTime.value,
+              selfEmployed: document.forms.resident.selfEmployed.value,
+              temp: document.forms.resident.temp.value,
+              seasonal: document.forms.resident.seasonal.value,
+              highSchool: document.forms.resident.highSchool.value,
+              associatesDegree: document.forms.resident.associatesDegree.value,
+              Marketing: document.forms.resident.Marketing.value,
+              bachelorsDegree: document.forms.resident.bachelorsDegree.value,
+              mastersDegree: document.forms.resident.mastersDegree.value,
+              other: document.forms.resident.other.value,
 
 
-              bottomBunkrequested: document.forms.bottomBunkrequested.value,
-              pilsenWellnessReq: document.forms.pilsenWellnessReq.value,
-              backgroundCheck: document.forms.backgroundCheck.value,
-              previousPart: document.forms.previousPart.value,
-              referral: document.forms.referral.value,
-              tbTest: document.forms.tbTest.value
+              pilsenWellness: document.forms.resident.pilsenWellness.value,
+              failureCompletedoChore: document.forms.resident.failureCompletedoChore.value,
+              comment: document.forms.resident.comment.value,
+              dateDisciplinary: document.forms.resident.dateDisciplinary.value,
+              noShownoCall: document.forms.resident.noShownoCall.value,
+              noShowprogramActivities: document.forms.resident.noShowprogramActivities.value,
+              lackHygienecleanliness: document.forms.resident.lackHygienecleanliness.value,
+              failureTofollowSmokingpolicy: document.forms.resident.failureTofollowSmokingpolicy.value,
+              confrontationalBehavior: document.forms.resident.confrontationalBehavior.value,
+              damageTosjomProperty: document.forms.resident.damageTosjomProperty.vaule,
+              noShowforCasemanagerApp: document.forms.resident.noShowforCasemanagerApp.value,
+              failureTomeetBehavioralexpectation: document.forms.resident.failureTomeetBehavioralexpectation.value,
+              fighting: document.forms.resident.fighting.value,
+
+
+              bottomBunkrequested: document.forms.resident.bottomBunkrequested.value,
+              pilsenWellnessReq: document.forms.resident.pilsenWellnessReq.value,
+              backgroundCheck: document.forms.resident.backgroundCheck.value,
+              previousPart: document.forms.resident.previousPart.value,
+              referral: document.forms.resident.referral.value,
+              tbTest: document.forms.resident.tbTest.value
               
     
 

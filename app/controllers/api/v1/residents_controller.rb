@@ -40,7 +40,7 @@ module Api
         params.require(:resident).permit(
           :first_name,
           :last_name,
-          :date,
+          :dateOfBirth,
           :hmis_number,
           :hmis_entry_date,
           :documented,

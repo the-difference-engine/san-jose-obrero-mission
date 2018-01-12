@@ -16,7 +16,7 @@ class ResidentsController < ApplicationController
     resident = Resident.create(
                 first_name: params[:first_name].capitalize,
                 last_name: params[:last_name].capitalize,
-                date: params[:date].to_datetime,
+                dateOfBirth: params[:dateOfBirth].to_datetime,
                 hmis_number: params[:hmis_number],
                 hmis_entry_date: params[:hmis_entry_date].to_datetime,
                 documented: params[:documented],

@@ -5,7 +5,7 @@
 #  id                     :integer          not null, primary key
 #  first_name             :string
 #  last_name              :string
-#  date                   :datetime
+#  dateOfBirth            :datetime
 #  hmis_number            :string
 #  hmis_entry_date        :datetime
 #  documented             :boolean
@@ -30,6 +30,7 @@
 # mentalIllnessType :string
 # hivAndaids :string
 # victimofDomesticViolence :string
+# checkBoxvictimOfviolence :string
 # pregnantParentingTeen :string
 # exOffenderCriminalRecord :string
 # disabled :boolean
@@ -38,7 +39,6 @@
 # veteran :boolean
 # veteranDocumentation :boolean
 # dischargeType :string
-# veteranType :string
 # idCard :string
 # driverLicense :string
 # birthCertificate :string
