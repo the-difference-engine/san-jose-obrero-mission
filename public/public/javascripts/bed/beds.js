@@ -45,16 +45,18 @@ function getBeds() {
       $(function() {
         var label = $('<label for="bed_id">' + 'BED' + "</label>");
         var select = $('<select name="bed_id"></select>').addClass("form-control");
+        // var noneAvailable = data.find((o, i) => {
+        //   if (o.occupied === false) {
+        //     return true;
+        //   }
+        // });
+        // console.log("None Available", noneAvailable);
         for (var i = 0; i < data.length; i++) {
           if (data[i].occupied === false) {
             var option = $(
-              select.append('<option value="${data[i].bed_id}">' + data[i].bed_id + '</option>')
+              select.append('<option value=' + data[i].bed_id + '>' + data[i].bed_id + '</option>')
             );
-          } else {
-            option = $(
-              select.append('<option>' + 'None available' + '</option>')
-            );
-          }
+          } 
         }
         select.appendTo(label);
         option.appendTo(select);
