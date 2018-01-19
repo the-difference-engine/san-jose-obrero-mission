@@ -3,8 +3,8 @@ getResident(id);
 
 function getResident(residentId) {
 
-  var url = "https://qa-san-jose.herokuapp.com/api/v1/residents/" + residentId;
- //var url = "http://localhost:3000/api/v1/residents/" + residentId;
+  // var url = "https://qa-san-jose.herokuapp.com/api/v1/residents/" + residentId;
+ var url = "http://localhost:3004/api/v1/residents/" + residentId;
    var myHeaders = new Headers();
    myHeaders.append('Content-Type', 'application/json');
    console.log(url)
@@ -19,9 +19,10 @@ function getResident(residentId) {
    })
    .then(function(data) {
      var nameAge = data.full_name;
-
+      var status = data.status;
      document.querySelector('#show-page-avatar').innerHTML = setAvatar(data.image);
      document.querySelector('#name-age').innerHTML = nameAge;
+     document.querySelector('#status').innerHTML = '<p>' + 'Status: ' + status + '</p>';
      document.querySelector('#personal-information').innerHTML = personalInformation(data);
      displayGeneralTab(data);
    })
@@ -37,35 +38,86 @@ function setAvatar(avatar) {
 }
 
 function personalInformation(resident) {
-  return '<div class="container-fluid">' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
-                '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
-                '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
-                '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
-                '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
-                '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
-                  + '</p></div>' +
-                '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admitted_date || 'N/A')+ '</p></div>' +
-                '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.released_date || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.tenure || 'N/A') + '</p></div>' +
-                '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.hmis_number
-                  + '</p></div>' +
-                '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.hmis_entry_date
-                  + '</p></div>' +
-            '</div>' +
-         '</div>';
+  return '<div class="table-responsive">' + 
+          '<table class="table table-bordered">' +
+              '<thead class="residentShow">' +
+                '<tr>' +
+                  '<th>' + 'Gender' +  '</th>' +
+                  '<th>' + 'Date of Birth' +  '</th>' +
+                  '<th>' + 'Age' + '</th>' +
+                  '<th>' + 'Ethnicity' +  '</th>' +
+                  '<th>' + 'Race' +  '</th>' +
+                  '<th>' + 'Phone Number' +  '</th>' +
+                '</tr>' +     
+              '</thead>' + 
+              '<tbody>' + 
+                '<tr>' +
+                  '<td class="showBody">' + resident.gender + '</td>' +
+                  '<td class="showBody">' + resident.date_of_birth + '</td>' +
+                  '<td class="showBody">' + resident.age + '</td>' +
+                  '<td class="showBody">' + resident.ethnicity + '</td>' +
+                  '<td class="showBody">' + resident.resident_race + '</td>' +
+                  '<td class="showBody">' + resident.phone_number + '</td>' +
+                '</tr>' +
+              '</tbody>' + 
+          '</table>' +
+         '</div>' +
+         '<br>' +
+        '<div class="table-responsive">' +
+          '<table class="table table-bordered">' +
+            '<thead class="residentShow">' +
+              '<tr>' +
+                '<th>' + 'Case Manager' + '</th>' +
+                '<th>' + 'Admitted' + '</th>' +
+                '<th>' + 'Released' + '</th>' +
+                '<th>' + 'Tenure' + '</th>' +
+                '<th>' + 'HMIS#' + '</th>' +
+                '<th>' + 'HMIS Entry Date' + '</th>' +
+                '<th>' + 'Bed ID' + '</th>' +
+              '</tr>' +
+            '</thead>' +
+            '<tbody>' +
+              '<tr>' +
+                '<td class="showBody">' + resident.case_manager + '</td>' +
+                '<td class="showBody">' + resident.admitted_date + '</td>' +
+                '<td class="showBody">' + resident.released_date + '</td>' +
+                '<td class="showBody">' + resident.tenure + '</td>' +
+                '<td class="showBody">' + resident.hmis_number + '</td>' +
+                '<td class="showBody">' + resident.hmis_entry_date + '</td>' +
+                '<td class="showBody">' + resident.bed_id + '</td>' +
+              '</tr>' +
+            '</tbody>' +
+            '</table>' +
+        '</div>'   
+  // return '<div class="container-fluid">' +
+  //           '<div class="row">' +
+  //               '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
+  //           '</div>' +
+  //           '<div class="row">' +
+  //               '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
+  //               '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
+  //               '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
+  //           '</div>' +
+  //           '<div class="row">' +
+  //               '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
+  //                 + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
+  //           '</div>' +
+  //           '<div class="row">' +
+  //               '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admitted_date || 'N/A')+ '</p></div>' +
+  //               '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.released_date || 'N/A') + '</p></div>' +
+  //               '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.tenure || 'N/A') + '</p></div>' +
+  //               '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.hmis_number
+  //                 + '</p></div>' +
+  //               '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.hmis_entry_date
+  //                 + '</p></div>' +
+  //           '</div>' +
+  //        '</div>';
   }
 
 function displayGeneralTab(resident) {

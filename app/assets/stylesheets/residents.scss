@@ -23,6 +23,28 @@
   width: 12em;
 }
 
+.residentShow {
+  background-color: #c69AA5;
+  color: white;
+  border-width: 1px;
+}
+
+.nav-item {
+  background-color: #6583c0;
+  color: white;
+  border-width: 1px;
+}
+
+.nav-item h4 {
+    font-size: 17px;
+}
+
+.showBody {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
 .table-cell-head {
   display:table-cell;
   padding: 5px;
@@ -101,12 +123,21 @@ hr.solid {
   //color: #444;
 }
 
-.box {
+.box.b {
   //background-color: #444;
   //color: #fff;
   border-radius: 5px;
   padding: 2px;
   font-size: 150%;
+  margin: auto 0;
+}
+
+.box.c {
+  //background-color: #444;
+  //color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 125%;
   margin: auto 0;
 }
 
