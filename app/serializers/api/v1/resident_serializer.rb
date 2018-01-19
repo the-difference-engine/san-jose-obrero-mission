@@ -2,7 +2,7 @@
     attributes :full_name,
                :first_name,
                :last_name,
-               :date,
+               :date_of_birth,
                :age,
                :hmis_number,
                :hmis_entry_date,

@@ -1,13 +1,13 @@
-debugger
+
 function submitResidentsForm() {
 //   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
-//  var url = "http://localhost:3000/api/v1/residents";
+ var url = "http://localhost:3000/api/v1/residents";
 
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
               last_name: document.forms.resident.last_name.value,
-              dateOfBirth: document.forms.resident.dateOfBirth.value,
+              date_of_birth: document.forms.resident.dateOfBirth.value,
               hmis_number: document.forms.resident.hmis_number.value,
               hmis_entry_date: document.forms.resident.hmis_entry_date.value,
               gender: document.forms.resident.gender.value,

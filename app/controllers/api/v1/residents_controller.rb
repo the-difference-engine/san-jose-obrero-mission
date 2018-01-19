@@ -12,8 +12,9 @@ module Api
       end
 
       def create
+       
         resident = Resident.new(resident_params)
-        binding.pry
+        
         if resident.save!
           render json: resident
         end
@@ -40,7 +41,6 @@ module Api
         params.require(:resident).permit(
           :first_name,
           :last_name,
-          :dateOfBirth,
           :hmis_number,
           :hmis_entry_date,
           :documented,
@@ -53,7 +53,8 @@ module Api
           :prior_living_situation,
           :number_of_shelters,
           :chronically_homeless,
-          :image
+          :image,
+          :date_of_birth
 
         )
 
