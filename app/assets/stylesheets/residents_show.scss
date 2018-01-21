@@ -24,12 +24,16 @@ hr.solid {
   width: 75px;
 }
 
-.avatar-container {
+#show-page-avatar {
+  padding-top: 20px;
+}
+
+.show-avatar-container {
   background-repeat: no-repeat;
   background-position: 50%;
   border-radius: 50%;
   border: 1px solid #C38F9B;
-  width: 45px;
+  width: 125px;
 }
 
 .show-head-section-container {
