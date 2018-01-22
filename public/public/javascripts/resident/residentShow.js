@@ -192,19 +192,19 @@ function displayGeneralTab(resident) {
     '<div style="display: inline-block; width: 50%;" class="table-responsive">' +
       '<table class="table table-bordered">' +
         '<tr>' +
-          '<th class="residentShow">' + 'Is the Client Disabled?' + '</th>' +
+          '<th class="residentShow">' + 'Is the client disabled?' + '</th>' +
           '<td class="showBody">' + resident.disabled + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="residentShow">' + 'Is the Client a Veteran?' + '</th>' +
+          '<th class="residentShow">' + 'Is the client a veteran?' + '</th>' +
           '<td class="showBody">' + resident.veteran + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="residentShow">' + 'Is the Client Taking Prescribed Medicine?' + '</th>' +
+          '<th class="residentShow">' + 'Is the client taking prescribed medicine?' + '</th>' +
           '<td class="showBody">' + resident.prescribed_medicine + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="residentShow">' + 'Does the Client Have Allergies?' + '</th>' +
+          '<th class="residentShow">' + 'Does the client have allergies?' + '</th>' +
           '<td class="showBody">' + resident.allergies + '</td>' +
         '</tr>' +
         '<tr>' +
