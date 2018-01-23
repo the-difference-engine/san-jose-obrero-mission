@@ -21,14 +21,19 @@ function submitResidentsForm() {
                 hmis_number: document.forms.resident.hmis_number.value,
                 hmis_entry_date: document.forms.resident.hmis_entry_date.value
               },
+
+              General:{
+                cause_of_homeslessness: document.forms.resident.cause_of_homelessness.value,
+                length_of_homelessness: document.forms.resident.length_of_homelessness.value,
+                prior_living_situation: document.forms.resident.priorLivingSituation.value,
+                number_of_shelters: document.forms.resident.number_of_shelters.value,
+                chronicallyHomeless: document.forms.resident.chronicallyHomeless.value,
+
+              },
               
 
 
-              cause_of_homeslessness: document.forms.resident.cause_of_homelessness.value,
-              length_of_homelessness: document.forms.resident.length_of_homelessness.value,
-              prior_living_situation: document.forms.resident.priorLivingSituation.value,
-              number_of_shelters: document.forms.resident.number_of_shelters.value,
-              chronicallyHomeless: document.forms.resident.chronicallyHomeless.value,
+    
               specialNeedsNone: document.forms.resident.specialNeedsNone.value,
               specialNeedsSubstanceAbuse: document.forms.resident.specialNeedsSubstanceAbuse.value,
               specialNeedsAlcoholAbuse: document.forms.resident.specialNeedsAlcoholAbuse.value,
