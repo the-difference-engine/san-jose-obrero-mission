@@ -21,65 +21,8 @@
 #  number_of_shelters     :integer
 #  chronically_homeless   :boolean
 #  image                  :string
-#
-#
-# specialNeedsNone :string
-# specialNeedsSubstanceAbuse :string
-# specialNeedsAlcoholAbuse :string
-# mentalIllness :string
-# mentalIllnessType :string
-# hivAndaids :string
-# victimofDomesticViolence :string
-# checkBoxvictimOfviolence :string
-# pregnantParentingTeen :string
-# exOffenderCriminalRecord :string
-# disabled :boolean
-# disabilityDocumentation :boolean
-# disabilityType :string
-# veteran :boolean
-# veteranDocumentation :boolean
-# dischargeType :string
-# idCard :string
-# driverLicense :string
-# birthCertificate :string
-# socialSecuritynumber :string
-# passportNumber :string
-# permanentResidentcard :string
-# informationType :string
-# dateSetup :datetime not null
-# dateExpiration :datetime not null
-# daysLeft :integer
-# companyName :string
-# address :string
-# city :string
-# zip :integer
-# phone :integer
-# supervisor :string
-# startDate :datetime not null
-# endDate :datetime not null
-# marketing :string
-#
-# pilsenWellness :string
-# failureComplete :string
-# commentBox :varchar(max)
-# dateDisciplinary :datetime
-# noShowNoCall :string
-# programActivities :string
-# lackHygiene :string
-# failureTofollowPolicy :string
-# confrontationalBehavior :string
-# damageTosjom :string
-# noShowcaseManager :string
-# failureTomeetExpectations :string
-# fighting :string
-#
-# bottomBunk :string
-# pilsenWell :string
-# backgroundCheck: :string
-# previousPart :string
-# referral :string
-# tbTest :string
-#
+
+
 
 class Resident < ApplicationRecord
   has_one :bed
@@ -89,7 +32,12 @@ class Resident < ApplicationRecord
   end 
 
   def age
+<<<<<<< HEAD
     return if date.nil? 
     ((Time.zone.now - date.to_time) / 1.year.seconds).floor
+=======
+    return if date_of_birth.nil?
+    Time.now.year - date_of_birth.year
+>>>>>>> add admittance info migration
   end
 end

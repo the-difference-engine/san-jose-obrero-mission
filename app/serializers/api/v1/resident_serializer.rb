@@ -16,7 +16,11 @@
                :prior_living_situation,
                :number_of_shelters,
                :chronically_homeless,
-               :image
+               :image,
+               :admittance_information
+
+    
+
  end
                           
 

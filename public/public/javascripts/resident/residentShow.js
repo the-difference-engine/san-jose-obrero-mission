@@ -3,7 +3,7 @@ getResident(id);
 
 
 
-
+debugger
 function getResident(residentId) {
 
   // var url = "https://qa-san-jose.herokuapp.com/api/v1/residents/" + residentId;
@@ -22,6 +22,8 @@ function getResident(residentId) {
    })
    .then(function(data) {
      var nameAge = data.full_name;
+    
+
      document.querySelector('#show-page-avatar').innerHTML = setAvatar(data.image);
      document.querySelector('#name-age').innerHTML = nameAge;
      document.querySelector('#personal-information').innerHTML = personalInformation(data);
@@ -107,6 +109,7 @@ function personalInformation(resident) {
             '</table>' +
           '</div>'
 }
+   
   return '<div class="container-fluid">' +
             '<div class="row">' +
                 '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
@@ -114,7 +117,7 @@ function personalInformation(resident) {
                 '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
             '</div>' +
             '<div class="row">' +
-                '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.dateOfBirth || 'N/A') + '</p></div>' +
+                '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
                 '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
                 '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
                 '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119011110) do
+ActiveRecord::Schema.define(version: 20180123003147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20180119011110) do
     t.boolean  "documented"
     t.string   "gender"
     t.string   "ethnicity"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "bed_id"
     t.string   "resident_race"
     t.string   "cause_of_homeslessness"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20180119011110) do
     t.boolean  "chronically_homeless"
     t.string   "image"
     t.datetime "date_of_birth"
+    t.jsonb    "admittance_information", default: {}, null: false
   end
 
   create_table "users", force: :cascade do |t|

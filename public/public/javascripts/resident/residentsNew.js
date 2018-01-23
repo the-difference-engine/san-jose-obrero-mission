@@ -2,6 +2,7 @@
 function submitResidentsForm() {
 //   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
  var url = "http://localhost:3000/api/v1/residents";
+ debugger
 
     var data = {
         resident: {
