@@ -2,19 +2,28 @@
 function submitResidentsForm() {
 //   var url = "https://qa-san-jose.herokuapp.com/api/v1/residents";
  var url = "http://localhost:3000/api/v1/residents";
- debugger
+ 
 
     var data = {
         resident: {
               first_name: document.forms.resident.first_name.value,
               last_name: document.forms.resident.last_name.value,
               date_of_birth: document.forms.resident.dateOfBirth.value,
-              hmis_number: document.forms.resident.hmis_number.value,
-              hmis_entry_date: document.forms.resident.hmis_entry_date.value,
               gender: document.forms.resident.gender.value,
               ethnicity: document.forms.resident.ethnicity.value,
               bed_id: document.forms.resident.bed_id.value,
               resident_race: document.forms.resident.resident_race.value,
+
+              admittance_information: {
+                admitted_date: document.forms.resident.admittedDate.value,
+                released_date: document.forms.resident.releasedDate.value,
+                tenure: document.forms.resident.tenure.value,
+                hmis_number: document.forms.resident.hmis_number.value,
+                hmis_entry_date: document.forms.resident.hmis_entry_date.value
+              },
+              
+
+
               cause_of_homeslessness: document.forms.resident.cause_of_homelessness.value,
               length_of_homelessness: document.forms.resident.length_of_homelessness.value,
               prior_living_situation: document.forms.resident.priorLivingSituation.value,

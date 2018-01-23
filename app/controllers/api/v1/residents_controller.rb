@@ -12,6 +12,7 @@ module Api
       end
 
       def create
+        binding.pry
        
         resident = Resident.new(resident_params)
         
@@ -41,8 +42,6 @@ module Api
         params.require(:resident).permit(
           :first_name,
           :last_name,
-          :hmis_number,
-          :hmis_entry_date,
           :documented,
           :gender,
           :ethnicity,
@@ -54,7 +53,14 @@ module Api
           :number_of_shelters,
           :chronically_homeless,
           :image,
-          :date_of_birth
+          :date_of_birth,
+          admittance_information: [
+            :admitted_date,
+            :released_date,
+            :tenure,
+            :hmis_number,
+            :hmis_entry_date
+          ]
 
         )
 
