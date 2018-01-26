@@ -12,7 +12,7 @@ module Api
       end
 
       def create
-        binding.pry
+        
        
         resident = Resident.new(resident_params)
         
@@ -60,7 +60,107 @@ module Api
             :tenure,
             :hmis_number,
             :hmis_entry_date
-          ]
+          ],
+          general: [
+            :cause_of_homeslessness,
+            :length_of_homelessness,
+            :prior_living_situation,
+            :number_of_shelters,
+            :chronically_Homeless,
+            :special_Needs_None,
+            :special_Needs_Substance_Abuse,
+            :sought_Treatment,
+            :mental_Illness,
+            :mental_IllnessType,
+            :hiv_And_aids, 
+            :victim_Of_domestic_Violence,
+            :pregnant_Parenting_Teen,
+            :exOffender_Criminal_record,
+            :disabled,
+            :disability_Documentation,
+            :disability_Type,
+            :veteran,
+            :veteran_Documentation,
+            :discharge_Type,
+            :check_Box_hiv,
+            :check_Box_health_Problems,
+            :check_Box_victim_Of_violence,
+            :check_Box_pregnant_Teen,
+            :check_Box_exOffender,
+            :speak_english,
+            :primary_Language,
+            :prescribed_medication,
+            :med_Notes,
+            :allergies,
+            :allergy_Notes
+
+          ],
+
+        identification: [
+          :id_Card,
+          :driver_License,
+          :birth_Certificate,
+          :social_Security_number,
+          :passport_Number,
+          :permanent_Resident_card,
+          :information_Type,
+          :date_Setup,
+          :date_Expiration,
+          :days_Left
+        ],
+
+      employmenteducation: [
+          :full_Time,
+          :Company_Name,
+          :Address,
+          :City,
+          :state,
+          :Zip,
+          :Phone,
+          :Supervisor,
+          :Start_date,
+          :End_date,
+          :part_Time,
+          :self_Employed,
+          :temp,
+          :seasonal,
+          :high_School,
+          :associates_Degree,
+          :Marketing,
+          :bachelors_Degree,
+          :masters_Degree,
+          :other
+      ],
+    
+    disciplanary: [
+        :pilsen_Wellness,
+        :failure_Complete_do_Chore,
+        :comment,
+        :date_Disciplinary,
+        :no_Show_no_Call,
+        :no_Show_program_Activities,
+        :lack_Hygiene_cleanliness,
+        :failure_To_follow_Smoking_policy,
+        :confrontational_Behavior,
+        :damage_To_sjom_Property,
+        :no_Show_for_Case_manager_App,
+        :failure_To_meet_Behavioral_expectation,
+        :fighting
+
+    ],
+    
+    
+    
+    
+    requirementlist: [
+          :bottom_Bunk_requested,
+          :pilsen_Wellness_Req,
+          :background_Check,
+          :previous_Part,
+          :referral,
+          :tb_test
+    ]
+
 
         )
 

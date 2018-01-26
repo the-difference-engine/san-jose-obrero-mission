@@ -17,7 +17,12 @@
                :number_of_shelters,
                :chronically_homeless,
                :image,
-               :admittance_information
+               :admittance_information,
+               :general,
+               :identification,
+               :employmenteducation,
+               :disciplanary,
+               :requirementlist
 
     
 

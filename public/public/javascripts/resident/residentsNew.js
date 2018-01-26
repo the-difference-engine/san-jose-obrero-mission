@@ -22,98 +22,111 @@ function submitResidentsForm() {
                 hmis_entry_date: document.forms.resident.hmis_entry_date.value
               },
 
-              General:{
+              general: {
                 cause_of_homeslessness: document.forms.resident.cause_of_homelessness.value,
                 length_of_homelessness: document.forms.resident.length_of_homelessness.value,
                 prior_living_situation: document.forms.resident.priorLivingSituation.value,
                 number_of_shelters: document.forms.resident.number_of_shelters.value,
-                chronicallyHomeless: document.forms.resident.chronicallyHomeless.value,
+                chronically_Homeless: document.forms.resident.chronicallyHomeless.value,
+                special_Needs_None: document.forms.resident.specialNeedsNone.value,
+                special_Needs_Substance_Abuse: document.forms.resident.specialNeedsSubstanceAbuse.value,
+                sought_Treatment: document.forms.resident.soughtTreatment.value,
+                mental_Illness: document.forms.resident.mentalIllness.value,
+                mental_IllnessType: document.forms.resident.mentalIllnessType.value,
+                hiv_And_aids: document.forms.resident.hivAndaids.value, 
+                victim_Of_domestic_Violence: document.forms.resident.victimofDomesticViolence.value,
+                pregnant_Parenting_Teen: document.forms.resident.pregnantParentingTeen.value,
+                exOffender_Criminal_record: document.forms.resident.exOffenderCriminalRecord.value,
+                disabled: document.forms.resident.disabled.value,
+                disability_Documentation: document.forms.resident.disabilityDocumentation.value,
+                disability_Type: document.forms.resident.disabilityType.value,
+                veteran: document.forms.resident.veteran.value,
+                veteran_Documentation: document.forms.resident.veteranDocumentation.value,
+                discharge_Type: document.forms.resident.dischargeType.value,
+                check_Box_hiv: document.forms.resident.checkBoxhiv.value,
+                check_Box_health_Problems: document.forms.resident.checkBoxhealthProblems.value,
+                check_Box_victim_Of_violence: document.forms.resident.checkBoxvictimOfviolence.value,
+                check_Box_pregnant_Teen: document.forms.resident.checkBoxpregnantTeen.value,
+                check_Box_exOffender: document.forms.resident.checkBoxexOffender.value,
+                speak_english: document.forms.resident.speak_english.value,
+                primary_Language: document.forms.resident.primaryLanguage.value,
+                prescribed_medication: document.forms.resident.prescribed_medication.value,
+                med_Notes: document.forms.resident.medNotes.value,
+                allergies: document.forms.resident.allergies.value,
+                allergy_Notes: document.forms.resident.allergyNotes.value,
+
+              },
+
+              identification: {
+                id_Card: document.forms.resident.idCard.value,
+                driver_License: document.forms.resident.driverLicense.value,
+                birth_Certificate: document.forms.resident. birthCertificate.value,
+                social_Security_number: document.forms.resident.socialSecuritynumber.value,
+                passport_Number: document.forms.resident.passportNumber.value,
+                permanent_Resident_card: document.forms.resident.permanentResidentcard.value,
+                information_Type: document.forms.resident.informationType.value,
+                date_Setup: document.forms.resident.dateSetup.value,
+                date_Expiration: document.forms.resident.dateExpiration.value,
+                days_Left: document.forms.resident.daysLeft.value,
+              },
+
+              employmenteducation: {
+                full_Time: document.forms.resident.fullTime.value,
+                Company_Name: document.forms.resident.CompanyName.value,
+                Address: document.forms.resident.Address.value,
+                City: document.forms.resident.City.value,
+                state: document.forms.resident.state.value,
+                Zip: document.forms.resident.Zip.value,
+                Phone: document.forms.resident.Phone.value,
+                Supervisor: document.forms.resident.Supervisor.value,
+                Start_date: document.forms.resident.Startdate.value,
+                End_date: document.forms.resident.Enddate.value,
+                part_Time: document.forms.resident.partTime.value,
+                self_Employed: document.forms.resident.selfEmployed.value,
+                temp: document.forms.resident.temp.value,
+                seasonal: document.forms.resident.seasonal.value,
+                high_School: document.forms.resident.highSchool.value,
+                associates_Degree: document.forms.resident.associatesDegree.value,
+                Marketing: document.forms.resident.Marketing.value,
+                bachelors_Degree: document.forms.resident.bachelorsDegree.value,
+                masters_Degree: document.forms.resident.mastersDegree.value,
+                other: document.forms.resident.other.value,
 
               },
               
+              disciplanary: {
+                pilsen_Wellness: document.forms.resident.pilsenWellness.value,
+                failure_Complete_do_Chore: document.forms.resident.failureCompletedoChore.value,
+                comment: document.forms.resident.comment.value,
+                date_Disciplinary: document.forms.resident.dateDisciplinary.value,
+                no_Show_no_Call: document.forms.resident.noShownoCall.value,
+                no_Show_program_Activities: document.forms.resident.noShowprogramActivities.value,
+                lack_Hygiene_cleanliness: document.forms.resident.lackHygienecleanliness.value,
+                failure_To_follow_Smoking_policy: document.forms.resident.failureTofollowSmokingpolicy.value,
+                confrontational_Behavior: document.forms.resident.confrontationalBehavior.value,
+                damage_To_sjom_Property: document.forms.resident.damageTosjomProperty.vaule,
+                no_Show_for_Case_manager_App: document.forms.resident.noShowforCasemanagerApp.value,
+                failure_To_meet_Behavioral_expectation: document.forms.resident.failureTomeetBehavioralexpectation.value,
+                fighting: document.forms.resident.fighting.value,
 
+             },
+            
+             
+             requirementlist: {
+                bottom_Bunk_requested: document.forms.resident.bottomBunkrequested.value,
+                pilsen_Wellness_Req: document.forms.resident.pilsenWellnessReq.value,
+                background_Check: document.forms.resident.backgroundCheck.value,
+                previous_Part: document.forms.resident.previousPart.value,
+                referral: document.forms.resident.referral.value,
+                tb_Test: document.forms.resident.tbTest.value,
 
-    
-              specialNeedsNone: document.forms.resident.specialNeedsNone.value,
-              specialNeedsSubstanceAbuse: document.forms.resident.specialNeedsSubstanceAbuse.value,
-              specialNeedsAlcoholAbuse: document.forms.resident.specialNeedsAlcoholAbuse.value,
-              soughtTreatment: document.forms.resident.soughtTreatment.value,
-              mentalIllness: document.forms.resident.mentalIllness.value,
-              mentalIllnessType: document.forms.resident.mentalIllnessType.value,
-              hivAndaids: document.forms.resident.hivAndaids.value, 
-              victimofDomesticViolence: document.forms.resident.victimofDomesticViolence.value,
-              pregnantParentingTeen: document.forms.resident.pregnantParentingTeen.value,
-              exOffenderCriminalRecord: document.forms.resident.exOffenderCriminalRecord.value,
-              disabled: document.forms.resident.disabled.value,
-              disabilityDocumentation: document.forms.resident.disabilityDocumentation.value,
-              disabilityType: document.forms.resident.disabilityType.value,
-              veteran: document.forms.resident.veteran.value,
-              veteranDocumentation: document.forms.resident.veteranDocumentation.value,
-              dischargeType: document.forms.resident.dischargeType.value,
-            //   veteranType: document.forms.resident.veteranType.value,
-              idCard: document.forms.resident.idCard.value,
-              driverLicense: document.forms.resident.driverLicense.value,
-              birthCertificate: document.forms.resident. birthCertificate.value,
-              socialSecuritynumber: document.forms.resident.socialSecuritynumber.value,
-              passportNumber: document.forms.resident.passportNumber.value,
-              permanentResidentcard: document.forms.resident.permanentResidentcard.value,
-              informationType: document.forms.resident.informationType.value,
-              dateSetup: document.forms.resident.dateSetup.value,
-              dateExpiration: document.forms.resident.dateExpiration.value,
-              daysLeft: document.forms.resident.daysLeft.value,
-
-              checkBoxhiv: document.forms.resident.checkBoxhiv.value,
-              checkBoxhealthProblems: document.forms.resident.checkBoxhealthProblems.value,
-              checkBoxvictimOfviolence: document.forms.resident.checkBoxvictimOfviolence.value,
-              checkBoxpregnantTeen: document.forms.resident.checkBoxpregnantTeen.value,
-              checkBoxexOffender: document.forms.resident.checkBoxexOffender.value,
-              speak_english: document.forms.resident.speak_english.value,
-              primaryLanguage: document.forms.resident.primaryLanguage.value,
-              prescribed_medication: document.forms.resident.prescribed_medication.value,
-              medNotes: document.forms.resident.medNotes.value,
-              allergies: document.forms.resident.allergies.value,
-              allergyNotes: document.forms.resident.allergyNotes.value,
-
-              partTime: document.forms.resident.partTime.value,
-              selfEmployed: document.forms.resident.selfEmployed.value,
-              temp: document.forms.resident.temp.value,
-              seasonal: document.forms.resident.seasonal.value,
-              highSchool: document.forms.resident.highSchool.value,
-              associatesDegree: document.forms.resident.associatesDegree.value,
-              Marketing: document.forms.resident.Marketing.value,
-              bachelorsDegree: document.forms.resident.bachelorsDegree.value,
-              mastersDegree: document.forms.resident.mastersDegree.value,
-              other: document.forms.resident.other.value,
-
-
-              pilsenWellness: document.forms.resident.pilsenWellness.value,
-              failureCompletedoChore: document.forms.resident.failureCompletedoChore.value,
-              comment: document.forms.resident.comment.value,
-              dateDisciplinary: document.forms.resident.dateDisciplinary.value,
-              noShownoCall: document.forms.resident.noShownoCall.value,
-              noShowprogramActivities: document.forms.resident.noShowprogramActivities.value,
-              lackHygienecleanliness: document.forms.resident.lackHygienecleanliness.value,
-              failureTofollowSmokingpolicy: document.forms.resident.failureTofollowSmokingpolicy.value,
-              confrontationalBehavior: document.forms.resident.confrontationalBehavior.value,
-              damageTosjomProperty: document.forms.resident.damageTosjomProperty.vaule,
-              noShowforCasemanagerApp: document.forms.resident.noShowforCasemanagerApp.value,
-              failureTomeetBehavioralexpectation: document.forms.resident.failureTomeetBehavioralexpectation.value,
-              fighting: document.forms.resident.fighting.value,
-
-
-              bottomBunkrequested: document.forms.resident.bottomBunkrequested.value,
-              pilsenWellnessReq: document.forms.resident.pilsenWellnessReq.value,
-              backgroundCheck: document.forms.resident.backgroundCheck.value,
-              previousPart: document.forms.resident.previousPart.value,
-              referral: document.forms.resident.referral.value,
-              tbTest: document.forms.resident.tbTest.value
+             },
               
+
+
     
-
-
-
-
-
+              
+        
 
 
         }
