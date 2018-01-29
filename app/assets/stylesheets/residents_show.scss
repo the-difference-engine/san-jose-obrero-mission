@@ -28,6 +28,11 @@ hr.solid {
   padding-top: 20px;
 }
 
+.nav-tabs.nav-justified>.active>a {
+  background-color: #9B0032;
+  color: white;
+}
+
 .table-responsive {
   text-align: center;
 }
@@ -67,5 +72,3 @@ hr.solid {
   font-size: 150%;
   margin: auto 0;
 }
-
-
