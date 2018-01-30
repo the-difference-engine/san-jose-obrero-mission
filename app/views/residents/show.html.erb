@@ -1,17 +1,21 @@
-<div class="head-section-container-show">
+<div class="page-header">
+    <div id='show-page-avatar'></div>
+    <h1 id="name-age"></h1>
+    <button class="btn btn-default">Edit Resident</button>
+</div>
+<%# <div class="head-section-container-show">
     <div id='show-page-avatar'class="box a"></div>
     <div id="name-age" class="box b"></div>
-    <div class="box c"></div>
+    <div id="status" class="box c"></div>
     <div class="box d">
         <button onclick="submitResidentsForm()" type="submit" class="btn btn-md btn-success" disabled = true >Edit</button>
     </div>
     <div class="box d">
         <a href="/residents" class="btn btn-md btn-default" disabled = true >Cancel</a>
     </div>
-</div>
-<div id="personal-information"></div>
-<br>
-<ul class="nav nav-tabs" role="tablist">
+</div> %>
+<div id="personal-information" class="container-fluid"></div>
+<ul class="nav nav-tabs nav-justified" role="tablist">    
     <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#show-general" role="tab" aria-controls="show-general"><h4>General</h4></a>
       </li>
@@ -22,19 +26,18 @@
         <a class="nav-link" data-toggle="tab" href="#show-employment" role="tab" aria-controls="Employment"><h4>Employment & Education</h4></a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#show-disciplinary" role="tab" aria-controls="disciplinary"><h4>Disciplinary</h4></a>
+        <a class="nav-link" data-toggle="tab" href="#show-disciplinary" role="tab" aria-controls="disciplinary"><h4>Disciplinary</h4></a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#show-requirements" role="tab" aria-controls="Requirements"><h4>Requirements Checklist</h4></a>
+        <a class="nav-link" data-toggle="tab" href="#show-requirements" role="tab" aria-controls="Requirements"><h4>Requirements Checklist</h4></a>
       </li>
 </ul>
-<br>
 <div class="tab-content">
     <div class="tab-pane active container-fluid" id="show-general" role="tabpanel"> General</div>
-    <div class="tab-pane" id="show-indentification" role="tabpanel"> Indentification</div>
-    <div class="tab-pane" id="show-employment" role="tabpanel"> Employment</div>
-    <div class="tab-pane" id="show-disciplinary" role="tabpanel"> Disciplinary</div>
-    <div class="tab-pane" id="show-requirements" role="tabpanel"> Requirements</div>
+    <div class="tab-pane container-fluid" id="show-indentification" role="tabpanel">Identification</div>
+    <div class="tab-pane container-fluid" id="show-employment" role="tabpanel"> Employment</div>
+    <div class="tab-pane container-fluid" id="show-disciplinary" role="tabpanel"> Disciplinary</div>
+    <div class="tab-pane container-fluid" id="show-requirements" role="tabpanel"> Requirements</div>
 </div>
 
 <script type="text/javascript" src="/public/javascripts/resident/residentShow.js"></script>

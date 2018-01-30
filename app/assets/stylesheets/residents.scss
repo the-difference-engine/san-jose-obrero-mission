@@ -4,17 +4,21 @@
 }
 
 .tbody { 
-  display:table-body; 
+  display: table-body; 
 }
 .table2 {
-  display:table;
+  display: table;
 }
 .table-row {
-  display:table-row;
+  display: table-row;
 }
 
 .head-table-row {
   border-bottom: 1px solid #000000;
+}
+
+.table-responsive {
+  font-family: Avenir;
 }
 
 .table-cell {
@@ -22,6 +26,23 @@
   padding: 5px;
   width: 12em;
 }
+
+#name-age {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.nav-item {
+  background-color: #2B2B2B;
+  color: white;
+  border-width: 1px;
+  font-family: Avenir;
+}
+
+.nav-item h4 {
+    font-size: 16px;
+}
+
 
 .table-cell-head {
   display:table-cell;
@@ -101,12 +122,21 @@ hr.solid {
   //color: #444;
 }
 
-.box {
+.box.b {
   //background-color: #444;
   //color: #fff;
   border-radius: 5px;
   padding: 2px;
   font-size: 150%;
+  margin: auto 0;
+}
+
+.box.c {
+  //background-color: #444;
+  //color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 125%;
   margin: auto 0;
 }
 
