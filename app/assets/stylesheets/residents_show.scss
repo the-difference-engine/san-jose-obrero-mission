@@ -24,6 +24,16 @@ hr.solid {
   width: 75px;
 }
 
+.page-header {
+  padding-bottom: 10px;
+  margin: 40px 0 0px;
+  border-bottom: 1px solid #eeeeee;
+  text-align: center;
+  background-color: #F6F6F6;
+  font-family: Avenir;
+  color: black;
+}
+
 #show-page-avatar {
   padding-top: 20px;
 }
@@ -43,6 +53,15 @@ hr.solid {
   border-width: 1px;
   width: 235px;
   text-align: center;
+  // height: 40px;
+}
+
+.showHeaderLeftAlign {
+  background-color: #9B0032;
+  color: white;
+  border-width: 1px;
+  width: 150px;
+  text-align: left;
   // height: 40px;
 }
 

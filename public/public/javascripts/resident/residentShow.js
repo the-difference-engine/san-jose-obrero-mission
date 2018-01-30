@@ -39,66 +39,66 @@ function setAvatar(avatar) {
 }
 
 function personalInformation(resident) {
-  return '<div style="display: inline-block; width: 50%; text-align: center;" class="table-responsive">' + 
+  return '<div style="display: inline-block; width: 50%; text-align: left;" class="table-responsive">' + 
           '<table class="table table-bordered">' +
               '<tr>' +
-                '<th class="showHeader">' + 'Status' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Status' + '</th>' +
                 '<td>' + resident.status + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Gender' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Gender' + '</th>' +
                 '<td>' + resident.gender + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Date of Birth' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Date of Birth' + '</th>' +
                 '<td>' + resident.date_of_birth + '</td>' +
               '</tr>' + 
               '<tr>' +
-                '<th class="showHeader">' + 'Age' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Age' + '</th>' +
                 '<td>' + resident.age + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Ethnicity' +  '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Ethnicity' +  '</th>' +
                 '<td>' + resident.ethnicity + '</td>' +
               '</tr>'  +
               '<tr>' +
-                '<th class="showHeader">' + 'Race' +  '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Race' +  '</th>' +
                 '<td>' + resident.resident_race + '</td>' +
               '</tr>' + 
               '<tr>' +
-                '<th class="showHeader">' + 'Phone Number' +  '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Phone Number' +  '</th>' +
                 '<td>' + resident.phone_number + '</td>' +
               '</tr>' +
           '</table>' +
          '</div>' + 
-          '<div style="display: inline-block; width: 50%; text-align: center;" class="table-responsive">' +
+          '<div style="display: inline-block; width: 50%; text-align: left;" class="table-responsive">' +
             '<table class="table table-bordered">' +
               '<tr>' +
-                '<th class="showHeader">' + 'Case Manager' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Case Manager' + '</th>' +
                 '<td>' + resident.case_manager + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Admitted' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Admitted' + '</th>' +
                 '<td>' + resident.admitted_date + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Released' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Released' + '</th>' +
                 '<td>' + resident.released_date + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Tenure' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Tenure' + '</th>' +
                 '<td>' + resident.tenure + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'HMIS#' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'HMIS#' + '</th>' +
                 '<td>' + resident.hmis_number + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'HMIS Entry Date' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'HMIS Entry Date' + '</th>' +
                 '<td>' + resident.hmis_entry_date + '</td>' +
               '</tr>' +
               '<tr>' +
-                '<th class="showHeader">' + 'Bed ID#' + '</th>' +
+                '<th class="showHeaderLeftAlign">' + 'Bed ID#' + '</th>' +
                 '<td>' + resident.bed_id + '</td>' +
               '</tr>' +
             '</table>' +
@@ -111,59 +111,89 @@ function displayGeneralTab(resident) {
       '<table class="table table-bordered">' +
         '<tr>' +
           '<th class="showHeader">' + 'Cause of Homelessness' + '</th>' +
-          '<td>' + resident.cause_of_homelessness + '</td>' +
-        '</tr>' +
-        '<tr>' +
           '<th class="showHeader">' + 'Length of Homelessness' + '</th>' +
-          '<td>' + resident.length_of_homelessness + '</td>' +
+          '<th class="showHeader">' + 'Prior Living Situation' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Prior Living Situation' + '</th>' +
+          '<td>' + resident.cause_of_homelessness + '</td>' +
+          '<td>' + resident.length_of_homelessness + '</td>' +
           '<td>' + resident.prior_living_situation + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Length of Prior Living Situation' + '</th>' +
-          '<td>' + resident.length_of_prior_situation + '</td>' +
-        '</tr>' +
-        '<tr>' +
-          '<th class="showHeader">' + 'Number of Shelters in Past Year' + '</th>' +
-          '<td>' + resident.number_of_shelters + '</td>' +
-        '</tr>' +
-        '<tr>' +
-          '<th class="showHeader">' + 'Chronically Homeless?' + '</th>' +
-          '<td>' + resident.chronically_homeless + '</td>' +
-        '</tr>' +
-      '</table>' +   
-    '</div>'+
+      '</table>' +
+    '</div>' +
     '<div class="table-responsive">' +
       '<table class="table table-bordered">' +
         '<tr>' +
+          '<th class="showHeader">' + 'Length of Prior Living Situation' + '</th>' +
+          '<th class="showHeader">' + 'Number of Shelters in Past Year' + '</th>' +
+          '<th class="showHeader">' + 'Chronically Homeless?' + '</th>' +
+        '</tr>' +
+        '<tr>' +
+          '<td>' + resident.length_of_prior_situation + '</td>' +
+          '<td>' + resident.number_of_shelters + '</td>' +
+          '<td>' + resident.chronically_homeless + '</td>' +
+        '</tr>' +
+        '<tr>' +
+      '</table>' +
+    '</div>' +
+    // '<div class="table-responsive">' +
+    //   '<table class="table table-bordered">' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Cause of Homelessness' + '</th>' +
+    //       '<td>' + resident.cause_of_homelessness + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Length of Homelessness' + '</th>' +
+    //       '<td>' + resident.length_of_homelessness + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Prior Living Situation' + '</th>' +
+    //       '<td>' + resident.prior_living_situation + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Length of Prior Living Situation' + '</th>' +
+    //       '<td>' + resident.length_of_prior_situation + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Number of Shelters in Past Year' + '</th>' +
+    //       '<td>' + resident.number_of_shelters + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //       '<th class="showHeader">' + 'Chronically Homeless?' + '</th>' +
+    //       '<td>' + resident.chronically_homeless + '</td>' +
+    //     '</tr>' +
+    //   '</table>' +   
+    // '</div>'+
+    '<div style="text-align: left;" class="table-responsive">' +
+      '<table class="table table-bordered">' +
+        '<tr>' +
           '<th class="showHeader">' + '' + '</th>' +
-          '<th class="showHeader">' + 'Y/N' + '</th>' +
+          '<th class="showHeader">' + 'Yes/No' + '</th>' +
           '<th class="showHeader">' + 'Notes' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Is the client disabled?' + '</th>' +
+          '<th class="showHeaderLeftAlign">' + 'Is the client disabled?' + '</th>' +
           '<td>' + resident.disabled + '</td>' +
           '<td>' + resident.disabled + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Is the client a veteran?' + '</th>' +
+          '<th class="showHeaderLeftAlign">' + 'Is the client a veteran?' + '</th>' +
           '<td>' + resident.veteran + '</td>' +
           '<td>' + resident.veteran + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Is the client taking prescribed medicine?' + '</th>' +
+          '<th class="showHeaderLeftAlign">' + 'Is the client taking prescribed medicine?' + '</th>' +
           '<td>' + resident.prescribed_medicine + '</td>' +
           '<td>' + resident.prescribed_medicine + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Does the client have allergies?' + '</th>' +
+          '<th class="showHeaderLeftAlign">' + 'Does the client have allergies?' + '</th>' +
           '<td>' + resident.allergies + '</td>' +
           '<td>' + resident.allergies + '</td>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'Does the client speak and read English well?' + '</th>' +
+          '<th class="showHeaderLeftAlign">' + 'Does the client speak and read English well?' + '</th>' +
           '<td>' + resident.speak_english + '</td>' +
           '<td>' + resident.speak_english + '</td>' +
         '</tr>' +
@@ -257,22 +287,16 @@ function displayRequirements(resident) {
       '<table class="table table-bordered">' +
         '<tr>' +
           '<th class="showHeader">' + 'Bottom Bunk Requested' + '</th>' +
-          '<td>' + resident.bottom_bunk_requested + '</td>' +
-        '</tr>' +
-        '<tr>' +
           '<th class="showHeader">' + 'Pilsen Wellness' + '</th>' +
-          '<td>' + resident.pilsen_wellness + '</td>' +
-        '</tr>' +
-        '<tr>' +
           '<th class="showHeader">' + 'Background Check' + '</th>' +
-          '<td>' + resident.background_check + '</td>' +
-        '</tr>' +
-        '<tr>' +
           '<th class="showHeader">' + 'Referral' + '</th>' +
-          '<td>' + resident.referral + '</td>' +
+          '<th class="showHeader">' + 'TB Test' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeader">' + 'TB Test' + '</th>' +
+          '<td>' + resident.bottom_bunk_requested + '</td>' +
+          '<td>' + resident.pilsen_wellness + '</td>' +
+          '<td>' + resident.background_check + '</td>' +
+          '<td>' + resident.referral + '</td>' +
           '<td>' + resident.tb_test + '</td>' +
         '</tr>' +
       '</table>' +   
