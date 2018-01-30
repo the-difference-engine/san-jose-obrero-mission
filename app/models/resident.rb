@@ -32,12 +32,7 @@ class Resident < ApplicationRecord
   end 
 
   def age
-<<<<<<< HEAD
     return if date.nil? 
     ((Time.zone.now - date.to_time) / 1.year.seconds).floor
-=======
-    return if date_of_birth.nil?
-    Time.now.year - date_of_birth.year
->>>>>>> add admittance info migration
   end
 end

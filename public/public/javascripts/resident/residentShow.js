@@ -84,23 +84,23 @@ function personalInformation(resident) {
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'Admitted' + '</th>' +
-                '<td>' + resident.admitted_date + '</td>' +
+                '<td>' + resident.admittance_information.admitted_date + '</td>' +
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'Released' + '</th>' +
-                '<td>' + resident.released_date + '</td>' +
+                '<td>' + resident.admittance_information.released_date + '</td>' +
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'Tenure' + '</th>' +
-                '<td>' + resident.tenure + '</td>' +
+                '<td>' + resident.admittance_information.tenure + '</td>' +
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'HMIS#' + '</th>' +
-                '<td>' + resident.hmis_number + '</td>' +
+                '<td>' + resident.admittance_information.hmis_number + '</td>' +
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'HMIS Entry Date' + '</th>' +
-                '<td>' + resident.hmis_entry_date + '</td>' +
+                '<td>' + resident.admittance_information.hmis_entry_date + '</td>' +
               '</tr>' +
               '<tr>' +
                 '<th class="showHeaderLeftAlign">' + 'Bed ID#' + '</th>' +
@@ -110,36 +110,36 @@ function personalInformation(resident) {
           '</div>'
 }
    
-  return '<div class="container-fluid">' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
-                '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
-                '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
-                '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
-                '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
-                '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
-                  + '</p></div>' +
-                '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
-            '</div>' +
-            '<div class="row">' +
-                '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admittance_information.admitted_date || 'N/A')+ '</p></div>' +
-                '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.admittance_information.released_date || 'N/A') + '</p></div>' +
-                '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.admittance_information.tenure || 'N/A') + '</p></div>' +
-                '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.admittance_information.hmis_number
-                  + '</p></div>' +
-                '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.admittance_information.hmis_entry_date
-                  + '</p></div>' +
-            '</div>' +
-         '</div>';
-  }
+//   return '<div class="container-fluid">' +
+//             '<div class="row">' +
+//                 '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
+//             '</div>' +
+//             '<div class="row">' +
+//                 '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
+//                 '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
+//                 '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
+//             '</div>' +
+//             '<div class="row">' +
+//                 '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
+//                   + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
+//             '</div>' +
+//             '<div class="row">' +
+//                 '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admittance_information.admitted_date || 'N/A')+ '</p></div>' +
+//                 '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.admittance_information.released_date || 'N/A') + '</p></div>' +
+//                 '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.admittance_information.tenure || 'N/A') + '</p></div>' +
+//                 '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.admittance_information.hmis_number
+//                   + '</p></div>' +
+//                 '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.admittance_information.hmis_entry_date
+//                   + '</p></div>' +
+//             '</div>' +
+//          '</div>';
+//   }
 
  
 
@@ -153,9 +153,9 @@ function displayGeneralTab(resident) {
           '<th class="showHeader">' + 'Prior Living Situation' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<td>' + resident.cause_of_homelessness + '</td>' +
-          '<td>' + resident.length_of_homelessness + '</td>' +
-          '<td>' + resident.prior_living_situation + '</td>' +
+          '<td>' + resident.general.cause_of_homelessness + '</td>' +
+          '<td>' + resident.general.length_of_homelessness + '</td>' +
+          '<td>' + resident.general.prior_living_situation + '</td>' +
         '</tr>' +
         '<tr>' +
       '</table>' +
@@ -168,72 +168,72 @@ function displayGeneralTab(resident) {
           '<th class="showHeader">' + 'Chronically Homeless?' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<td>' + resident.length_of_prior_situation + '</td>' +
-          '<td>' + resident.number_of_shelters + '</td>' +
-          '<td>' + resident.chronically_homeless + '</td>' +
+          '<td>' + resident.general.length_of_prior_situation + '</td>' +
+          '<td>' + resident.general.number_of_shelters + '</td>' +
+          '<td>' + resident.general.chronically_Homeless + '</td>' +
         '</tr>' +
         '<tr>' +
       '</table>' +
-  document.querySelector('#show-general').innerHTML = '<div class="row">' +
-      '<div class="col-lg-6">' +
-          '<label>Cause of Homelessness</label>' + '<p>' +
-      (resident.general.cause_of_homeslessness || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-          '<label>Length of Homelessness</label>' +
-          '<p>' +
-          (resident.general.length_of_homelessness || 'N/A') +
-          '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-6">' +
-          '<label>Prior Living Situation</label>' + '<p>' +
-      (resident.general.prior_living_situation || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-          '<label>How long in prior living situation?</label>' +
-          '<p>' +
-          (resident.general.length_of_prior_situation || 'N/A') +
-          '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-6">' +
-          '<label>Number of Shelters in the Past Year</label>' + '<p>' +
-      (resident.general.number_of_shelters || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-          '<label>Chronically Homeless</label>' +
-          '<p>' +
-          (resident.general.chronically_Homeless || 'N/A') +
-          '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Special Needs / None </label>' + '<p>' +
-      (resident.general.special_Needs_None || 'N/A')  + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Special Needs / Substance Abuse </label>' + '<p>' +
-      (resident.general.special_Needs_Substance_Abuse || 'N/A')  + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Special Needs / Alcohol Abuse</label>' + '<p>' +
-      (resident.general.special_Needs_alcohol_Abuse || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Sought Treatment?</label>' + '<p>' +
-      (resident.general.sought_Treatment || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
+//   document.querySelector('#show-general').innerHTML = '<div class="row">' +
+//       '<div class="col-lg-6">' +
+//           '<label>Cause of Homelessness</label>' + '<p>' +
+//       (resident.general.cause_of_homeslessness || 'N/A') + '</p>' +
+//       '</div>' +
+//       '<div class="col-lg-6">' +
+//           '<label>Length of Homelessness</label>' +
+//           '<p>' +
+//           (resident.general.length_of_homelessness || 'N/A') +
+//           '</p>' +
+//       '</div>' +
+//     '</div>' +
+//     '<hr class="dashed">' +
+//     '<div class="row">' +
+//       '<div class="col-lg-6">' +
+//           '<label>Prior Living Situation</label>' + '<p>' +
+//       (resident.general.prior_living_situation || 'N/A') + '</p>' +
+//       '</div>' +
+//       '<div class="col-lg-6">' +
+//           '<label>How long in prior living situation?</label>' +
+//           '<p>' +
+//           (resident.general.length_of_prior_situation || 'N/A') +
+//           '</p>' +
+//       '</div>' +
+//     '</div>' +
+//     '<hr class="dashed">' +
+//     '<div class="row">' +
+//       '<div class="col-lg-6">' +
+//           '<label>Number of Shelters in the Past Year</label>' + '<p>' +
+//       (resident.general.number_of_shelters || 'N/A') + '</p>' +
+//       '</div>' +
+//       '<div class="col-lg-6">' +
+//           '<label>Chronically Homeless</label>' +
+//           '<p>' +
+//           (resident.general.chronically_Homeless || 'N/A') +
+//           '</p>' +
+//       '</div>' +
+//     '</div>' +
+//     '<hr class="dashed">' +
+//     '<div class="row">' +
+//       '<div class="col-lg-12">' +
+//           '<label>Special Needs / None </label>' + '<p>' +
+//       (resident.general.special_Needs_None || 'N/A')  + '</p>' +
+//       '</div>' +
+//       '<div class="col-lg-12">' +
+//           '<label>Special Needs / Substance Abuse </label>' + '<p>' +
+//       (resident.general.special_Needs_Substance_Abuse || 'N/A')  + '</p>' +
+//       '</div>' +
+//       '<div class="col-lg-12">' +
+//           '<label>Special Needs / Alcohol Abuse</label>' + '<p>' +
+//       (resident.general.special_Needs_alcohol_Abuse || 'N/A') + '</p>' +
+//       '</div>' +
+//     '</div>' +
+//     '<hr class="dashed">' +
+//     '<div class="row">' +
+//       '<div class="col-lg-12">' +
+//           '<label>Sought Treatment?</label>' + '<p>' +
+//       (resident.general.sought_Treatment || 'N/A') + '</p>' +
+//       '</div>' +
+//     '</div>' +
   
     '<div style="text-align: left;" class="table-responsive">' +
       '<table class="table table-bordered">' +
@@ -244,28 +244,28 @@ function displayGeneralTab(resident) {
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Is the client disabled?' + '</th>' +
-          '<td>' + resident.disabled + '</td>' +
-          '<td>' + resident.disabled + '</td>' +
+          '<td>' + resident.general.disabled + '</td>' +
+          '<td>' + resident.general.disabled + '</td>' +
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Is the client a veteran?' + '</th>' +
-          '<td>' + resident.veteran + '</td>' +
-          '<td>' + resident.veteran + '</td>' +
+          '<td>' + resident.general.veteran + '</td>' +
+          '<td>' + resident.general.veteran + '</td>' +
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Is the client taking prescribed medicine?' + '</th>' +
-          '<td>' + resident.prescribed_medicine + '</td>' +
-          '<td>' + resident.prescribed_medicine + '</td>' +
+          '<td>' + resident.general.prescribed_medicine + '</td>' +
+          '<td>' + resident.general.prescribed_medicine + '</td>' +
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Does the client have allergies?' + '</th>' +
-          '<td>' + resident.allergies + '</td>' +
-          '<td>' + resident.allergies + '</td>' +
+          '<td>' + resident.general.allergies + '</td>' +
+          '<td>' + resident.general.allergies + '</td>' +
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Does the client speak and read English well?' + '</th>' +
-          '<td>' + resident.speak_english + '</td>' +
-          '<td>' + resident.speak_english + '</td>' +
+          '<td>' + resident.general.speak_english + '</td>' +
+          '<td>' + resident.general.speak_english + '</td>' +
         '</tr>' +
       '</table>' +
     '</div>' + 
@@ -278,9 +278,11 @@ function displayGeneralTab(resident) {
           '<th class="showHeader">' + 'Notes' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<td>' + resident.type + '</td>' +
-          '<td>' + resident.sought_treatment + '</td>' +
-          '<td>' + resident.notes + '</td>' +
+          '<td>' + resident.general.special_Needs_None + '</td>' +
+          '<td>' + resident.general.special_Needs_Substance_Abuse + '</td>' +
+          '<td>' + resident.general.special_Needs_alcohol_Abuse + '</td>' +
+          '<td>' + resident.general.sought_Treatment + '</td>' +
+        //   '<td>' + resident.general.notes + '</td>' +
         '</tr>' +
       '</table>' +
     '</div>';
@@ -297,13 +299,58 @@ function displayIdentification(resident) {
             '<th class="showHeader">' + 'Green/Permanent Resident Card' + '</th>' +
         '</tr>' +
         '<tr>' +
-            '<td>' + resident.license_number + '</td>' +
-            '<td>' + resident.social_security_number + '</td>' +
-            '<td>' + resident.passport + '</td>' +
+            '<td>' + resident.identification.id_Card + '</td>' +
+            '<td>' + resident.identification.social_security_number + '</td>' +
+            '<td>' + resident.identification.passport + '</td>' +
             '<td>' + resident.green_card + '</td>' +
         '</tr>' +
         '<tr>' +
       '</table>' +   
+    '</div>';
+
+    '<div class="col-lg-6">' +
+    '<label for="ID-Card">ID Card</label>'+ '<p>' +
+    (resident.identification.id_Card || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+   ' <label for="Driver-License">Drivers License</label>' + '<p>' +
+   (resident.identification.driver_License || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+    '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
+    (resident.identification.birth_Certificate || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+    '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
+    (resident.identification.social_Security_number || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+    '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
+    (resident.identification.passport_Number || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+    '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
+    (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
+    '</div>' +
+    '<div class="col-lg-6">' +
+    '<label for="Expectations">Expectations</label>'+ '<p>' +
+    (resident.identification.information_Type || 'N/A') + '</p>' +
+    '</div>' +
+
+    '<div class="col-lg-6">' +
+    '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
+    (resident.identification.date_Setup || 'N/A') + '</p>' +
+    '</div>' +
+
+    '<div class="col-lg-6">' +
+    '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
+    (resident.identification.date_Expiration || 'N/A') + '</p>' +
+    '</div>' +
+
+    '<div class="col-lg-6">' +
+    '<label for="Days-Left">Days Left</label>'+ '<p>' +
+    (resident.identification.days_Left || 'N/A') + '</p>' +
+    '</div>' +
     '</div>';
 }
 
@@ -319,11 +366,11 @@ function displayEmploymentEducation(resident) {
             '<th class="showHeader">' + "Master's" + '</th>' +
             '<th class="showHeader">' + "Other" + '</th>' +
           '</tr>' +
-            '<td>' + resident.associates + '</td>' +
-            '<td>' + resident.high_school + '</td>' +
-            '<td>' + resident.bachelors + '</td>' +
-            '<td>' + resident.masters + '</td>' +
-            '<td>' + resident.other_education + '</td>' +
+            '<td>' + resident.identification.associates + '</td>' +
+            '<td>' + resident.identification.high_school + '</td>' +
+            '<td>' + resident.identification.bachelors + '</td>' +
+            '<td>' + resident.identification.masters + '</td>' +
+            '<td>' + resident.identification.other_education + '</td>' +
           '<tr>' +
         '</tr>' +
       '</table>' +   
@@ -339,7 +386,7 @@ function displayEmploymentEducation(resident) {
             '<th class="showHeader">' + "Date Started" + '</th>' +
             '<th class="showHeader">' + "Date Ended" + '</th>' +
           '</tr>' +
-            '<td>' + resident.employer_company + '</td>' +
+            '<td>' + resident.identification.employer_company + '</td>' +
             '<td>' + resident.employer_address + '</td>' +
             '<td>' + resident.employer_phone_number + '</td>' +
             '<td>' + resident.employer_supervisor + '</td>' +
@@ -478,50 +525,50 @@ function displayRequirements(resident) {
 
 function displayIdentificationtab(resident) {
   document.querySelector('#show-indentification').innerHTML = '<div class="row">' +
-      '<div class="col-lg-6">' +
-      '<label for="ID-Card">ID Card</label>'+ '<p>' +
-      (resident.identification.id_Card || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-     ' <label for="Driver-License">Drivers License</label>' + '<p>' +
-     (resident.identification.driver_License || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-      '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
-      (resident.identification.birth_Certificate || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-      '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
-      (resident.identification.social_Security_number || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-      '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
-      (resident.identification.passport_Number || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-      '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
-      (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-6">' +
-      '<label for="Expectations">Expectations</label>'+ '<p>' +
-      (resident.identification.information_Type || 'N/A') + '</p>' +
-      '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="ID-Card">ID Card</label>'+ '<p>' +
+    //   (resident.identification.id_Card || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //  ' <label for="Driver-License">Drivers License</label>' + '<p>' +
+    //  (resident.identification.driver_License || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
+    //   (resident.identification.birth_Certificate || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
+    //   (resident.identification.social_Security_number || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
+    //   (resident.identification.passport_Number || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
+    //   (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Expectations">Expectations</label>'+ '<p>' +
+    //   (resident.identification.information_Type || 'N/A') + '</p>' +
+    //   '</div>' +
 
-      '<div class="col-lg-6">' +
-      '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
-      (resident.identification.date_Setup || 'N/A') + '</p>' +
-      '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
+    //   (resident.identification.date_Setup || 'N/A') + '</p>' +
+    //   '</div>' +
 
-      '<div class="col-lg-6">' +
-      '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
-      (resident.identification.date_Expiration || 'N/A') + '</p>' +
-      '</div>' +
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
+    //   (resident.identification.date_Expiration || 'N/A') + '</p>' +
+    //   '</div>' +
 
-      '<div class="col-lg-6">' +
-      '<label for="Days-Left">Days Left</label>'+ '<p>' +
-      (resident.identification.days_Left || 'N/A') + '</p>' +
-      '</div>' +
-      '</div>';
+    //   '<div class="col-lg-6">' +
+    //   '<label for="Days-Left">Days Left</label>'+ '<p>' +
+    //   (resident.identification.days_Left || 'N/A') + '</p>' +
+    //   '</div>' +
+    //   '</div>';
 }
 
 function displayEmploymenttab(resident) {
