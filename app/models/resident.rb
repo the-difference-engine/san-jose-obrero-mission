@@ -31,7 +31,7 @@ class Resident < ApplicationRecord
   end 
 
   def age
-    return if date.nil?
-    Time.zone.now.year - date.year
+    return if date.nil? 
+    ((Time.zone.now - date.to_time) / 1.year.seconds).floor
   end
 end
