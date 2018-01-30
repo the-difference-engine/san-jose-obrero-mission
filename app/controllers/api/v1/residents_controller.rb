@@ -12,7 +12,6 @@ module Api
       end
 
       def create
-        
        
         resident = Resident.new(resident_params)
         
@@ -65,28 +64,27 @@ module Api
             :cause_of_homeslessness,
             :length_of_homelessness,
             :prior_living_situation,
+            :length_of_prior_situation,
             :number_of_shelters,
             :chronically_Homeless,
             :special_Needs_None,
             :special_Needs_Substance_Abuse,
+            :special_Needs_alcohol_Abuse,
             :sought_Treatment,
             :mental_Illness,
             :mental_IllnessType,
-            :hiv_And_aids, 
+            :hiv_And_aids,
+            :Chronical_health_Problem, 
             :victim_Of_domestic_Violence,
             :pregnant_Parenting_Teen,
             :exOffender_Criminal_record,
+            :disabled_Yes,
             :disabled,
             :disability_Documentation,
             :disability_Type,
             :veteran,
             :veteran_Documentation,
             :discharge_Type,
-            :check_Box_hiv,
-            :check_Box_health_Problems,
-            :check_Box_victim_Of_violence,
-            :check_Box_pregnant_Teen,
-            :check_Box_exOffender,
             :speak_english,
             :primary_Language,
             :prescribed_medication,
