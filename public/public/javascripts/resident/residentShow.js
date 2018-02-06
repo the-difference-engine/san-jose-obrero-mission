@@ -107,39 +107,11 @@ function personalInformation(resident) {
                 '<td>' + resident.bed_id + '</td>' +
               '</tr>' +
             '</table>' +
-          '</div>'
+          '</div>';
 }
    
-//   return '<div class="container-fluid">' +
-//             '<div class="row">' +
-//                 '<div class="col-lg-2"><label>Full Name</label> ' + '<p>' + resident.full_name + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Gender</label> ' + '<p>' + resident.gender + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Phone Number</label> ' + '<p>' + (resident.phone_number || 'N/A') + '</p></div>' +
-//             '</div>' +
-//             '<div class="row">' +
-//                 '<div class="col-lg-2"><label>Date of Birth:</label> ' + '<p>' + (resident.date_of_birth || 'N/A') + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Age:</label> ' + '<p>' + resident.age + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Ethnicity:</label> ' + '<p>' + resident.ethnicity + '</p></div>' +
-//                 '<div class="col-lg-3"><label>Race:</label> ' + '<p>' + resident.resident_race + '</p></div>' +
-//                 '<div class="col-lg-3"><label>Status:</label> ' + '<p>' + (resident.status || 'N/A') + '</p></div>' +
-//             '</div>' +
-//             '<div class="row">' +
-//                 '<div class="col-lg-2"><label>Case Manager:</label> ' + '<p>' + (resident.case_manager || 'N/A') + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Bed:</label> ' + '<p>' + resident.bed_id
-//                   + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
-//             '</div>' +
-//             '<div class="row">' +
-//                 '<div class="col-lg-2"><label>Admitted:</label>' + '<p>' + (resident.admittance_information.admitted_date || 'N/A')+ '</p></div>' +
-//                 '<div class="col-lg-2"><label>Released:</label> ' + '<p>' + (resident.admittance_information.released_date || 'N/A') + '</p></div>' +
-//                 '<div class="col-lg-2"><label>Tenure:</label> ' + '<p>' + (resident.admittance_information.tenure || 'N/A') + '</p></div>' +
-//                 '<div class="col-lg-3"><label>HMIS#:</label> ' + '<p>' + resident.admittance_information.hmis_number
-//                   + '</p></div>' +
-//                 '<div class="col-lg-3"><label>HMIS Entry Date:</label> ' + '<p>' + resident.admittance_information.hmis_entry_date
-//                   + '</p></div>' +
-//             '</div>' +
-//          '</div>';
-//   }
+
+//  '<div class="col-lg-2"><label>Bed lock combo number:</label> ' + '<p>' + (resident.bed_lock_combo_number || 'N/A') + '</p></div>' +
 
  
 
@@ -160,6 +132,7 @@ function displayGeneralTab(resident) {
         '<tr>' +
       '</table>' +
     '</div>' +
+
     '<div class="table-responsive">' +
       '<table class="table table-bordered">' +
         '<tr>' +
@@ -174,45 +147,7 @@ function displayGeneralTab(resident) {
         '</tr>' +
         '<tr>' +
       '</table>' +
-//   document.querySelector('#show-general').innerHTML = '<div class="row">' +
-//       '<div class="col-lg-6">' +
-//           '<label>Cause of Homelessness</label>' + '<p>' +
-//       (resident.general.cause_of_homeslessness || 'N/A') + '</p>' +
-//       '</div>' +
-//       '<div class="col-lg-6">' +
-//           '<label>Length of Homelessness</label>' +
-//           '<p>' +
-//           (resident.general.length_of_homelessness || 'N/A') +
-//           '</p>' +
-//       '</div>' +
-//     '</div>' +
-//     '<hr class="dashed">' +
-//     '<div class="row">' +
-//       '<div class="col-lg-6">' +
-//           '<label>Prior Living Situation</label>' + '<p>' +
-//       (resident.general.prior_living_situation || 'N/A') + '</p>' +
-//       '</div>' +
-//       '<div class="col-lg-6">' +
-//           '<label>How long in prior living situation?</label>' +
-//           '<p>' +
-//           (resident.general.length_of_prior_situation || 'N/A') +
-//           '</p>' +
-//       '</div>' +
-//     '</div>' +
-//     '<hr class="dashed">' +
-//     '<div class="row">' +
-//       '<div class="col-lg-6">' +
-//           '<label>Number of Shelters in the Past Year</label>' + '<p>' +
-//       (resident.general.number_of_shelters || 'N/A') + '</p>' +
-//       '</div>' +
-//       '<div class="col-lg-6">' +
-//           '<label>Chronically Homeless</label>' +
-//           '<p>' +
-//           (resident.general.chronically_Homeless || 'N/A') +
-//           '</p>' +
-//       '</div>' +
-//     '</div>' +
-//     '<hr class="dashed">' +
+    '</div>' +  
 //     '<div class="row">' +
 //       '<div class="col-lg-12">' +
 //           '<label>Special Needs / None </label>' + '<p>' +
@@ -234,7 +169,26 @@ function displayGeneralTab(resident) {
 //       (resident.general.sought_Treatment || 'N/A') + '</p>' +
 //       '</div>' +
 //     '</div>' +
-  
+    '<div style="text-align: left;" class="table-responsive">' +
+      '<table class="table table-bordered">' +
+        '<tr>' +
+          '<th class="showHeader">' + '' + '</th>' +
+          '<th class="showHeader">' + 'Yes/No' + '</th>' +
+          '<th class="showHeader">' + 'Documentation?' + '</th>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Is the client disabled?' + '</th>' +
+          '<td>' + (resident.general.disabled || 'N/A') + '</td>' +
+          '<td>' + (resident.general.disability_Documentation || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Is the client a veteran?' + '</th>' +
+          '<td>' + (resident.general.veteran || 'N/A') + '</td>' +
+          '<td>' + (resident.general.veteranDocumentation || 'N/A') + '</td>' +
+        '</tr>' +
+      '</table>' +
+    '</div>' + 
+
     '<div style="text-align: left;" class="table-responsive">' +
       '<table class="table table-bordered">' +
         '<tr>' +
@@ -243,46 +197,99 @@ function displayGeneralTab(resident) {
           '<th class="showHeader">' + 'Notes' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<th class="showHeaderLeftAlign">' + 'Is the client disabled?' + '</th>' +
-          '<td>' + resident.general.disabled + '</td>' +
-          '<td>' + resident.general.disabled + '</td>' +
-        '</tr>' +
-        '<tr>' +
-          '<th class="showHeaderLeftAlign">' + 'Is the client a veteran?' + '</th>' +
-          '<td>' + resident.general.veteran + '</td>' +
-          '<td>' + resident.general.veteran + '</td>' +
-        '</tr>' +
-        '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Is the client taking prescribed medicine?' + '</th>' +
-          '<td>' + resident.general.prescribed_medicine + '</td>' +
-          '<td>' + resident.general.prescribed_medicine + '</td>' +
+          '<td>' + (resident.general.prescribed_medication || 'N/A') + '</td>' +
+          '<td>' + (resident.general.med_Notes || 'N/A') + '</td>' +
         '</tr>' +
         '<tr>' +
           '<th class="showHeaderLeftAlign">' + 'Does the client have allergies?' + '</th>' +
-          '<td>' + resident.general.allergies + '</td>' +
-          '<td>' + resident.general.allergies + '</td>' +
-        '</tr>' +
-        '<tr>' +
-          '<th class="showHeaderLeftAlign">' + 'Does the client speak and read English well?' + '</th>' +
-          '<td>' + resident.general.speak_english + '</td>' +
-          '<td>' + resident.general.speak_english + '</td>' +
+          '<td>' + (resident.general.allergies || 'N/A') + '</td>' +
+          '<td>' + (resident.general.allergy_Notes || 'N/A') + '</td>' +
         '</tr>' +
       '</table>' +
     '</div>' + 
+
+    '<div style="text-align: left;" class="table-responsive">' +
+      '<table class="table table-bordered">' +
+        '<tr>' +
+          '<th class="showHeader">' + '' + '</th>' +
+          '<th class="showHeader">' + 'Yes/No' + '</th>' +
+          '<th class="showHeader">' + 'Primary Language' + '</th>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Does the client speak and read English well?' + '</th>' +
+          '<td>' + (resident.general.speak_english || 'N/A') + '</td>' +
+          '<td>' + (resident.general.primary_Language || 'N/A') + '</td>' +
+        '</tr>' +
+      '</table>' +
+    '</div>' + 
+
+    '<div style="text-align: left;" class="table-responsive">' +
+      '<table class="table table-bordered">' +
+        '<tr>' +
+          '<th class="showHeader">' + '' + '</th>' +
+          '<th class="showHeader">' + 'Yes/No' + '</th>' +
+          '<th class="showHeader">' + 'Type' + '</th>' +
+          '<th class="showHeader">' + 'Documentation' + '</th>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Does the client have a Mental Illness?' + '</th>' +
+          '<td>' + (resident.general.mental_Illness || 'N/A') + '</td>' +
+          '<td>' + (resident.general.mental_IllnessType || 'N/A') + '</td>' +
+          '<td>' + (resident.general.mental_Illness_documentation || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Does the client have a disability?' + '</th>' +
+          '<td>' + (resident.general.disabled || 'N/A') + '</td>' +
+          '<td>' + (resident.general.disability_Type || 'N/A') + '</td>' +
+          '<td>' + (resident.general.disability_Documentation || 'N/A') + '</td>' +
+        '</tr>' +
+      '</table>' +
+    '</div>' + 
+
+    '<div style="text-align: left;" class="table-responsive">' +
+      '<table class="table table-bordered">' +
+        '<tr>' +
+          '<th class="showHeader">' + '' + '</th>' +
+          '<th class="showHeader">' + 'Yes/No' + '</th>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'HIV or AIDS' + '</th>' +
+          '<td>' + (resident.general.hiv_And_aids || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Chronic Health Problems' + '</th>' +
+          '<td>' + (resident.general.Chronical_health_Problem || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Victim of Domestic Violence' + '</th>' +
+          '<td>' + (resident.general.victim_Of_domestic_Violence || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Pregnant/Parenting Teen' + '</th>' +
+          '<td>' + (resident.general.pregnant_Parenting_Teen || 'N/A') + '</td>' +
+        '</tr>' +
+        '<tr>' +
+          '<th class="showHeaderLeftAlign">' + 'Ex-Offender(Criminal Record)' + '</th>' +
+          '<td>' + (resident.general.exOffender_Criminal_record || 'N/A') + '</td>' +
+        '</tr>' +
+      '</table>' +
+    '</div>' + 
+
     '<div class="table-responsive">' +
       '<h4>' + 'Special Needs/Conditions' + '</h4>' + 
       '<table class="table table-bordered">' +
         '<tr>' +
-          '<th class="showHeader">' + 'Type' + '</th>' +
-          '<th class="showHeader">' + 'Sought Treatment' + '</th>' +
-          '<th class="showHeader">' + 'Notes' + '</th>' +
+          '<th class="showHeader">' + 'None' + '</th>' +
+          '<th class="showHeader">' + 'Substance Abuse' + '</th>' +
+          '<th class="showHeader">' + 'Alcohol Abuse' + '</th>' +
+          '<th class="showHeader">' + 'Sought Treatment?' + '</th>' +
         '</tr>' +
         '<tr>' +
-          '<td>' + resident.general.special_Needs_None + '</td>' +
-          '<td>' + resident.general.special_Needs_Substance_Abuse + '</td>' +
-          '<td>' + resident.general.special_Needs_alcohol_Abuse + '</td>' +
-          '<td>' + resident.general.sought_Treatment + '</td>' +
-        //   '<td>' + resident.general.notes + '</td>' +
+          '<td>' + (resident.general.special_Needs_None || 'N/A') + '</td>' +
+          '<td>' + (resident.general.special_Needs_Substance_Abuse || 'N/A') + '</td>' +
+          '<td>' + (resident.general.special_Needs_alcohol_Abuse || 'N/A') + '</td>' +
+          '<td>' + (resident.general.sought_Treatment || 'N/A') + '</td>' +
         '</tr>' +
       '</table>' +
     '</div>';
@@ -293,66 +300,44 @@ function displayIdentification(resident) {
     '<div class="table-responsive">' +
       '<table class="table table-bordered">' +
         '<tr>' +
-            '<th class="showHeader">' + 'State ID/License Number' + '</th>' +
+            '<th class="showHeader">' + 'State ID' + '</th>' +
+            '<th class="showHeader">' + 'Drivers License Number' + '</th>' +
+            '<th class="showHeader">' + 'Birth Certificate' + '</th>' +
             '<th class="showHeader">' + 'Social Security Number' + '</th>' +
             '<th class="showHeader">' + 'Passport Number' + '</th>' +
             '<th class="showHeader">' + 'Green/Permanent Resident Card' + '</th>' +
         '</tr>' +
         '<tr>' +
             '<td>' + resident.identification.id_Card + '</td>' +
-            '<td>' + resident.identification.social_security_number + '</td>' +
-            '<td>' + resident.identification.passport + '</td>' +
-            '<td>' + resident.green_card + '</td>' +
+            '<td>' + resident.identification.driver_License + '</td>' +
+            '<td>' + resident.identification.birth_Certificate + '</td>' +
+            '<td>' + resident.identification.social_Security_number + '</td>' +
+            '<td>' + resident.identification.passport_Number + '</td>' +
+            '<td>' + resident.identification.permanent_Resident_card + '</td>' +
         '</tr>' +
-        '<tr>' +
       '</table>' +   
     '</div>';
+//     '<div class="col-lg-6">' +
+//     '<label for="Expectations">Expectations</label>'+ '<p>' +
+//     (resident.identification.information_Type || 'N/A') + '</p>' +
+//     '</div>' +
 
-    '<div class="col-lg-6">' +
-    '<label for="ID-Card">ID Card</label>'+ '<p>' +
-    (resident.identification.id_Card || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-   ' <label for="Driver-License">Drivers License</label>' + '<p>' +
-   (resident.identification.driver_License || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-    '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
-    (resident.identification.birth_Certificate || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-    '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
-    (resident.identification.social_Security_number || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-    '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
-    (resident.identification.passport_Number || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-    '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
-    (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
-    '</div>' +
-    '<div class="col-lg-6">' +
-    '<label for="Expectations">Expectations</label>'+ '<p>' +
-    (resident.identification.information_Type || 'N/A') + '</p>' +
-    '</div>' +
+//     '<div class="col-lg-6">' +
+//     '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
+//     (resident.identification.date_Setup || 'N/A') + '</p>' +
+//     '</div>' +
 
-    '<div class="col-lg-6">' +
-    '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
-    (resident.identification.date_Setup || 'N/A') + '</p>' +
-    '</div>' +
+//     '<div class="col-lg-6">' +
+//     '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
+//     (resident.identification.date_Expiration || 'N/A') + '</p>' +
+//     '</div>' +
 
-    '<div class="col-lg-6">' +
-    '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
-    (resident.identification.date_Expiration || 'N/A') + '</p>' +
-    '</div>' +
-
-    '<div class="col-lg-6">' +
-    '<label for="Days-Left">Days Left</label>'+ '<p>' +
-    (resident.identification.days_Left || 'N/A') + '</p>' +
-    '</div>' +
-    '</div>';
-}
+//     '<div class="col-lg-6">' +
+//     '<label for="Days-Left">Days Left</label>'+ '<p>' +
+//     (resident.identification.days_Left || 'N/A') + '</p>' +
+//     '</div>' +
+//     '</div>';
+// }
 
 function displayEmploymentEducation(resident) {
   document.querySelector('#show-employment').innerHTML =
@@ -417,159 +402,160 @@ function displayRequirements(resident) {
           '<td>' + resident.tb_test + '</td>' +
         '</tr>' +
       '</table>' +   
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Mental Illines?</label>' + '<p>' +
-      (resident.general.mental_Illness || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Mental Illness Type</label>' + '<p>' +
-      (resident.general.mental_IllnessType || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>HIV or Aids</label>' + '<p>' +
-      (resident.general.hiv_And_aids || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Chronic Health Problems</label>' + '<p>' +
-      (resident.general.Chronical_health_Problem || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<div class="col-lg-12">' +
-          '<label>Victim of Domestic Violence</label>' + '<p>' +
-      (resident.general.victim_Of_domestic_Violence || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Pregnant/Parenting Teen</label>' + '<p>' +
-      (resident.general.pregnant_Parenting_Teen || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Ex-Offender(Criminal Record)</label>' + '<p>' +
-      (resident.general.exOffender_Criminal_record || 'N/A') + '</p>' +
-      '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-    '<div class="col-lg-12">' +
-          '<label>Is the client disabled?</label>' + '<p>' +
-      (resident.general.disabled_Yes || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Is the client disabled?</label>' + '<p>' +
-      (resident.general.disabled || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Does Client have documentation of this?</label>' + '<p>' +
-      (resident.general.disability_Documentation|| 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-      '<label>Does Client have documentation of this?</label>' + '<p>' +
-  (resident.general.disability_Type || 'N/A') + '</p>' +
-  '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Is the client a veteran?</label>' + '<p>' +
-      (resident.general.veteran || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-    '<div class="col-lg-12">' +
-          '<label>Does the client have documentation of this?</label>' + '<p>' +
-      (resident.general.veteranDocumentation || 'N/A') + '</p>' +
-      '</div>' +
+    '</div>';  
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Mental Illines?</label>' + '<p>' +
+  //     (resident.general.mental_Illness || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Mental Illness Type</label>' + '<p>' +
+  //     (resident.general.mental_IllnessType || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>HIV or Aids</label>' + '<p>' +
+  //     (resident.general.hiv_And_aids || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Chronic Health Problems</label>' + '<p>' +
+  //     (resident.general.Chronical_health_Problem || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<div class="col-lg-12">' +
+  //         '<label>Victim of Domestic Violence</label>' + '<p>' +
+  //     (resident.general.victim_Of_domestic_Violence || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Pregnant/Parenting Teen</label>' + '<p>' +
+  //     (resident.general.pregnant_Parenting_Teen || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Ex-Offender(Criminal Record)</label>' + '<p>' +
+  //     (resident.general.exOffender_Criminal_record || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //   '<div class="col-lg-12">' +
+  //         '<label>Is the client disabled?</label>' + '<p>' +
+  //     (resident.general.disabled_Yes || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Is the client disabled?</label>' + '<p>' +
+  //     (resident.general.disabled || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Does Client have documentation of this?</label>' + '<p>' +
+  //     (resident.general.disability_Documentation|| 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //     '<label>Does Client have documentation of this?</label>' + '<p>' +
+  // (resident.general.disability_Type || 'N/A') + '</p>' +
+  // '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Is the client a veteran?</label>' + '<p>' +
+  //     (resident.general.veteran || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //   '<div class="col-lg-12">' +
+  //         '<label>Does the client have documentation of this?</label>' + '<p>' +
+  //     (resident.general.veteranDocumentation || 'N/A') + '</p>' +
+  //     '</div>' +
    
 
-      '<div class="col-lg-12">' +
-          '<label>Does the client speak and read English well?</label>' + '<p>' +
-      (resident.general.speak_english || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Notes?</label>' + '<p>' +
-      (resident.general.primary_Language || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Is the client taking prescribed medication?</label>' + '<p>' +
-      (resident.general.prescribed_medication || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Notes</label>' + '<p>' +
-      (resident.general.med_Notes || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>' +
-    '<hr class="dashed">' +
-    '<div class="row">' +
-      '<div class="col-lg-12">' +
-          '<label>Does the client have any allergies?</label>' + '<p>' +
-      (resident.general.allergies || 'N/A') + '</p>' +
-      '</div>' +
-      '<div class="col-lg-12">' +
-          '<label>Notes</label>' + '<p>' +
-      (resident.general.allergy_Notes || 'N/A') + '</p>' +
-      '</div>' +
-    '</div>';
+  //     '<div class="col-lg-12">' +
+  //         '<label>Does the client speak and read English well?</label>' + '<p>' +
+  //     (resident.general.speak_english || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Notes?</label>' + '<p>' +
+  //     (resident.general.primary_Language || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Is the client taking prescribed medication?</label>' + '<p>' +
+  //     (resident.general.prescribed_medication || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Notes</label>' + '<p>' +
+  //     (resident.general.med_Notes || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>' +
+  //   '<hr class="dashed">' +
+  //   '<div class="row">' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Does the client have any allergies?</label>' + '<p>' +
+  //     (resident.general.allergies || 'N/A') + '</p>' +
+  //     '</div>' +
+  //     '<div class="col-lg-12">' +
+  //         '<label>Notes</label>' + '<p>' +
+  //     (resident.general.allergy_Notes || 'N/A') + '</p>' +
+  //     '</div>' +
+  //   '</div>';
 }
 
-function displayIdentificationtab(resident) {
-  document.querySelector('#show-indentification').innerHTML = '<div class="row">' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="ID-Card">ID Card</label>'+ '<p>' +
-    //   (resident.identification.id_Card || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //  ' <label for="Driver-License">Drivers License</label>' + '<p>' +
-    //  (resident.identification.driver_License || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
-    //   (resident.identification.birth_Certificate || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
-    //   (resident.identification.social_Security_number || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
-    //   (resident.identification.passport_Number || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
-    //   (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Expectations">Expectations</label>'+ '<p>' +
-    //   (resident.identification.information_Type || 'N/A') + '</p>' +
-    //   '</div>' +
+// function displayIdentificationtab(resident) {
+//   document.querySelector('#show-indentification').innerHTML = '<div class="row">' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="ID-Card">ID Card</label>'+ '<p>' +
+//     //   (resident.identification.id_Card || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //  ' <label for="Driver-License">Drivers License</label>' + '<p>' +
+//     //  (resident.identification.driver_License || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Birth-Certificate">Birth Certificate</label>'+ '<p>' +
+//     //   (resident.identification.birth_Certificate || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Social-Security-Number">Social Security Number</label>'+ '<p>' +
+//     //   (resident.identification.social_Security_number || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Passport-Number">Passport Number</label>'+ '<p>' +
+//     //   (resident.identification.passport_Number || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Permanent-Resident-Card">Permanent Resident Card</label>'+ '<p>' +
+//     //   (resident.identification.permanent_Resident_card || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Expectations">Expectations</label>'+ '<p>' +
+//     //   (resident.identification.information_Type || 'N/A') + '</p>' +
+//     //   '</div>' +
 
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
-    //   (resident.identification.date_Setup || 'N/A') + '</p>' +
-    //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Date-Setup">Date Setup</label>'+ '<p>' +
+//     //   (resident.identification.date_Setup || 'N/A') + '</p>' +
+//     //   '</div>' +
 
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
-    //   (resident.identification.date_Expiration || 'N/A') + '</p>' +
-    //   '</div>' +
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Date-Expiration">Date Expiration</label>'+ '<p>' +
+//     //   (resident.identification.date_Expiration || 'N/A') + '</p>' +
+//     //   '</div>' +
 
-    //   '<div class="col-lg-6">' +
-    //   '<label for="Days-Left">Days Left</label>'+ '<p>' +
-    //   (resident.identification.days_Left || 'N/A') + '</p>' +
-    //   '</div>' +
-    //   '</div>';
-}
+//     //   '<div class="col-lg-6">' +
+//     //   '<label for="Days-Left">Days Left</label>'+ '<p>' +
+//     //   (resident.identification.days_Left || 'N/A') + '</p>' +
+//     //   '</div>' +
+//     //   '</div>';
+// }
 
 function displayEmploymenttab(resident) {
   document.querySelector('#show-employment').innerHTML = '<div class="row">' +
