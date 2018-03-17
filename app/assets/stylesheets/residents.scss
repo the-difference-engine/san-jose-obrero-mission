@@ -22,7 +22,7 @@
 }
 
 .table-cell {
-  display:table-cell;
+  display: table-cell;
   padding: 5px;
   width: 12em;
 }
@@ -45,18 +45,18 @@
 
 
 .table-cell-head {
-  display:table-cell;
+  display: table-cell;
   padding: 5px;
   width: 12em;
 }
 
 .table-cell-head-one {
   color: transparent;
-  display:table-cell;
+  display: table-cell;
 }
 
 .table-head { 
-  display:table-head;
+  display: table-head;
   font-weight: bold;
   border-bottom: 1px solid #000000;
 }
@@ -199,4 +199,12 @@ hr.solid {
   padding: 10px 20px 10px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
+}
+
+.alt {
+  border: 4px solid red;
+}
+
+#filterButtons {
+  float: right;
 }
